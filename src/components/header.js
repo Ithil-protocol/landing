@@ -2,14 +2,16 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 
+import LogoDark from '../assets/images/logoFullDark.svg'
+
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gray-800">
+    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 max-w-1920 w-[calc(100% - 3rem)]">
       <div className="flex items-center flex-shrink-0 mr-6 text-white">
         <span className="text-xl font-semibold tracking-tight">
-          {siteTitle}
+          <img src={LogoDark} />
         </span>
       </div>
       <div className="block lg:hidden">
@@ -38,13 +40,31 @@ function Header({ siteTitle }) {
             href="#responsive-header"
             className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
           >
-            Home
+            Github
           </Link>
           <Link
             to={`/page-2`}
             className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
           >
-            page 2
+            Discord
+          </Link>
+          <Link
+            to={`/page-2`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+          >
+            Twitter
+          </Link>
+          <Link
+            to={`/page-2`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+          >
+            Docs
+          </Link>
+          <Link
+            to={`/page-2`}
+            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+          >
+            Discord
           </Link>
         </div>
         <div>
@@ -54,7 +74,7 @@ function Header({ siteTitle }) {
             rel="noreferrer"
             className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
           >
-            Download
+            Launch app
           </a>
         </div>
       </div>
