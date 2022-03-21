@@ -5,8 +5,11 @@
   "version": "0.3.0",
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
     "autoprefixer": "^10.4.2",
     "gatsby": "^4.5.3",
+    "gatsby-plugin-emotion": "^7.10.0",
     "gatsby-plugin-google-analytics": "^4.0.0",
     "gatsby-plugin-image": "^2.5.2",
     "gatsby-plugin-manifest": "^4.5.2",
@@ -21,7 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "twin.macro": "^2.8.2"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
