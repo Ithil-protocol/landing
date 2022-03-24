@@ -1,93 +1,54 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState } from "react"
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+import 'twin.macro'
+import tw from 'twin.macro'
+import { useState } from "react"
 
 import LogoDark from '../assets/images/logoFullDark.svg'
+import { Button } from './Button'
+import { Txt } from './Txt';
+import { List } from 'phosphor-react'
 
-function Header({ siteTitle }) {
+const Header = ({ siteTitle }) => {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 max-w-1920 w-[calc(100% - 3rem)]">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
-        <span className="text-xl font-semibold tracking-tight">
-          <img src={LogoDark} />
-        </span>
-      </div>
-      <div className="block lg:hidden">
+    <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 tablet:p-6 mb-6 max-w-1920 w-full tablet:w-[calc(100% - 3rem)]">
+      <img tw='w-24 tablet:w-28 mr-6' src={LogoDark} />
+      <div className="lg:hidden flex flex-row gap-3">
+      <Button tw='block lg:hidden' action bold text="Launch app" />
         <button
           onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white"
+          className="flex items-center px-3 py-2 text-white "
         >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+          <List size={26} />
         </button>
       </div>
       <div
         className={`${
           isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+        } w-full lg:flex lg:items-center lg:w-auto p-8 desktop:p-0`}
       >
-        <div className="text-sm lg:flex-grow">
-          <Link
-            to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            Github
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            Discord
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            Twitter
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            Docs
-          </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            Discord
-          </Link>
-        </div>
-        <div>
-          <a
-            href="https://github.com/kosvrouvas/gatsby-tailwindcss-starter"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
-          >
-            Launch app
+        <div tw='flex flex-col desktop:flex-row justify-center gap-5 mr-14'>
+          <a href='https://www.google.com' target='_blank'>
+            <Txt.Body2Regular tw='text-font-200'>GitHub</Txt.Body2Regular>
+          </a>
+          <a href='https://www.google.com' target='_blank'>
+            <Txt.Body2Regular tw='text-font-200'>Discord</Txt.Body2Regular>
+          </a>
+          <a href='https://www.google.com' target='_blank'>
+            <Txt.Body2Regular tw='text-font-200'>Twitter</Txt.Body2Regular>
+          </a>
+          <a href='https://www.google.com' target='_blank'>
+            <Txt.Body2Regular tw='text-font-200'>Docs</Txt.Body2Regular>
           </a>
         </div>
+        <Button tw='hidden lg:block' action bold text="Launch app" />
       </div>
+      
     </nav>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
 
 body,
 html,
@@ -56,6 +58,9 @@ body > div {
   --lineheight-heading2: 32px;
   --fontsize-heading1: 32px;
   --lineheight-heading1: 51.2px;
+
+  --fontsize-section: 48px;
+  --lineheight-section: 45.6px;
 }
 .dark {
   --primary: 7, 11, 15;
@@ -98,6 +103,9 @@ body > div {
     --lineheight-heading2: 25.6px;
     --fontsize-heading1: 24px;
     --lineheight-heading1: 38.4px;
+
+    --fontsize-section: 24px;
+    --lineheight-section: 38.4px;
   }
 }
 
