@@ -17,10 +17,10 @@ const Header = ({ siteTitle }) => {
     <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 tablet:p-6 mb-6 max-w-1920 w-full tablet:w-[calc(100% - 3rem)]">
       <img tw='w-24 tablet:w-28 mr-6' src={LogoDark} />
       <div className="lg:hidden flex flex-row gap-3">
-      <Button tw='block lg:hidden' action bold text="Launch app" />
+      <Button tw='block lg:hidden h-10' bold text="Launch app" />
         <button
           onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white "
+          className="flex items-center px-3 py-2 text-primary"
         >
           <List size={26} />
         </button>
@@ -44,7 +44,7 @@ const Header = ({ siteTitle }) => {
             <Txt.Body2Regular tw='text-font-200'>Docs</Txt.Body2Regular>
           </a>
         </div>
-        <Button tw='hidden lg:block' action bold text="Launch app" />
+        <Button tw='hidden lg:block' bold text="Launch app" />
       </div>
       
     </nav>
