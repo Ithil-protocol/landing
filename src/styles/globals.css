@@ -59,8 +59,8 @@ body > div {
   --fontsize-heading1: 32px;
   --lineheight-heading1: 51.2px;
 
-  --fontsize-section: 48px;
-  --lineheight-section: 45.6px;
+  --fontsize-section: 24px;
+  --lineheight-section: 38.4px;
 }
 .dark {
   --primary: 7, 11, 15;
@@ -105,7 +105,7 @@ body > div {
     --lineheight-heading1: 38.4px;
 
     --fontsize-section: 48px;
-    --lineheight-section: 76.8px;
+    --lineheight-section: 38.4px;
   }
 }
 
@@ -129,5 +129,7 @@ body > div {
     --lineheight-heading2: 28.8px;
     --fontsize-heading1: 32px;
     --lineheight-heading1: 51.2px;
+    --fontsize-section: 48px;
+    --lineheight-section: 45.6px;
   }
 }

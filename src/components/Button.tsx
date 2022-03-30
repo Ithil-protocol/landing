@@ -31,9 +31,9 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
       type={props.type ?? 'button'}
       className={props.className}
       css={[
-        tw`border-0 rounded-md cursor-pointer flex flex-row items-center justify-center h-9 tablet:h-10 desktop:h-11 px-2`,
-        primary && tw`bg-primary-200`,
-        props.action && tw`bg-action`,
+        tw`border-0 rounded-md cursor-pointer flex flex-row items-center justify-center h-12 tablet:h-11 desktop:h-12 px-2  px-5 tablet:px-6 desktop:px-7`,
+        primary && tw`bg-action`,
+        props.action && tw`border border-primary`,
         props.full && tw`w-full`,
       ]}
       onClick={props.onClick}
@@ -52,7 +52,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
       <Txt.Body2Regular
         css={[
           tw`flex-grow`,
-          primary && tw`text-secondary`,
+          primary && tw`text-primary-100`,
           props.action && tw`text-primary-100`,
           props.bold && tw`font-bold`,
         ]}

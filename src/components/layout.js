@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     <>
       <div tw="flex flex-row bg-background-primary min-h-screen w-full">
         <div
-          tw="max-w-1920 w-[calc(100% - 3rem)] my-6 mx-auto"
+          tw="max-w-1920 w-full tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"
         >
           <Header />
           {children}
