@@ -9,6 +9,7 @@
     "@emotion/styled": "^11.8.1",
     "autoprefixer": "^10.4.2",
     "gatsby": "^4.5.3",
+    "gatsby-cli": "^4.11.0",
     "gatsby-plugin-emotion": "^7.10.0",
     "gatsby-plugin-google-analytics": "^4.0.0",
     "gatsby-plugin-image": "^2.5.2",
