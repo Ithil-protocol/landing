@@ -5,12 +5,13 @@ import 'twin.macro'
 import tw from 'twin.macro'
 import { useState } from "react"
 
+// @ts-ignore
 import LogoDark from '../assets/images/logoFullDark.svg'
 import { Button } from './Button'
 import { Txt } from './Txt';
 import { List } from 'phosphor-react'
 
-const Header = ({ siteTitle }) => {
+const Header = (props: { siteTitle?: any }) => {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
