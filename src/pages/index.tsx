@@ -1,4 +1,10 @@
 import React from "react"
+import PropTypes from "prop-types"
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+import 'twin.macro'
+import tw from 'twin.macro'
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -6,15 +12,28 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Txt } from "../components/Txt"
 import 'twin.macro'
-import tw from 'twin.macro'
 import { Button } from "../components/Button"
 import { BookOpen } from "phosphor-react"
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
+//@ts-ignore
+import EtherIcon from "../assets/images/ether.png"
+//@ts-ignore
+import WrappedEtherIcon from "../assets/images/weth.png"
+//@ts-ignore
+import WrappedBitconIcon from "../assets/images/wbtc.png"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
+//@ts-ignore
+import DaiStablecoinIcon from "../assets/images/dai.png"
 import Feature from "../components/Feature"
 import Strategy from "../components/Strategy"
+import Token from "../components/Token"
+
+// import LogoDark from '../assets/images/logoFullDark.svg'
 
 const IndexPage = () => (
+  <>
   <Layout>
     {/* <SEO title="Home" /> */}
     <div tw="h-screen flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
@@ -51,6 +70,54 @@ const IndexPage = () => (
       </div>
     </div>
   </Layout>
+  
+<div tw="flex flex-row bg-primary-100 min-h-screen w-full">
+        <div
+          tw="max-w-1920 w-full tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"
+        >
+          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
+  <div tw="w-full flex justify-center desktop:justify-start desktop:w-1/3">
+    <Txt.Section tw="text-secondary desktop:w-24">Supported tokens</Txt.Section>
+  </div>
+  <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row">
+    <div tw="flex flex-wrap justify-center desktop:justify-start gap-3 tablet:gap-6 desktop:gap-10">
+    <Token
+    tokenName="Ether"
+    tokenSymbol="ETH"
+    apy="10%"
+    icon={EtherIcon}
+    />
+    <Token
+    tokenName="Wrapped Ether"
+    tokenSymbol="WETH"
+    apy="12%"
+    icon={WrappedEtherIcon}
+    />
+    <Token
+    tokenName="DAI Stablecoin"
+    tokenSymbol="DAI"
+    apy="12%"
+    icon={DaiStablecoinIcon}
+    />
+    <Token
+    tokenName="Wrapped Bitcoin"
+    tokenSymbol="WBTC"
+    apy="8%"
+    icon={WrappedBitconIcon}
+    />
+    <Token
+    tokenName="Tether USD"
+    tokenSymbol="USDT"
+    apy="10%"
+    icon={TetherUsdIcon}
+    />
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+</>
+
 )
 
 export default IndexPage
