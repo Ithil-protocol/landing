@@ -31,7 +31,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
       type={props.type ?? 'button'}
       className={props.className}
       css={[
-        tw`border-0 rounded-md cursor-pointer flex flex-row items-center justify-center h-12 tablet:h-11 desktop:h-12 px-2  px-5 tablet:px-6 desktop:px-7`,
+        tw`border-0 rounded-md cursor-pointer flex flex-row items-center justify-center h-12 tablet:h-12 desktop:h-12 px-2  px-5 tablet:px-6 desktop:px-7`,
         primary && tw`bg-action`,
         props.action && tw`border border-primary`,
         props.full && tw`w-full`,
@@ -49,7 +49,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
         />
       )}
 
-      <Txt.Body2Regular
+      <Txt.Body1Regular
         css={[
           tw`flex-grow`,
           primary && tw`text-primary-100`,
@@ -58,7 +58,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
         ]}
       >
         {props.text}
-      </Txt.Body2Regular>
+      </Txt.Body1Regular>
 
       {RightIcon && (
         <RightIcon
