@@ -45,9 +45,35 @@ const IndexPage = () => (
 
     <div tw="flex flex-col gap-10 desktop:gap-20 my-20 desktop:my-0 justify-start tablet:items-center desktop:items-start">
       <Txt.Section>Available strategies</Txt.Section>
-      <div tw="flex flex-col tablet:flex-row gap-10">
-        <Strategy />
-        <Strategy />
+      <div tw="flex flex-col tablet:flex-row gap-5 tablet:gap-7 flex-wrap">
+        <Strategy
+          title="Margin trading"
+          description="Go long or short on any token pair"
+          apyMin="0"
+          apyMax="∞x"
+          risk="High"
+        />
+        <Strategy
+          title="Leveraged staking"
+          description="Stake your favorite token and earn wealth"
+          apyMin="0"
+          apyMax="10x"
+          risk="Low"
+        />
+        <Strategy
+          title="Degenbox"
+          description="MIM and TIME Aave looping"
+          apyMin="0"
+          apyMax="∞x"
+          risk="High"
+        />
+        <Strategy
+          title="Options"
+          description="Play with Put and Call options"
+          apyMin="0"
+          apyMax="100x"
+          risk="Medium"
+        />
       </div>
     </div>
   </Layout>
