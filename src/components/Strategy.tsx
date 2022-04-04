@@ -7,17 +7,24 @@ import tw from 'twin.macro'
 import { Txt } from "./Txt"
 
 
-const Strategy = () => {
+const Strategy = (props: { title: string, description: string, apyMin: string, apyMax: string, risk: string }) => {
+  const { title, description, apyMin, apyMax, risk } = props
   return (
     <div tw="rounded-xl bg-secondary-300 flex flex-col justify-between p-5 min-width[356px]">
-      <Txt.Heading2 tw="text-primary mb-2">Margin Trading</Txt.Heading2>
-      <Txt.Body2Regular tw="text-font-200 mb-12" >Go long or short on any token pair</Txt.Body2Regular>
+      <Txt.Heading2 tw="text-primary mb-2">{title}</Txt.Heading2>
+      <Txt.Body2Regular tw="text-font-200 mb-12" >{description}</Txt.Body2Regular>
       <div tw="flex flex-row justify-between">
-        <Txt.Body2Bold tw="text-primary">APY: 0 - inf x</Txt.Body2Bold>
+        <Txt.Body2Bold tw="text-primary">APY: {apyMin} - {apyMax}</Txt.Body2Bold>
         <div tw="flex flex-row gap-3 items-center">
           <Txt.CaptionMedium tw="text-primary" >Risk:</Txt.CaptionMedium>
-          <div tw="rounded-md py-1 px-3 bg-error">
-          <Txt.CaptionMedium tw="text-primary" >High:</Txt.CaptionMedium>
+          <div 
+            css={[tw`rounded-md py-1 px-3`,
+              risk === 'High' && tw`bg-error`,
+              risk === 'Medium' && tw`bg-warning`,
+              risk === 'Low' && tw`bg-success`,
+            ]}
+          >
+          <Txt.CaptionMedium tw="text-primary" >{risk}</Txt.CaptionMedium>
           </div>
         </div>
       </div>
