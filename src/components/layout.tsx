@@ -19,7 +19,7 @@ const Layout = (props: {
       <div
         // @ts-ignore
         css={[
-          tw`flex flex-row w-full bg-background-primary`,
+          tw`flex flex-row w-full z-10`,
           props.bgLight && tw`bg-primary-100`,
           props.minScreenHeight && tw`min-h-screen`,
         ]}
