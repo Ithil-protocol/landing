@@ -7,9 +7,11 @@ import "twin.macro"
 import tw from "twin.macro"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Plus } from "phosphor-react"
+import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
+import { SocialLink } from "../components/SocialLink"
+import { Asset } from "../components/Asset"
 import SEO from "../components/seo"
 import { Txt } from "../components/Txt"
 import "twin.macro"
@@ -45,14 +47,25 @@ import EthereumIcon from "../assets/images/eth.png"
 import { ParallaxProvider, Parallax } from "react-scroll-parallax"
 // @ts-ignore
 import IthilBackground from "../assets/images/bg.png"
+//@ts-ignore
+import TwitterIcon from "../assets/images/twitter.svg"
+//@ts-ignore
+import DiscordIcon from "../assets/images/discord.svg"
+//@ts-ignore
+import MediumIcon from "../assets/images/medium.svg"
+//@ts-ignore
+import GithubIcon from "../assets/images/github.svg"
 
 const IndexPage = () => {
-
   return (
     <ParallaxProvider>
       <>
         <Parallax translateY={[-20, 20]}>
-          <div css={{ backgroundImage: `url(${IthilBackground})` }} tw="w-full h-96 z-index[1]"></div>
+          <div
+            // @ts-ignore
+            css={{ backgroundImage: `url(${IthilBackground})` }}
+            tw="w-full h-96 z-index[1]"
+          ></div>
         </Parallax>
         <Layout header>
           {/* <SEO title="Home" /> */}
@@ -82,11 +95,12 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+
           <div tw="h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
-            <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
-            <div tw="flex flex-col w-full tablet:w-4/5 gap-4 desktop:gap-10 justify-start tablet:items-center desktop:items-start">
+            <div tw="w-full min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
+            <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
               <Txt.Section>How it works</Txt.Section>
-              <Txt.Body1Regular tw="text-font-200 text-left tablet:text-center desktop:text-left ">
+              <Txt.Body1Regular tw="text-font-200 text-left">
                 Traders can use LPs’ liquidity to perform leveraged investments
                 and earn a lot, LPs’ get fees from this, liquidators assure
                 liquidity is not attacked.
@@ -107,7 +121,7 @@ const IndexPage = () => {
             <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 block desktop:hidden"></div>
           </div>
 
-          <div tw="flex flex-col gap-10 desktop:gap-20 my-20 desktop:my-0 justify-start tablet:items-center desktop:items-start">
+          <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
             <Txt.Section>Available strategies</Txt.Section>
             <div tw="flex flex-col tablet:flex-row gap-5 tablet:gap-7 flex-wrap">
               <Strategy
@@ -144,13 +158,13 @@ const IndexPage = () => {
 
         <Layout bgLight={true}>
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
-            <div tw="w-full flex justify-center desktop:justify-start desktop:w-1/3">
+            <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="text-secondary desktop:w-24">
                 Supported tokens
               </Txt.Section>
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row">
-              <div tw="flex flex-wrap justify-center desktop:justify-start gap-3 tablet:gap-6 desktop:gap-10">
+              <div tw="flex flex-wrap justify-start gap-3 tablet:gap-6 desktop:gap-10">
                 <Token
                   tokenName="Ether"
                   tokenSymbol="ETH"
@@ -181,7 +195,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center p-6 gap-3 min-width[170px] desktop:min-width[240px]">
+                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-[170px] desktop:min-width[240px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
@@ -194,7 +208,7 @@ const IndexPage = () => {
 
         <Layout>
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
-            <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10">
+            <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10 tablet:mb-12">
               <Txt.Section tw="desktop:mb-10">Earn by lending</Txt.Section>
               <Txt.Body1Regular tw="text-font-200">
                 Traders can use LPs’ liquidity to perform leveraged investments
@@ -204,48 +218,24 @@ const IndexPage = () => {
               <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
-              <div tw="flex flex-col w-full tablet:w-7/12 gap-5">
+              <div tw="flex flex-col w-full tablet:w-9/12 gap-5">
                 <div tw="flex flex-row justify-between w-full">
                   <Txt.Body1Regular tw="text-font-200">Asset</Txt.Body1Regular>
                   <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
                 </div>
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <div tw="flex flex-row justify-between items-center w-full">
-                  <div tw="flex flex-row gap-3 justify-start items-center">
-                    <img src={EthereumIcon} tw="w-12 h-12" alt="" />
-                    <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
-                  </div>
-                  <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
-                </div>
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <div tw="flex flex-row justify-between items-center w-full">
-                  <div tw="flex flex-row gap-3 justify-start items-center">
-                    <img src={EthereumIcon} tw="w-12 h-12" alt="" />
-                    <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
-                  </div>
-                  <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
-                </div>
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <div tw="flex flex-row justify-between items-center w-full">
-                  <div tw="flex flex-row gap-3 justify-start items-center">
-                    <img src={EthereumIcon} tw="w-12 h-12" alt="" />
-                    <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
-                  </div>
-                  <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
-                </div>
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <div tw="flex flex-row justify-between items-center w-full">
-                  <div tw="flex flex-row gap-3 justify-start items-center">
-                    <img src={EthereumIcon} tw="w-12 h-12" alt="" />
-                    <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
-                  </div>
-                  <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
-                </div>
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
               </div>
             </div>
           </div>
 
-          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="desktop:w-24">Partners</Txt.Section>
             </div>
@@ -259,6 +249,37 @@ const IndexPage = () => {
                 <Partner image={PartnerPlaceholer} />
                 <Partner image={PartnerPlaceholer} />
                 <Partner image={PartnerPlaceholer} />
+              </div>
+            </div>
+          </div>
+        </Layout>
+        <Layout bgLight>
+          <div tw="w-full flex flex-col gap-10 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+            <div tw="w-full flex justify-start desktop:w-1/3">
+              <Txt.Section tw="text-secondary">Join our community</Txt.Section>
+            </div>
+            <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
+              <div tw="flex flex-wrap justify-start gap-10 tablet:gap-20 desktop:gap-40">
+                <SocialLink
+                  label="Twitter"
+                  icon={TwitterIcon}
+                  url="https://www.google.com"
+                />
+                <SocialLink
+                  label="Discord"
+                  icon={DiscordIcon}
+                  url="https://www.google.com"
+                />
+                <SocialLink
+                  label="Medium"
+                  icon={MediumIcon}
+                  url="https://www.google.com"
+                />
+                <SocialLink
+                  label="GitHub"
+                  icon={GithubIcon}
+                  url="https://www.google.com"
+                />
               </div>
             </div>
           </div>

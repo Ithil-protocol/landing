@@ -15,7 +15,7 @@ const Header = (props: { siteTitle?: any }) => {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 tablet:p-6 mb-6 max-w-1920 w-full tablet:w-[calc(100% - 3rem)]">
+    <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 mb-6 max-w-1920 w-full">
       <img tw='w-24 tablet:w-28 mr-6' src={LogoDark} />
       <div className="lg:hidden flex flex-row gap-3">
       <Button tw='block lg:hidden h-10' bold text="Launch app" />
@@ -33,16 +33,16 @@ const Header = (props: { siteTitle?: any }) => {
       >
         <div tw='flex flex-col desktop:flex-row justify-center gap-5 mr-14'>
           <a href='https://www.google.com' target='_blank'>
-            <Txt.Body2Regular tw='text-font-200'>GitHub</Txt.Body2Regular>
+            <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>GitHub</Txt.Body1Regular>
           </a>
           <a href='https://www.google.com' target='_blank'>
-            <Txt.Body2Regular tw='text-font-200'>Discord</Txt.Body2Regular>
+            <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>Discord</Txt.Body1Regular>
           </a>
           <a href='https://www.google.com' target='_blank'>
-            <Txt.Body2Regular tw='text-font-200'>Twitter</Txt.Body2Regular>
+            <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>Twitter</Txt.Body1Regular>
           </a>
           <a href='https://www.google.com' target='_blank'>
-            <Txt.Body2Regular tw='text-font-200'>Docs</Txt.Body2Regular>
+            <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>Docs</Txt.Body1Regular>
           </a>
         </div>
         <Button tw='hidden lg:block' bold text="Launch app" />
