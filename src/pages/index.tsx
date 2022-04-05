@@ -13,6 +13,10 @@ import { BookOpen } from "phosphor-react"
 import CoinIcon from "../assets/images/coinIcon.svg"
 import Feature from "../components/Feature"
 import Strategy from "../components/Strategy"
+import Partner from "../components/Partner"
+
+//@ts-ignore 
+import PartnerPlaceholer from '../assets/images/ithil.svg'
 
 const IndexPage = () => (
   <Layout>
@@ -76,6 +80,26 @@ const IndexPage = () => (
         />
       </div>
     </div>
+
+    <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+        <div tw="w-full flex justify-start desktop:w-1/3">
+          <Txt.Section tw="desktop:w-24">
+            Partners
+          </Txt.Section>
+        </div>
+        <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
+          <div tw="flex flex-wrap justify-start gap-3 tablet:gap-6">
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+          </div>
+        </div>
+      </div>
   </Layout>
 )
 
