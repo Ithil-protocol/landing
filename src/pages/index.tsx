@@ -18,6 +18,9 @@ import Partner from "../components/Partner"
 //@ts-ignore 
 import PartnerPlaceholer from '../assets/images/ithil.svg'
 
+//@ts-ignore 
+import EthereumIcon from '../assets/images/eth.png'
+
 const IndexPage = () => (
   <Layout>
     {/* <SEO title="Home" /> */}
@@ -82,6 +85,49 @@ const IndexPage = () => (
     </div>
 
     <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+        <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10">
+          <Txt.Section tw="desktop:mb-10">Earn by lending</Txt.Section>
+          <Txt.Body1Regular tw="text-font-200">Traders can use LPs’ liquidity to perform leveraged investments and earn a lot, LPs’ get fees from this, liquidators assure liquidity is not attacked.</Txt.Body1Regular>
+          <Button tw="w-1/2 tablet:w-auto self-start" text='Stake' bold />
+        </div>
+        <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
+          <div tw="flex flex-col w-full tablet:w-7/12 gap-5">
+            <div tw="flex flex-row justify-between w-full">
+              <Txt.Body1Regular tw="text-font-200">Asset</Txt.Body1Regular>
+              <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
+            </div>
+            <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+            <div tw="flex flex-row justify-between w-full">
+              <div tw="flex flex-row gap-3 justify-start items-center">
+                <img src={EthereumIcon} tw="w-12 h-12" alt="" />
+                <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
+              </div>
+              <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
+            </div>
+            <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+            <div tw="flex flex-row justify-between w-full">
+              <div tw="flex flex-row gap-3 justify-start items-center">
+                <img src={EthereumIcon} tw="w-12 h-12" alt="" />
+                <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
+              </div>
+              <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
+            </div>
+            <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+            <div tw="flex flex-row justify-between w-full">
+              <div tw="flex flex-row gap-3 justify-start items-center">
+                <img src={EthereumIcon} tw="w-12 h-12" alt="" />
+                <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
+              </div>
+              <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
+            </div>
+            <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+            <div tw="flex flex-row justify-between w-full">
+              <div tw="flex flex-row gap-3 justify-start items-center">
+                <img src={EthereumIcon} tw="w-12 h-12" alt="" />
+                <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
+              </div>
+              <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
+            </div>
         <div tw="w-full flex justify-start desktop:w-1/3">
           <Txt.Section tw="desktop:w-24">
             Partners
