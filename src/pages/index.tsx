@@ -7,7 +7,7 @@ import "twin.macro"
 import tw from "twin.macro"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Plus } from "phosphor-react"
+import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -30,18 +30,26 @@ import DaiStablecoinIcon from "../assets/images/dai.png"
 import Feature from "../components/Feature"
 import Strategy from "../components/Strategy"
 //@ts-ignore
-import LogoDark from '../assets/images/logoFullDark.svg'
+import LogoDark from "../assets/images/logoFullDark.svg"
 import Token from "../components/Token"
 
 // import LogoDark from '../assets/images/logoFullDark.svg'
 import Partner from "../components/Partner"
 
-//@ts-ignore 
-import PartnerPlaceholer from '../assets/images/ithil.svg'
+//@ts-ignore
+import PartnerPlaceholer from "../assets/images/ithil.svg"
 
-//@ts-ignore 
-import EthereumIcon from '../assets/images/eth.png'
->>>>>>> src/pages/index.tsx
+//@ts-ignore
+import EthereumIcon from "../assets/images/eth.png"
+
+//@ts-ignore
+import TwitterIcon from "../assets/images/twitter.svg"
+//@ts-ignore
+import DiscordIcon from "../assets/images/discord.svg"
+//@ts-ignore
+import MediumIcon from "../assets/images/medium.svg"
+//@ts-ignore
+import GithubIcon from "../assets/images/github.svg"
 
 const IndexPage = () => (
   <>
@@ -131,6 +139,7 @@ const IndexPage = () => (
         </div>
       </div>
     </Layout>
+
     <Layout bgLight={true}>
       <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
         <div tw="w-full flex justify-center desktop:justify-start desktop:w-1/3">
@@ -172,37 +181,25 @@ const IndexPage = () => (
             />
             <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center p-6 gap-3 min-width[170px] desktop:min-width[240px]">
               <Plus tw="text-primary-100" size={20} />
-              <Txt.Body1Regular tw="text-primary-100">See all tokens</Txt.Body1Regular>
+              <Txt.Body1Regular tw="text-primary-100">
+                See all tokens
+              </Txt.Body1Regular>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-  </>
-    </div>
-    
-    <div tw="w-full flex flex-row gap-10 desktop:gap-20 my-20 justify-start items-start desktop:my-32">
-        <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
-          <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
-          <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">Ithil © 2022</Txt.Body1Bold>
-        </div>
-        <div tw=" w-full w-8/12 tablet:w-6/12 flex flex-col tablet:flex-row items-end justify-center">
-          <div tw="flex flex-col w-full tablet:w-7/12 gap-3">
-            <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">Legal disclaimer</Txt.Body1Bold>
-            <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">IPFS</Txt.Body1Bold>
-            <div tw="flex flex-row flex-wrap gap-2">
-              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-            </div>
-            <Button tw="tablet:self-start mt-10" text='Launch app' bold />
 
-    <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+    <Layout>
+      <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
         <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10">
           <Txt.Section tw="desktop:mb-10">Earn by lending</Txt.Section>
-          <Txt.Body1Regular tw="text-font-200">Traders can use LPs’ liquidity to perform leveraged investments and earn a lot, LPs’ get fees from this, liquidators assure liquidity is not attacked.</Txt.Body1Regular>
-          <Button tw="w-1/2 tablet:w-auto self-start" text='Stake' bold />
+          <Txt.Body1Regular tw="text-font-200">
+            Traders can use LPs’ liquidity to perform leveraged investments and
+            earn a lot, LPs’ get fees from this, liquidators assure liquidity is
+            not attacked.
+          </Txt.Body1Regular>
+          <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
         </div>
         <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
           <div tw="flex flex-col w-full tablet:w-7/12 gap-5">
@@ -211,7 +208,7 @@ const IndexPage = () => (
               <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
             </div>
             <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-            <div tw="flex flex-row justify-between w-full">
+            <div tw="flex flex-row justify-between items-center w-full">
               <div tw="flex flex-row gap-3 justify-start items-center">
                 <img src={EthereumIcon} tw="w-12 h-12" alt="" />
                 <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
@@ -219,7 +216,7 @@ const IndexPage = () => (
               <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
             </div>
             <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-            <div tw="flex flex-row justify-between w-full">
+            <div tw="flex flex-row justify-between items-center w-full">
               <div tw="flex flex-row gap-3 justify-start items-center">
                 <img src={EthereumIcon} tw="w-12 h-12" alt="" />
                 <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
@@ -227,7 +224,7 @@ const IndexPage = () => (
               <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
             </div>
             <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-            <div tw="flex flex-row justify-between w-full">
+            <div tw="flex flex-row justify-between items-center w-full">
               <div tw="flex flex-row gap-3 justify-start items-center">
                 <img src={EthereumIcon} tw="w-12 h-12" alt="" />
                 <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
@@ -235,17 +232,20 @@ const IndexPage = () => (
               <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
             </div>
             <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-            <div tw="flex flex-row justify-between w-full">
+            <div tw="flex flex-row justify-between items-center w-full">
               <div tw="flex flex-row gap-3 justify-start items-center">
                 <img src={EthereumIcon} tw="w-12 h-12" alt="" />
                 <Txt.Body1Regular tw="text-font-200">ETH</Txt.Body1Regular>
               </div>
               <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
         <div tw="w-full flex justify-start desktop:w-1/3">
-          <Txt.Section tw="desktop:w-24">
-            Partners
-          </Txt.Section>
+          <Txt.Section tw="desktop:w-24">Partners</Txt.Section>
         </div>
         <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
           <div tw="flex flex-wrap justify-start gap-3 tablet:gap-6">
@@ -260,7 +260,62 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-  </Layout>
+    </Layout>
+    <Layout bgLight>
+    <div tw="w-full flex flex-col gap-10 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+        <div tw="w-full flex justify-start desktop:w-1/3">
+          <Txt.Section tw="text-secondary">Join our community</Txt.Section>
+        </div>
+        <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
+          <div tw="flex flex-wrap justify-start gap-10 tablet:gap-20 desktop:gap-40">
+            <div tw="flex items-center gap-5 justify-center">
+              <img tw="h-8 w-8" src={TwitterIcon} alt="twitter icon" />
+              <Txt.InputText>Twitter</Txt.InputText>
+            </div>
+            <div tw="flex items-center gap-5 justify-center">
+              <img tw="h-8 w-8" src={DiscordIcon} alt="twitter icon" />
+              <Txt.InputText>Discord</Txt.InputText>
+            </div>
+            <div tw="flex items-center gap-5 justify-center">
+              <img tw="h-8 w-8" src={MediumIcon} alt="twitter icon" />
+              <Txt.InputText>Medium</Txt.InputText>
+            </div>
+            <div tw="flex items-center gap-5 justify-center">
+              <img tw="h-8 w-8" src={GithubIcon} alt="twitter icon" />
+              <Txt.InputText>GitHub</Txt.InputText>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+    <Layout>
+      <div tw="w-full flex flex-row gap-10 desktop:gap-20 my-20 justify-start items-start desktop:my-32">
+        <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
+          <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
+          <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
+            Ithil © 2022
+          </Txt.Body1Bold>
+        </div>
+        <div tw=" w-full w-8/12 tablet:w-6/12 flex flex-col tablet:flex-row items-end justify-center">
+          <div tw="flex flex-col w-full tablet:w-7/12 gap-3">
+            <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
+              Legal disclaimer
+            </Txt.Body1Bold>
+            <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
+              IPFS
+            </Txt.Body1Bold>
+            <div tw="flex flex-row flex-wrap gap-2">
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+            </div>
+            <Button tw="tablet:self-start mt-10" text="Launch app" bold />
+          </div>
+        </div>
+      </div>
+    </Layout>
+  </>
 )
 
 export default IndexPage
