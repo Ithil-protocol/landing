@@ -13,6 +13,10 @@ import { BookOpen } from "phosphor-react"
 import CoinIcon from "../assets/images/coinIcon.svg"
 import Feature from "../components/Feature"
 import Strategy from "../components/Strategy"
+import Partner from "../components/Partner"
+
+//@ts-ignore 
+import PartnerPlaceholer from '../assets/images/ithil.svg'
 
 //@ts-ignore 
 import EthereumIcon from '../assets/images/eth.png'
@@ -124,6 +128,21 @@ const IndexPage = () => (
               </div>
               <Txt.Body1Regular tw="text-font-200">12%</Txt.Body1Regular>
             </div>
+        <div tw="w-full flex justify-start desktop:w-1/3">
+          <Txt.Section tw="desktop:w-24">
+            Partners
+          </Txt.Section>
+        </div>
+        <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
+          <div tw="flex flex-wrap justify-start gap-3 tablet:gap-6">
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
+            <Partner image={PartnerPlaceholer} />
           </div>
         </div>
       </div>
