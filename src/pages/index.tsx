@@ -29,6 +29,8 @@ import TetherUsdIcon from "../assets/images/usdt.png"
 import DaiStablecoinIcon from "../assets/images/dai.png"
 import Feature from "../components/Feature"
 import Strategy from "../components/Strategy"
+//@ts-ignore
+import LogoDark from '../assets/images/logoFullDark.svg'
 import Token from "../components/Token"
 
 // import LogoDark from '../assets/images/logoFullDark.svg'
@@ -39,6 +41,7 @@ import PartnerPlaceholer from '../assets/images/ithil.svg'
 
 //@ts-ignore 
 import EthereumIcon from '../assets/images/eth.png'
+>>>>>>> src/pages/index.tsx
 
 const IndexPage = () => (
   <>
@@ -177,6 +180,23 @@ const IndexPage = () => (
     </Layout>
   </>
     </div>
+    
+    <div tw="w-full flex flex-row gap-10 desktop:gap-20 my-20 justify-start items-start desktop:my-32">
+        <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
+          <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
+          <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">Ithil © 2022</Txt.Body1Bold>
+        </div>
+        <div tw=" w-full w-8/12 tablet:w-6/12 flex flex-col tablet:flex-row items-end justify-center">
+          <div tw="flex flex-col w-full tablet:w-7/12 gap-3">
+            <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">Legal disclaimer</Txt.Body1Bold>
+            <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">IPFS</Txt.Body1Bold>
+            <div tw="flex flex-row flex-wrap gap-2">
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+              <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+            </div>
+            <Button tw="tablet:self-start mt-10" text='Launch app' bold />
 
     <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
         <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10">
