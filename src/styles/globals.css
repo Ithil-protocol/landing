@@ -16,6 +16,16 @@ body > div {
   box-sizing: border-box;
 }
 
+.layoutLight {
+  background: rgb(242,245,246);
+  background: linear-gradient(90deg, rgba(242,245,246,1) 0%, rgba(219,239,255,1) 0%, rgba(242,245,246,1) 57%, rgba(242,245,246,1) 67%, rgba(242,245,246,1) 100%);
+}
+
+.layoutDark {
+  background: rgb(21,26,41);
+  background: radial-gradient(circle, rgba(21,26,41,1) 0%, rgba(7,124,224,0.16992734593837533) 0%, rgba(13,17,29,1) 100%, rgba(21,26,41,1) 100%, rgba(21,26,41,1) 100%);
+}
+
 :root {
   --background-primary: 21, 26, 41;
 

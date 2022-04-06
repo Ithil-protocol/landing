@@ -55,7 +55,7 @@ import GithubIcon from "../assets/images/github.svg"
 
 const IndexPage = () => (
   <>
-    <Layout header>
+    <Layout header bgDark>
       {/* <SEO title="Home" /> */}
       <div tw="h-screen flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
         <div tw="flex flex-col w-full tablet:w-4/5 gap-4 desktop:gap-10 justify-start tablet:items-center desktop:items-start">
@@ -143,7 +143,7 @@ const IndexPage = () => (
     </Layout>
 
     <Layout bgLight={true}>
-      <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
+      <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
         <div tw="w-full flex justify-start desktop:w-1/3">
           <Txt.Section tw="text-secondary desktop:w-24">
             Supported tokens
@@ -192,7 +192,7 @@ const IndexPage = () => (
       </div>
     </Layout>
 
-    <Layout>
+    <Layout bgDark>
       <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
         <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10">
           <Txt.Section tw="desktop:mb-10">Earn by lending</Txt.Section>

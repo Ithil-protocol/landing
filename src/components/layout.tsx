@@ -13,14 +13,15 @@ const Layout = (props: {
   bgLight?: boolean
   header?: boolean
   minScreenHeight?: boolean
+  bgDark?: boolean
 }) => {
   return (
     <>
       <div
+        className={props.bgDark && 'layoutDark' || props.bgLight && 'layoutLight'}
         // @ts-ignore
         css={[
           tw`flex flex-row w-full bg-background-primary`,
-          props.bgLight && tw`bg-primary-100`,
           props.minScreenHeight && tw`min-h-screen`,
         ]}
       >
