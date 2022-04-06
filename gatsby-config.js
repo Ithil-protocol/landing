@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `ITHIL`,
-    description: `ITHIL Landing Page.`,
-    author: `-`,
+    title: `Ithil`,
+    author: `Ithil DAO`,
+    description: `Ithil is a generalised leveraged investment strategies aggregator`,
+    siteUrl: `https://ithil.fi`,
   },
   flags: {
     THE_FLAG: false
@@ -58,7 +59,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
+        cookieDomain: "ithil.fi",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
