@@ -44,9 +44,9 @@ import PartnerPlaceholer from "../assets/images/ithil.svg"
 //@ts-ignore
 import EthereumIcon from "../assets/images/eth.png"
 
-import { ParallaxProvider, Parallax } from "react-scroll-parallax"
+// import { ParallaxProvider, Parallax } from "react-scroll-parallax"
 // @ts-ignore
-import IthilBackground from "../assets/images/bg.png"
+import IthilBackground from "../assets/images/bgSvg.svg"
 //@ts-ignore
 import TwitterIcon from "../assets/images/twitter.svg"
 //@ts-ignore
@@ -56,20 +56,16 @@ import MediumIcon from "../assets/images/medium.svg"
 //@ts-ignore
 import GithubIcon from "../assets/images/github.svg"
 
+import { ParallaxProvider, Parallax, ParallaxBanner } from 'react-scroll-parallax';
+// import { Parallax } from 'react-parallax';
+
 const IndexPage = () => {
   return (
     <ParallaxProvider>
       <>
-        <Parallax translateY={[-20, 20]}>
-          <div
-            // @ts-ignore
-            css={{ backgroundImage: `url(${IthilBackground})` }}
-            tw="w-full h-96 z-index[1]"
-          ></div>
-        </Parallax>
         <Layout header>
           {/* <SEO title="Home" /> */}
-          <div tw="w-full my-20 ">
+          <div tw="w-full my-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">DeFi made easy</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
@@ -95,7 +91,14 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+          {/* <ParallaxBanner
+            layers={[{ image: '/static/banner.jpg', speed: -15 }]}
+            className="aspect-[2/1]"
+          /> */}
 
+          <Parallax translateY={[-40, 40]}>
+          <div className="bgImage" css={{ backgroundImage: `url(${IthilBackground})` }} tw="w-full"></div>
+          </Parallax>
           <div tw="h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
             <div tw="w-full min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
             <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
@@ -120,6 +123,7 @@ const IndexPage = () => {
             </div>
             <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 block desktop:hidden"></div>
           </div>
+          
 
           <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
             <Txt.Section>Available strategies</Txt.Section>
