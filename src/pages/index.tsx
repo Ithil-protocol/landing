@@ -1,62 +1,63 @@
-import React from "react"
-import PropTypes from "prop-types"
+import "twin.macro"
+import "twin.macro"
+
+import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
+import {
+  Parallax,
+  ParallaxBanner,
+  ParallaxProvider,
+} from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import "twin.macro"
-import tw from "twin.macro"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
 
-import Layout from "../components/Layout"
-import { SocialLink } from "../components/SocialLink"
 import { Asset } from "../components/Asset"
-import SEO from "../components/seo"
-import { Txt } from "../components/Txt"
-import "twin.macro"
-import { Button } from "../components/Button"
 import { BookOpen } from "phosphor-react"
+import { Button } from "../components/Button"
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
 //@ts-ignore
-import EtherIcon from "../assets/images/ether.png"
-//@ts-ignore
-import WrappedEtherIcon from "../assets/images/weth.png"
-//@ts-ignore
-import WrappedBitconIcon from "../assets/images/wbtc.png"
-//@ts-ignore
-import TetherUsdIcon from "../assets/images/usdt.png"
-//@ts-ignore
 import DaiStablecoinIcon from "../assets/images/dai.png"
-import Feature from "../components/Feature"
-import Strategy from "../components/Strategy"
-//@ts-ignore
-import LogoDark from "../assets/images/logoFullDark.svg"
-import Token from "../components/Token"
-
-// import LogoDark from '../assets/images/logoFullDark.svg'
-import Partner from "../components/Partner"
-
-//@ts-ignore
-import PartnerPlaceholer from "../assets/images/ithil.svg"
-
-//@ts-ignore
-import EthereumIcon from "../assets/images/eth.png"
-
-// import { ParallaxProvider, Parallax } from "react-scroll-parallax"
-// @ts-ignore
-import IthilBackground from "../assets/images/bgSvg.svg"
-//@ts-ignore
-import TwitterIcon from "../assets/images/twitter.svg"
 //@ts-ignore
 import DiscordIcon from "../assets/images/discord.svg"
 //@ts-ignore
-import MediumIcon from "../assets/images/medium.svg"
+import EtherIcon from "../assets/images/ether.png"
+//@ts-ignore
+import EthereumIcon from "../assets/images/eth.png"
+import Feature from "../components/Feature"
 //@ts-ignore
 import GithubIcon from "../assets/images/github.svg"
+// import { ParallaxProvider, Parallax } from "react-scroll-parallax"
+// @ts-ignore
+import IthilBackground from "../assets/images/bgSvg.svg"
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
+//@ts-ignore
+import LogoDark from "../assets/images/logoFullDark.svg"
+//@ts-ignore
+import MediumIcon from "../assets/images/medium.svg"
+// import LogoDark from '../assets/images/logoFullDark.svg'
+import Partner from "../components/Partner"
+//@ts-ignore
+import PartnerPlaceholer from "../assets/images/ithil.svg"
+import PropTypes from "prop-types"
+import React from "react"
+import SEO from "../components/seo"
+import { SocialLink } from "../components/SocialLink"
+import Strategy from "../components/Strategy"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
+import Token from "../components/Token"
+//@ts-ignore
+import TwitterIcon from "../assets/images/twitter.svg"
+import { Txt } from "../components/Txt"
+//@ts-ignore
+import WrappedBitconIcon from "../assets/images/wbtc.png"
+//@ts-ignore
+import WrappedEtherIcon from "../assets/images/weth.png"
+import tw from "twin.macro"
+import { withPrefix } from "gatsby"
 
-import { ParallaxProvider, Parallax, ParallaxBanner } from 'react-scroll-parallax';
 // import { Parallax } from 'react-parallax';
 
 const IndexPage = () => {
@@ -91,14 +92,32 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          {/* <ParallaxBanner
-            layers={[{ image: '/static/banner.jpg', speed: -15 }]}
-            className="aspect-[2/1]"
-          /> */}
+        </Layout>
+        <ParallaxBanner
+          className="aspect-[2/1]"
+          layers={[
+            { image: "./banner/base.svg", speed: 0 },
+            { image: "./banner/layer-1.svg", speed: -10 },
+            { image: "./banner/layer-2.svg", speed: -5 },
+            { image: "./banner/layer-3.svg", speed: 5 },
+            {
+              shouldAlwaysCompleteAnimation: true,
+              expanded: false,
 
-          <Parallax translateY={[-40, 40]}>
-          <div className="bgImage" css={{ backgroundImage: `url(${IthilBackground})` }} tw="w-full"></div>
-          </Parallax>
+              children: (
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    background:
+                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 80%, rgba(21, 26, 41, 1) 100%)",
+                  }}
+                />
+              ),
+            },
+          ]}
+        />
+        <Layout>
           <div tw="h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
             <div tw="w-full min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
             <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
@@ -123,8 +142,6 @@ const IndexPage = () => {
             </div>
             <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 block desktop:hidden"></div>
           </div>
-          
-
           <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
             <Txt.Section>Available strategies</Txt.Section>
             <div tw="flex flex-col tablet:flex-row gap-5 tablet:gap-7 flex-wrap">

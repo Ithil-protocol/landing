@@ -1,12 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
+import "twin.macro"
+
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import "twin.macro"
-import tw from "twin.macro"
 
 import Header from "./header"
+import PropTypes from "prop-types"
+import React from "react"
+import tw from "twin.macro"
 
 const Layout = (props: {
   children: any
