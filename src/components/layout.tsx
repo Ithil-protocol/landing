@@ -1,12 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
+import "twin.macro"
+
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import "twin.macro"
-import tw from "twin.macro"
 
 import Header from "./header"
+import PropTypes from "prop-types"
+import React from "react"
+import tw from "twin.macro"
 
 const Layout = (props: {
   children: any
@@ -14,11 +15,12 @@ const Layout = (props: {
   header?: boolean
   minScreenHeight?: boolean
   bgDark?: boolean
+  bgMain?: boolean
 }) => {
   return (
     <>
       <div
-        className={props.bgDark && 'layoutDark' || props.bgLight && 'layoutLight'}
+        className={props.bgDark && 'layoutDark' || props.bgLight && 'layoutLight' || props.bgMain && 'layoutMain'}
         // @ts-ignore
         css={[
           tw`flex flex-row w-full bg-background-primary`,

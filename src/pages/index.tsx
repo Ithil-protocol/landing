@@ -1,75 +1,79 @@
-import React from "react"
-import PropTypes from "prop-types"
+import "twin.macro"
+import "twin.macro"
+
+import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
+import {
+  Parallax,
+  ParallaxBanner,
+  ParallaxProvider,
+} from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import "twin.macro"
-import tw from "twin.macro"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
 
-import Layout from "../components/Layout"
-import { SocialLink } from "../components/SocialLink"
 import { Asset } from "../components/Asset"
-import SEO from "../components/seo"
-import { Txt } from "../components/Txt"
-import "twin.macro"
-import { Button } from "../components/Button"
 import { BookOpen } from "phosphor-react"
+import { Button } from "../components/Button"
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
 //@ts-ignore
+import DaiStablecoinIcon from "../assets/images/dai.png"
+//@ts-ignore
 import EtherIcon from "../assets/images/ether.png"
 //@ts-ignore
-import WrappedEtherIcon from "../assets/images/weth.png"
+import EthereumIcon from "../assets/images/eth.png"
+import Feature from "../components/Feature"
+
+// @ts-ignore
+import IthilBackground from "../assets/images/bgSvg.svg"
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
+//@ts-ignore
+import LogoDark from "../assets/images/logoFullDark.svg"
+import Partner from "../components/Partner"
+//@ts-ignore
+import PartnerPlaceholer from "../assets/images/ithil.svg"
+import PropTypes from "prop-types"
+import React from "react"
+import SEO from "../components/seo"
+import { SocialLink } from "../components/SocialLink"
+import Strategy from "../components/Strategy"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
+import Token from "../components/Token"
+import { Txt } from "../components/Txt"
 //@ts-ignore
 import WrappedBitconIcon from "../assets/images/wbtc.png"
 //@ts-ignore
-import TetherUsdIcon from "../assets/images/usdt.png"
-//@ts-ignore
-import DaiStablecoinIcon from "../assets/images/dai.png"
-import Feature from "../components/Feature"
-import Strategy from "../components/Strategy"
-//@ts-ignore
-import LogoDark from "../assets/images/logoFullDark.svg"
-import Token from "../components/Token"
-
-// import LogoDark from '../assets/images/logoFullDark.svg'
-import Partner from "../components/Partner"
-
-//@ts-ignore
-import PartnerPlaceholer from "../assets/images/ithil.svg"
-
-//@ts-ignore
-import EthereumIcon from "../assets/images/eth.png"
-
-import { ParallaxProvider, Parallax } from "react-scroll-parallax"
-// @ts-ignore
-import IthilBackground from "../assets/images/bg.png"
+import WrappedEtherIcon from "../assets/images/weth.png"
+import tw from "twin.macro"
+import { FooterSocialIcon } from '../components/FooterSocialIcon'
 //@ts-ignore
 import TwitterIcon from "../assets/images/twitter.svg"
-//@ts-ignore
-import DiscordIcon from "../assets/images/discord.svg"
 //@ts-ignore
 import MediumIcon from "../assets/images/medium.svg"
 //@ts-ignore
 import GithubIcon from "../assets/images/github.svg"
+//@ts-ignore
+import DiscordIcon from "../assets/images/discord.svg"
+//@ts-ignore
+import TwitterIconLight from "../assets/images/twitterLight.svg"
+//@ts-ignore
+import MediumIconLight from "../assets/images/mediumLight.svg"
+//@ts-ignore
+import GithubIconLight from "../assets/images/githubLight.svg"
+//@ts-ignore
+import DiscordIconLight from "../assets/images/discordLight.svg"
+
+// import { Parallax } from 'react-parallax';
 
 const IndexPage = () => {
   return (
     <ParallaxProvider>
       <>
-        <Parallax translateY={[-20, 20]}>
-          <div
-            // @ts-ignore
-            css={{ backgroundImage: `url(${IthilBackground})` }}
-            tw="w-full h-96 z-index[1]"
-          ></div>
-        </Parallax>
-        <Layout header bgDark>
+        <Layout header>
           {/* <SEO title="Home" /> */}
-          <div tw="w-full my-20 ">
+          <div tw="w-full my-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">DeFi made easy</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
@@ -95,7 +99,32 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+        </Layout>
+        <ParallaxBanner
+          className="aspect-[2/1]"
+          layers={[
+            { image: "./banner/base.svg", speed: 0 },
+            { image: "./banner/layer-1.svg", speed: -10 },
+            { image: "./banner/layer-2.svg", speed: -5 },
+            { image: "./banner/layer-3.svg", speed: 5 },
+            {
+              shouldAlwaysCompleteAnimation: true,
+              expanded: false,
 
+              children: (
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    background:
+                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(21, 26, 47, 1) 94%)",
+                  }}
+                />
+              ),
+            },
+          ]}
+        />
+        <Layout bgMain>
           <div tw="h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
             <div tw="w-full min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
             <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
@@ -120,7 +149,6 @@ const IndexPage = () => {
             </div>
             <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 block desktop:hidden"></div>
           </div>
-
           <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
             <Txt.Section>Available strategies</Txt.Section>
             <div tw="flex flex-col tablet:flex-row gap-5 tablet:gap-7 flex-wrap">
@@ -263,22 +291,22 @@ const IndexPage = () => {
                 <SocialLink
                   label="Twitter"
                   icon={TwitterIcon}
-                  url="https://www.google.com"
+                  url="https://twitter.com/ithil_protocol"
                 />
                 <SocialLink
                   label="Discord"
                   icon={DiscordIcon}
-                  url="https://www.google.com"
+                  url="https://discord.gg/tEaGBcGdQC"
                 />
                 <SocialLink
                   label="Medium"
                   icon={MediumIcon}
-                  url="https://www.google.com"
+                  url="https://medium.com/@ithil_protocol"
                 />
                 <SocialLink
                   label="GitHub"
                   icon={GithubIcon}
-                  url="https://www.google.com"
+                  url="https://github.com/Ithil-protocol"
                 />
               </div>
             </div>
@@ -297,14 +325,32 @@ const IndexPage = () => {
                 <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
                   Legal disclaimer
                 </Txt.Body1Bold>
-                <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
-                  IPFS
-                </Txt.Body1Bold>
-                <div tw="flex flex-row flex-wrap gap-2">
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+                <a href="https://ipfs.io" target="_blank" tw="max-w-min">
+                  <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular max-w-min">
+                    IPFS
+                  </Txt.Body1Bold>
+                </a>
+                <div tw="flex flex-row flex-wrap gap-3">
+                  <FooterSocialIcon
+                    icon={TwitterIconLight}
+                    url="https://twitter.com/ithil_protocol"
+                    altText="twitter"
+                  />
+                  <FooterSocialIcon
+                    icon={DiscordIconLight}
+                    url="https://discord.gg/tEaGBcGdQC"
+                    altText="discord"
+                  />
+                  <FooterSocialIcon
+                    icon={MediumIconLight}
+                    url="https://medium.com/@ithil_protocol"
+                    altText="medium"
+                  />
+                  <FooterSocialIcon
+                    icon={GithubIconLight}
+                    url="https://github.com/Ithil-protocol"
+                    altText="github"
+                  />
                 </div>
                 <Button tw="tablet:self-start mt-10" text="Launch app" bold />
               </div>

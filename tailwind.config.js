@@ -87,6 +87,9 @@ module.exports = {
       }
     },
     extend: {
+      backgroundImage: {
+        tt: "url('/src/assets/images/bg.png')",
+      },
       maxWidth: {
         1920: '1920px'
       },
