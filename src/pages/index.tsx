@@ -89,13 +89,15 @@ const IndexPage = () => {
                   text="Start investing"
                   bold
                 />
-                <Button
-                  tw="width[50%] tablet:w-auto tablet:self-start"
-                  text="Docs"
-                  bold
-                  action
-                  leftIcon={BookOpen}
-                />
+                <a href="https://docs.ithil.fi/" target="_blank">
+                  <Button
+                    tw="width[50%] tablet:w-auto tablet:self-start"
+                    text="Docs"
+                    bold
+                    action
+                    leftIcon={BookOpen}
+                  />
+                </a>
               </div>
             </div>
           </div>
