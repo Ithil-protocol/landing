@@ -256,7 +256,7 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
+          {/* <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="desktop:w-24">Partners</Txt.Section>
             </div>
@@ -272,7 +272,7 @@ const IndexPage = () => {
                 <Partner image={PartnerPlaceholer} />
               </div>
             </div>
-          </div>
+          </div> */}
         </Layout>
         <Layout bgLight>
           <div tw="w-full flex flex-col gap-10 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
