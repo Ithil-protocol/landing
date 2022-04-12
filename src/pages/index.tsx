@@ -14,23 +14,13 @@ import { css, jsx } from "@emotion/react"
 import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
-//@ts-ignore
-import DiscordIcon from "../assets/images/discord.svg"
-//@ts-ignore
-import EthereumIcon from "../assets/images/eth.png"
 import Feature from "../components/Feature"
-//@ts-ignore
-import GithubIcon from "../assets/images/github.svg"
-// import { ParallaxProvider, Parallax } from "react-scroll-parallax"
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 //@ts-ignore
 import LogoDark from "../assets/images/logoFullDark.svg"
-//@ts-ignore
-import MediumIcon from "../assets/images/medium.svg"
-// import LogoDark from '../assets/images/logoFullDark.svg'
 import Partner from "../components/Partner"
 //@ts-ignore
 import PartnerPlaceholer from "../assets/images/ithil.svg"
@@ -39,14 +29,12 @@ import React from "react"
 import SEO from "../components/seo"
 import { SocialLink } from "../components/SocialLink"
 import Strategy from "../components/Strategy"
-//@ts-ignore
-import TetherUsdIcon from "../assets/images/usdt.png"
+
 import Token from "../components/Token"
-//@ts-ignore
-import TwitterIcon from "../assets/images/twitter.svg"
 import { Txt } from "../components/Txt"
 import tw from "twin.macro"
 import { withPrefix } from "gatsby"
+import { FooterSocialIcon } from '../components/FooterSocialIcon'
 
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
@@ -66,8 +54,27 @@ import UsdcIcon from "../assets/images/usdcIcon.svg"
 import UniswapIcon from "../assets/images/uniswapIcon.svg"
 //@ts-ignore
 import OusdIcon from "../assets/images/ousdIcon.svg"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
 
-// import { Parallax } from 'react-parallax';
+
+//@ts-ignore
+import TwitterIcon from "../assets/images/twitter.svg"
+//@ts-ignore
+import MediumIcon from "../assets/images/medium.svg"
+//@ts-ignore
+import GithubIcon from "../assets/images/github.svg"
+//@ts-ignore
+import DiscordIcon from "../assets/images/discord.svg"
+//@ts-ignore
+import TwitterIconLight from "../assets/images/twitterLight.svg"
+//@ts-ignore
+import MediumIconLight from "../assets/images/mediumLight.svg"
+//@ts-ignore
+import GithubIconLight from "../assets/images/githubLight.svg"
+//@ts-ignore
+import DiscordIconLight from "../assets/images/discordLight.svg"
+
 
 const IndexPage = () => {
   return (
@@ -299,22 +306,22 @@ const IndexPage = () => {
                 <SocialLink
                   label="Twitter"
                   icon={TwitterIcon}
-                  url="https://www.google.com"
+                  url="https://twitter.com/ithil_protocol"
                 />
                 <SocialLink
                   label="Discord"
                   icon={DiscordIcon}
-                  url="https://www.google.com"
+                  url="https://discord.gg/tEaGBcGdQC"
                 />
                 <SocialLink
                   label="Medium"
                   icon={MediumIcon}
-                  url="https://www.google.com"
+                  url="https://medium.com/@ithil_protocol"
                 />
                 <SocialLink
                   label="GitHub"
                   icon={GithubIcon}
-                  url="https://www.google.com"
+                  url="https://github.com/Ithil-protocol"
                 />
               </div>
             </div>
@@ -333,14 +340,32 @@ const IndexPage = () => {
                 <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
                   Legal disclaimer
                 </Txt.Body1Bold>
-                <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
-                  IPFS
-                </Txt.Body1Bold>
-                <div tw="flex flex-row flex-wrap gap-2">
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
-                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+                <a href="https://ipfs.io" target="_blank" tw="max-w-min">
+                  <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular max-w-min">
+                    IPFS
+                  </Txt.Body1Bold>
+                </a>
+                <div tw="flex flex-row flex-wrap gap-3">
+                  <FooterSocialIcon
+                    icon={TwitterIconLight}
+                    url="https://twitter.com/ithil_protocol"
+                    altText="twitter"
+                  />
+                  <FooterSocialIcon
+                    icon={DiscordIconLight}
+                    url="https://discord.gg/tEaGBcGdQC"
+                    altText="discord"
+                  />
+                  <FooterSocialIcon
+                    icon={MediumIconLight}
+                    url="https://medium.com/@ithil_protocol"
+                    altText="medium"
+                  />
+                  <FooterSocialIcon
+                    icon={GithubIconLight}
+                    url="https://github.com/Ithil-protocol"
+                    altText="github"
+                  />
                 </div>
                 <Button tw="tablet:self-start mt-10" text="Launch app" bold />
               </div>
