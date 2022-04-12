@@ -14,16 +14,7 @@ import { css, jsx } from "@emotion/react"
 import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
-//@ts-ignore
-import CoinIcon from "../assets/images/coinIcon.svg"
-//@ts-ignore
-import DaiStablecoinIcon from "../assets/images/dai.png"
-//@ts-ignore
-import EtherIcon from "../assets/images/ether.png"
-//@ts-ignore
-import EthereumIcon from "../assets/images/eth.png"
 import Feature from "../components/Feature"
-
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
 import Layout from "../components/Layout"
@@ -38,16 +29,35 @@ import React from "react"
 import SEO from "../components/seo"
 import { SocialLink } from "../components/SocialLink"
 import Strategy from "../components/Strategy"
-//@ts-ignore
-import TetherUsdIcon from "../assets/images/usdt.png"
+
 import Token from "../components/Token"
 import { Txt } from "../components/Txt"
+import tw from "twin.macro"
+import { withPrefix } from "gatsby"
+import { FooterSocialIcon } from '../components/FooterSocialIcon'
+
+//@ts-ignore
+import CoinIcon from "../assets/images/coinIcon.svg"
+//@ts-ignore
+import DaiStablecoinIcon from "../assets/images/dai.png"
+//@ts-ignore
+import EtherIcon from "../assets/images/ether.png"
 //@ts-ignore
 import WrappedBitconIcon from "../assets/images/wbtc.png"
 //@ts-ignore
 import WrappedEtherIcon from "../assets/images/weth.png"
-import tw from "twin.macro"
-import { FooterSocialIcon } from '../components/FooterSocialIcon'
+//@ts-ignore
+import ShibInuIcon from "../assets/images/shibIcon.svg"
+//@ts-ignore
+import UsdcIcon from "../assets/images/usdcIcon.svg"
+//@ts-ignore
+import UniswapIcon from "../assets/images/uniswapIcon.svg"
+//@ts-ignore
+import OusdIcon from "../assets/images/ousdIcon.svg"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
+
+
 //@ts-ignore
 import TwitterIcon from "../assets/images/twitter.svg"
 //@ts-ignore
@@ -65,7 +75,6 @@ import GithubIconLight from "../assets/images/githubLight.svg"
 //@ts-ignore
 import DiscordIconLight from "../assets/images/discordLight.svg"
 
-// import { Parallax } from 'react-parallax';
 
 const IndexPage = () => {
   return (
@@ -254,13 +263,19 @@ const IndexPage = () => {
                   <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
                 </div>
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={UsdcIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={DaiStablecoinIcon} tokenSymbol="ETH" apy="5" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={WrappedEtherIcon} tokenSymbol="ETH" apy="11" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={WrappedBitconIcon} tokenSymbol="ETH" apy="8" />
+                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <Asset icon={ShibInuIcon} tokenSymbol="ETH" apy="11" />
+                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <Asset icon={UniswapIcon} tokenSymbol="ETH" apy="18" />
+                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" />
               </div>
             </div>
           </div>
