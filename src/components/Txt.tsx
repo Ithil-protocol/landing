@@ -111,7 +111,7 @@ export const Txt = {
     <InnerText
       {...props}
       css={[
-        tw`text-primary font-normal text-section`,
+        tw`font-serif text-primary font-normal text-section`,
       ]}
     />
   ),
