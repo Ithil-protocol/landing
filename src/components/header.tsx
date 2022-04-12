@@ -32,16 +32,16 @@ const Header = (props: { siteTitle?: any }) => {
         } w-full lg:flex lg:items-center lg:w-auto p-8 desktop:p-0`}
       >
         <div tw='flex flex-col desktop:flex-row justify-center gap-5 mr-14'>
-          <a href='https://www.google.com' target='_blank'>
+          <a href='https://github.com/Ithil-protocol' target='_blank'>
             <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>GitHub</Txt.Body1Regular>
           </a>
-          <a href='https://www.google.com' target='_blank'>
+          <a href='https://discord.gg/tEaGBcGdQC' target='_blank'>
             <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>Discord</Txt.Body1Regular>
           </a>
-          <a href='https://www.google.com' target='_blank'>
+          <a href='https://twitter.com/ithil_protocol' target='_blank'>
             <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>Twitter</Txt.Body1Regular>
           </a>
-          <a href='https://www.google.com' target='_blank'>
+          <a href='https://docs.ithil.fi/' target='_blank'>
             <Txt.Body1Regular tw='text-font-200 tablet:text-body2-regular'>Docs</Txt.Body1Regular>
           </a>
         </div>
