@@ -1,10 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import "twin.macro"
-import tw from "twin.macro"
 
 import { Txt } from "./Txt"
+import tw from "twin.macro"
 
 const Strategy = (props: {
   title: string
@@ -17,7 +16,7 @@ const Strategy = (props: {
   return (
     <div tw="rounded-xl bg-secondary-300 flex flex-col justify-between p-5 w-full tablet:w-[300px] desktop:w-[356px]">
       <Txt.Heading2 tw="text-primary mb-2">{title}</Txt.Heading2>
-      <Txt.Body2Regular tw="text-font-200 mb-12 w-9/12">
+      <Txt.Body2Regular tw="text-font-200 mb-12 w-9/12 h-14">
         {description}
       </Txt.Body2Regular>
       <div tw="flex flex-row justify-between">

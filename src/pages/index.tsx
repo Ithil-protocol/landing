@@ -1,39 +1,25 @@
 import "twin.macro"
-import "twin.macro"
 
-import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
-import {
-  Parallax,
-  ParallaxBanner,
-  ParallaxProvider,
-} from "react-scroll-parallax"
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
 
+//@ts-ignore
+import ArrowRight from "../assets/images/arrowRight.svg"
 import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
-import Feature from "../components/Feature"
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
 import HowItWorkIllustration from "../assets/images/howItWorks.svg"
-import Layout from "../components/Layout"
-import { Link } from "gatsby"
-//@ts-ignore
-import LogoDark from "../assets/images/logoFullDark.svg"
-import Partner from "../components/Partner"
 //@ts-ignore
 import PartnerPlaceholer from "../assets/images/ithil.svg"
 import PropTypes from "prop-types"
-import React from "react"
 import SEO from "../components/seo"
-import { SocialLink } from "../components/SocialLink"
-import Strategy from "../components/Strategy"
 
 import Token from "../components/Token"
-import { Txt } from "../components/Txt"
 import tw from "twin.macro"
 import { withPrefix } from "gatsby"
 import { FooterSocialIcon } from "../components/FooterSocialIcon"
@@ -43,11 +29,44 @@ import CoinIcon from "../assets/images/coinIcon.svg"
 //@ts-ignore
 import DaiStablecoinIcon from "../assets/images/dai.png"
 //@ts-ignore
+import DiscordIcon from "../assets/images/discord.svg"
+//@ts-ignore
 import EtherIcon from "../assets/images/ether.png"
+//@ts-ignore
+import EthereumIcon from "../assets/images/eth.png"
+import Feature from "../components/Feature"
+//@ts-ignore
+import GithubIcon from "../assets/images/github.svg"
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
+//@ts-ignore
+import LogoDark from "../assets/images/logoFullDark.svg"
+//@ts-ignore
+import MediumIcon from "../assets/images/medium.svg"
+import Partner from "../components/Partner"
+import { Plus } from "phosphor-react"
+import React from "react"
+import { SocialLink } from "../components/SocialLink"
+import Strategy from "../components/Strategy"
+import { StrategyScroll } from "../components/StrategyScroll"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
+//@ts-ignore
+import TwitterIcon from "../assets/images/twitter.svg"
+import { Txt } from "../components/Txt"
 //@ts-ignore
 import WrappedBitconIcon from "../assets/images/wbtc.png"
 //@ts-ignore
+import DiscordIconLight from "../assets/images/discordLight.svg"
+//@ts-ignore
+import TwitterIconLight from "../assets/images/twitterLight.svg"
+//@ts-ignore
+import MediumIconLight from "../assets/images/mediumLight.svg"
+//@ts-ignore
+import GithubIconLight from "../assets/images/githubLight.svg"
+// @ts-ignore
 import WrappedEtherIcon from "../assets/images/weth.png"
+
 //@ts-ignore
 import ShibInuIcon from "../assets/images/shibIcon.svg"
 //@ts-ignore
@@ -56,25 +75,7 @@ import UsdcIcon from "../assets/images/usdcIcon.svg"
 import UniswapIcon from "../assets/images/uniswapIcon.svg"
 //@ts-ignore
 import OusdIcon from "../assets/images/ousdIcon.svg"
-//@ts-ignore
-import TetherUsdIcon from "../assets/images/usdt.png"
 
-//@ts-ignore
-import TwitterIcon from "../assets/images/twitter.svg"
-//@ts-ignore
-import MediumIcon from "../assets/images/medium.svg"
-//@ts-ignore
-import GithubIcon from "../assets/images/github.svg"
-//@ts-ignore
-import DiscordIcon from "../assets/images/discord.svg"
-//@ts-ignore
-import TwitterIconLight from "../assets/images/twitterLight.svg"
-//@ts-ignore
-import MediumIconLight from "../assets/images/mediumLight.svg"
-//@ts-ignore
-import GithubIconLight from "../assets/images/githubLight.svg"
-//@ts-ignore
-import DiscordIconLight from "../assets/images/discordLight.svg"
 
 const IndexPage = () => {
   return (
@@ -141,6 +142,7 @@ const IndexPage = () => {
             },
           ]}
         />
+        {/* <DiscordIcon /> */}
         <Layout>
           <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
             <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
@@ -170,41 +172,8 @@ const IndexPage = () => {
               <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
             </div>
           </div>
-          <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
-            <Txt.Section>Available strategies</Txt.Section>
-            <div tw="flex flex-col tablet:flex-row gap-5 tablet:gap-7 flex-wrap">
-              <Strategy
-                title="Margin trading"
-                description="Go long or short on any token pair"
-                apyMin="0"
-                apyMax="∞x"
-                risk="High"
-              />
-              <Strategy
-                title="Leveraged staking"
-                description="Stake your favorite token and earn wealth"
-                apyMin="0"
-                apyMax="10x"
-                risk="Low"
-              />
-              <Strategy
-                title="Degenbox"
-                description="MIM and TIME Aave looping"
-                apyMin="0"
-                apyMax="∞x"
-                risk="High"
-              />
-              <Strategy
-                title="Options"
-                description="Play with Put and Call options"
-                apyMin="0"
-                apyMax="100x"
-                risk="Medium"
-              />
-            </div>
-          </div>
         </Layout>
-
+        <StrategyScroll />
         <Layout bgLight={true}>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
             <div tw="w-full flex justify-start desktop:w-2/12">
@@ -309,6 +278,7 @@ const IndexPage = () => {
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
                 <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" />
               </div>
+
             </div>
           </div>
 
@@ -340,22 +310,22 @@ const IndexPage = () => {
                 <SocialLink
                   label="Twitter"
                   icon={TwitterIcon}
-                  url="https://twitter.com/ithil_protocol"
+                  url="https://www.google.com"
                 />
                 <SocialLink
                   label="Discord"
                   icon={DiscordIcon}
-                  url="https://discord.gg/tEaGBcGdQC"
+                  url="https://www.google.com"
                 />
                 <SocialLink
                   label="Medium"
                   icon={MediumIcon}
-                  url="https://medium.com/@ithil_protocol"
+                  url="https://www.google.com"
                 />
                 <SocialLink
                   label="GitHub"
                   icon={GithubIcon}
-                  url="https://github.com/Ithil-protocol"
+                  url="https://www.google.com"
                 />
               </div>
             </div>
