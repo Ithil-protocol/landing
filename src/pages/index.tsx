@@ -135,7 +135,7 @@ const IndexPage = () => {
                     height: "100%",
                     width: "100%",
                     background:
-                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 80%, rgba(21, 26, 41, 1) 100%)",
+                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(21, 26, 47, 1) 94%)",
                   }}
                 />
               ),
@@ -143,7 +143,7 @@ const IndexPage = () => {
           ]}
         />
         {/* <DiscordIcon /> */}
-        <Layout>
+        <Layout bgMain>
           <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
             <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
               <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
@@ -240,14 +240,14 @@ const IndexPage = () => {
                   </Txt.Body1Regular>
                 </div>
               </div>
-            </div>
+          </div>
           </div>
         </Layout>
 
-        <Layout>
+        <Layout bgDark>
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
             <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10 tablet:mb-12">
-              <Txt.Section tw="desktop:mb-10">Earn by lending</Txt.Section>
+              <Txt.Section tw="tablet:mb-5 desktop:mb-10">Earn by lending</Txt.Section>
               <Txt.Body1Regular tw="text-font-200">
                 Traders can use LPs’ liquidity to perform leveraged investments
                 and earn a lot, LPs’ get fees from this, liquidators assure
@@ -263,19 +263,19 @@ const IndexPage = () => {
                   <Txt.Body1Regular tw="text-font-200">Asset</Txt.Body1Regular>
                   <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
                 </div>
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={UsdcIcon} tokenSymbol="ETH" apy="12" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={DaiStablecoinIcon} tokenSymbol="ETH" apy="5" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={WrappedEtherIcon} tokenSymbol="ETH" apy="11" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={WrappedBitconIcon} tokenSymbol="ETH" apy="8" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={ShibInuIcon} tokenSymbol="ETH" apy="11" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={UniswapIcon} tokenSymbol="ETH" apy="18" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
+                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" />
               </div>
 
