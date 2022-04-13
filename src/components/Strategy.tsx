@@ -1,10 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import "twin.macro"
-import tw from "twin.macro"
 
 import { Txt } from "./Txt"
+import tw from "twin.macro"
 
 const Strategy = (props: {
   title: string

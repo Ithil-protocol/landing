@@ -1,12 +1,6 @@
 import "twin.macro"
-import "twin.macro"
 
-import { DiscordLogo, GithubLogo, Plus } from "phosphor-react"
-import {
-  Parallax,
-  ParallaxBanner,
-  ParallaxProvider,
-} from "react-scroll-parallax"
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
@@ -14,67 +8,43 @@ import { css, jsx } from "@emotion/react"
 import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
-import Feature from "../components/Feature"
-// @ts-ignore
-import IthilBackground from "../assets/images/bgSvg.svg"
-import Layout from "../components/Layout"
-import { Link } from "gatsby"
-//@ts-ignore
-import LogoDark from "../assets/images/logoFullDark.svg"
-import Partner from "../components/Partner"
-//@ts-ignore
-import PartnerPlaceholer from "../assets/images/ithil.svg"
-import PropTypes from "prop-types"
-import React from "react"
-import SEO from "../components/seo"
-import { SocialLink } from "../components/SocialLink"
-import Strategy from "../components/Strategy"
-
-import Token from "../components/Token"
-import { Txt } from "../components/Txt"
-import tw from "twin.macro"
-import { withPrefix } from "gatsby"
-import { FooterSocialIcon } from '../components/FooterSocialIcon'
-
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
 //@ts-ignore
 import DaiStablecoinIcon from "../assets/images/dai.png"
 //@ts-ignore
+import DiscordIcon from "../assets/images/discord.svg"
+//@ts-ignore
 import EtherIcon from "../assets/images/ether.png"
+//@ts-ignore
+import EthereumIcon from "../assets/images/eth.png"
+import Feature from "../components/Feature"
+//@ts-ignore
+import GithubIcon from "../assets/images/github.svg"
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
+//@ts-ignore
+import LogoDark from "../assets/images/logoFullDark.svg"
+//@ts-ignore
+import MediumIcon from "../assets/images/medium.svg"
+import Partner from "../components/Partner"
+//@ts-ignore
+import PartnerPlaceholer from "../assets/images/ithil.svg"
+import { Plus } from "phosphor-react"
+import React from "react"
+import { SocialLink } from "../components/SocialLink"
+import Strategy from "../components/Strategy"
+import { StrategyScroll } from "../components/StrategyScroll"
+//@ts-ignore
+import TetherUsdIcon from "../assets/images/usdt.png"
+import Token from "../components/Token"
+//@ts-ignore
+import TwitterIcon from "../assets/images/twitter.svg"
+import { Txt } from "../components/Txt"
 //@ts-ignore
 import WrappedBitconIcon from "../assets/images/wbtc.png"
 //@ts-ignore
 import WrappedEtherIcon from "../assets/images/weth.png"
-//@ts-ignore
-import ShibInuIcon from "../assets/images/shibIcon.svg"
-//@ts-ignore
-import UsdcIcon from "../assets/images/usdcIcon.svg"
-//@ts-ignore
-import UniswapIcon from "../assets/images/uniswapIcon.svg"
-//@ts-ignore
-import OusdIcon from "../assets/images/ousdIcon.svg"
-//@ts-ignore
-import TetherUsdIcon from "../assets/images/usdt.png"
-
-
-//@ts-ignore
-import TwitterIcon from "../assets/images/twitter.svg"
-//@ts-ignore
-import MediumIcon from "../assets/images/medium.svg"
-//@ts-ignore
-import GithubIcon from "../assets/images/github.svg"
-//@ts-ignore
-import DiscordIcon from "../assets/images/discord.svg"
-//@ts-ignore
-import TwitterIconLight from "../assets/images/twitterLight.svg"
-//@ts-ignore
-import MediumIconLight from "../assets/images/mediumLight.svg"
-//@ts-ignore
-import GithubIconLight from "../assets/images/githubLight.svg"
-//@ts-ignore
-import DiscordIconLight from "../assets/images/discordLight.svg"
-
 
 const IndexPage = () => {
   return (
@@ -98,15 +68,13 @@ const IndexPage = () => {
                   text="Start investing"
                   bold
                 />
-                <a href="https://docs.ithil.fi/" target="_blank">
-                  <Button
-                    tw="width[50%] tablet:w-auto tablet:self-start"
-                    text="Docs"
-                    bold
-                    action
-                    leftIcon={BookOpen}
-                  />
-                </a>
+                <Button
+                  tw="width[50%] tablet:w-auto tablet:self-start"
+                  text="Docs"
+                  bold
+                  action
+                  leftIcon={BookOpen}
+                />
               </div>
             </div>
           </div>
@@ -160,41 +128,8 @@ const IndexPage = () => {
             </div>
             <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 block desktop:hidden"></div>
           </div>
-          <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
-            <Txt.Section>Available strategies</Txt.Section>
-            <div tw="flex flex-col tablet:flex-row gap-5 tablet:gap-7 flex-wrap">
-              <Strategy
-                title="Margin trading"
-                description="Go long or short on any token pair"
-                apyMin="0"
-                apyMax="∞x"
-                risk="High"
-              />
-              <Strategy
-                title="Leveraged staking"
-                description="Stake your favorite token and earn wealth"
-                apyMin="0"
-                apyMax="10x"
-                risk="Low"
-              />
-              <Strategy
-                title="Degenbox"
-                description="MIM and TIME Aave looping"
-                apyMin="0"
-                apyMax="∞x"
-                risk="High"
-              />
-              <Strategy
-                title="Options"
-                description="Play with Put and Call options"
-                apyMin="0"
-                apyMax="100x"
-                risk="Medium"
-              />
-            </div>
-          </div>
         </Layout>
-
+        <StrategyScroll />
         <Layout bgLight={true}>
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
             <div tw="w-full flex justify-start desktop:w-1/3">
@@ -263,24 +198,18 @@ const IndexPage = () => {
                   <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
                 </div>
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={UsdcIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={DaiStablecoinIcon} tokenSymbol="ETH" apy="5" />
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={WrappedEtherIcon} tokenSymbol="ETH" apy="11" />
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
                 <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={WrappedBitconIcon} tokenSymbol="ETH" apy="8" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={ShibInuIcon} tokenSymbol="ETH" apy="11" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={UniswapIcon} tokenSymbol="ETH" apy="18" />
-                <div tw="flex w-full h-0.5 bg-secondary-300"></div>
-                <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" />
+                <Asset icon={EthereumIcon} tokenSymbol="ETH" apy="12" />
               </div>
             </div>
           </div>
 
-          {/* <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
+          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="desktop:w-24">Partners</Txt.Section>
             </div>
@@ -296,7 +225,7 @@ const IndexPage = () => {
                 <Partner image={PartnerPlaceholer} />
               </div>
             </div>
-          </div> */}
+          </div>
         </Layout>
         <Layout bgLight>
           <div tw="w-full flex flex-col gap-10 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
@@ -308,22 +237,22 @@ const IndexPage = () => {
                 <SocialLink
                   label="Twitter"
                   icon={TwitterIcon}
-                  url="https://twitter.com/ithil_protocol"
+                  url="https://www.google.com"
                 />
                 <SocialLink
                   label="Discord"
                   icon={DiscordIcon}
-                  url="https://discord.gg/tEaGBcGdQC"
+                  url="https://www.google.com"
                 />
                 <SocialLink
                   label="Medium"
                   icon={MediumIcon}
-                  url="https://medium.com/@ithil_protocol"
+                  url="https://www.google.com"
                 />
                 <SocialLink
                   label="GitHub"
                   icon={GithubIcon}
-                  url="https://github.com/Ithil-protocol"
+                  url="https://www.google.com"
                 />
               </div>
             </div>
@@ -342,32 +271,14 @@ const IndexPage = () => {
                 <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
                   Legal disclaimer
                 </Txt.Body1Bold>
-                <a href="https://ipfs.io" target="_blank" tw="max-w-min">
-                  <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular max-w-min">
-                    IPFS
-                  </Txt.Body1Bold>
-                </a>
-                <div tw="flex flex-row flex-wrap gap-3">
-                  <FooterSocialIcon
-                    icon={TwitterIconLight}
-                    url="https://twitter.com/ithil_protocol"
-                    altText="twitter"
-                  />
-                  <FooterSocialIcon
-                    icon={DiscordIconLight}
-                    url="https://discord.gg/tEaGBcGdQC"
-                    altText="discord"
-                  />
-                  <FooterSocialIcon
-                    icon={MediumIconLight}
-                    url="https://medium.com/@ithil_protocol"
-                    altText="medium"
-                  />
-                  <FooterSocialIcon
-                    icon={GithubIconLight}
-                    url="https://github.com/Ithil-protocol"
-                    altText="github"
-                  />
+                <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular">
+                  IPFS
+                </Txt.Body1Bold>
+                <div tw="flex flex-row flex-wrap gap-2">
+                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
+                  <div tw="h-9 w-9 rounded-xl bg-font-200 opacity-30"></div>
                 </div>
                 <Button tw="tablet:self-start mt-10" text="Launch app" bold />
               </div>
