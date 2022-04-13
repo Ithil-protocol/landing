@@ -60,22 +60,17 @@ export const StrategyScroll = () => {
   const [selected, setSelected] = React.useState([])
 
   const apiRef = React.useRef({} as scrollVisibilityApiType)
-  const [isAtStart, setIsAtStart] = useState(true)
 
   const goToFirst = () => {
     const items = apiRef.current.items.toItems()
     apiRef.current.scrollToItem(
-      apiRef.current.getItemById(items[0]),
-      "auto",
-      "start"
+      apiRef.current.getPrevItem()
     )
   }
   const goToLast = () => {
     const items = apiRef.current.items.toItems()
     apiRef.current.scrollToItem(
-      apiRef.current.getItemById(items[items.length - 1]),
-      "auto",
-      "start"
+      apiRef.current.getNextItem()
     )
   }
 
@@ -103,27 +98,25 @@ export const StrategyScroll = () => {
             <div tw="flex flex-row gap-4">
               <img
                 tw="h-8 w-8"
-                src={!isAtStart ? ArrowLeftSelected : ArrowLeft}
+                src={!true ? ArrowLeftSelected : ArrowLeft}
                 alt="arrow left"
                 onClick={() => {
                   goToFirst()
-                  setIsAtStart(true)
                 }}
               />
               <img
                 tw="h-8 w-8"
-                src={!isAtStart ? ArrowRight : ArrowRightSelected}
+                src={!true ? ArrowRight : ArrowRightSelected}
                 alt="arrow right"
                 onClick={() => {
                   goToLast()
-                  setIsAtStart(false)
                 }}
               />
             </div>
           )}
         </div>
       </Layout>
-      <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef}>
+      <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef} wrapperClassName='mb-10 desktop-wide:ml-20'>
         {items.map(({ id, ...rest }, index) => (
           // @ts-ignore
           <Card
@@ -131,11 +124,8 @@ export const StrategyScroll = () => {
             title={id}
             key={id}
             css={[
-              tw`mr-6`,
-              index === 0 && tw`ml-12`,
-              index === items.length - 1 && tw`mr-12`,
+              tw` w-screen tablet:w-auto`,
             ]}
-            onClick={handleClick(id)}
             {...rest}
           />
         ))}
@@ -148,9 +138,9 @@ function Card({ onClick, title, itemId, className, ...rest }) {
   const visibility = React.useContext(VisibilityContext)
 
   return (
-    <div onClick={() => onClick(visibility)} tabIndex={0} className={className}>
-      {/* @ts-ignore */}
-      <Strategy {...rest} />
+    <div onClick={() => onClick(visibility)} tabIndex={0} className={`${className} px-3`}>
+      { /* @ts-ignore */ }
+      <Strategy title={title} {...rest} />
     </div>
   )
 }

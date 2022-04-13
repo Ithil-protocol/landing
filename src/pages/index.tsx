@@ -142,7 +142,6 @@ const IndexPage = () => {
             },
           ]}
         />
-        {/* <DiscordIcon /> */}
         <Layout bgMain>
           <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
             <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
@@ -175,7 +174,7 @@ const IndexPage = () => {
         </Layout>
         <StrategyScroll />
         <Layout bgLight={true}>
-          <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
+          <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-2/12">
               <Txt.Section tw="text-secondary">Supported tokens</Txt.Section>
             </div>
