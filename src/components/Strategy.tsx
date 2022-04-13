@@ -14,7 +14,7 @@ const Strategy = (props: {
 }) => {
   const { title, description, apyMin, apyMax, risk } = props
   return (
-    <div tw="rounded-xl bg-[rgba(255, 255, 255, 0.1)] flex flex-col justify-between p-5 w-full tablet:w-[300px] desktop:w-[356px]">
+    <div tw="rounded-xl bg-[rgba(255, 255, 255, 0.1)] flex flex-col justify-between p-5 w-[calc(100%)] tablet:w-[300px] desktop:w-[356px]">
       <Txt.Heading2 tw="text-primary mb-2">{title}</Txt.Heading2>
       <Txt.Body2Regular tw="text-font-200 mb-12 w-9/12 h-14">
         {description}
