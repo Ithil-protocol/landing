@@ -97,7 +97,7 @@ export const StrategyScroll = () => {
   return (
     <>
       <Layout>
-        <div tw="flex flex-row justify-between items-center my-20">
+        <div tw="flex flex-row justify-between items-center my-10">
           <Txt.Section tw="flex-grow">Available strategies</Txt.Section>
           {window.screen.width < 1600 && (
             <div tw="flex flex-row gap-4">

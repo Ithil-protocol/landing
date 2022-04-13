@@ -6,11 +6,11 @@ import tw from 'twin.macro'
 
 import { Txt } from "./Txt"
 
-const Token = (props: { icon: any, tokenSymbol: string, tokenName: string, apy: string }) => {
+const Token = (props: { icon: any, tokenSymbol: string, tokenName: string, apy: string, className?: string }) => {
   const { icon, tokenName, tokenSymbol, apy } = props
   const Icon = icon
   return (
-    <div tw="rounded-xl bg-secondary-300 flex flex-col justify-between p-6 gap-3 min-width[170px] desktop:min-width[240px]">
+    <div className={props.className} tw="rounded-xl bg-secondary-300 flex flex-col justify-between p-6 gap-3 width[45%] tablet:min-width[170px] desktop:min-width[240px]">
       <img tw='w-12 h-12' src={Icon} alt="token icon" />
       <div tw="flex flex-row justify-between">
         <Txt.Body2Bold tw="text-primary">{tokenSymbol}</Txt.Body2Bold>
