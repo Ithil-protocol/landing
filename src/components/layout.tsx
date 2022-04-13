@@ -4,7 +4,7 @@ import "twin.macro"
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
 
-import Header from "./header"
+import Header from "./Header"
 import PropTypes from "prop-types"
 import React from "react"
 import tw from "twin.macro"
