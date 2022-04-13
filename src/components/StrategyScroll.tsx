@@ -9,10 +9,15 @@ import { css, jsx } from "@emotion/react"
 // @ts-ignore
 import ArrowLeft from "../assets/images/arrowLeft.svg"
 // @ts-ignore
+import ArrowLeftSelected from "../assets/images/arrowLeftSelected.svg"
+// @ts-ignore
 import ArrowRight from "../assets/images/arrowRight.svg"
+// @ts-ignore
+import ArrowRightSelected from "../assets/images/arrowRightSelected.svg"
 import Layout from "./Layout"
 import Strategy from "./Strategy"
 import { Txt } from "./Txt"
+import tw from "twin.macro"
 
 const strategies = [
   {
@@ -55,6 +60,7 @@ export const StrategyScroll = () => {
   const [selected, setSelected] = React.useState([])
 
   const apiRef = React.useRef({} as scrollVisibilityApiType)
+  const [isAtStart, setIsAtStart] = useState(true)
 
   const goToFirst = () => {
     const items = apiRef.current.items.toItems()
@@ -88,66 +94,61 @@ export const StrategyScroll = () => {
       )
     }
 
-  const [isAtStart, setIsAtStart] = useState(false)
   return (
     <>
       <Layout>
-        <div tw="flex flex-row justify-between my-20">
-          <Txt.Section>Available strategies</Txt.Section>
-          <div tw="flex flex-row gap-2">
-            <img
-              tw="h-8 w-8"
-              src={ArrowLeft}
-              alt="arrow left"
-              onClick={() => {
-                goToFirst()
-                setIsAtStart(true)
-              }}
-            />
-            <img
-              tw="h-8 w-8"
-              src={ArrowRight}
-              alt="arrow right"
-              onClick={() => {
-                goToLast()
-                setIsAtStart(false)
-              }}
-            />
-          </div>
+        <div tw="flex flex-row justify-between items-center my-20">
+          <Txt.Section tw="flex-grow">Available strategies</Txt.Section>
+          {window.screen.width < 1600 && (
+            <div tw="flex flex-row gap-4">
+              <img
+                tw="h-8 w-8"
+                src={!isAtStart ? ArrowLeftSelected : ArrowLeft}
+                alt="arrow left"
+                onClick={() => {
+                  goToFirst()
+                  setIsAtStart(true)
+                }}
+              />
+              <img
+                tw="h-8 w-8"
+                src={!isAtStart ? ArrowRight : ArrowRightSelected}
+                alt="arrow right"
+                onClick={() => {
+                  goToLast()
+                  setIsAtStart(false)
+                }}
+              />
+            </div>
+          )}
         </div>
-        <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef}>
-          {items.map(({ id, ...rest }) => (
-            <Card
-              itemId={id}
-              title={id}
-              key={id}
-              onClick={handleClick(id)}
-              {...rest}
-            />
-          ))}
-        </ScrollMenu>
       </Layout>
+      <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef}>
+        {items.map(({ id, ...rest }, index) => (
+          // @ts-ignore
+          <Card
+            itemId={id}
+            title={id}
+            key={id}
+            css={[
+              tw`mr-6`,
+              index === 0 && tw`ml-12`,
+              index === items.length - 1 && tw`mr-12`,
+            ]}
+            onClick={handleClick(id)}
+            {...rest}
+          />
+        ))}
+      </ScrollMenu>
     </>
   )
 }
 
-function LeftArrow() {
-  const { isFirstItemVisible, scrollPrev } = React.useContext(VisibilityContext)
-
-  return <div onClick={() => scrollPrev()}>Left</div>
-}
-
-function RightArrow() {
-  const { isLastItemVisible, scrollNext } = React.useContext(VisibilityContext)
-
-  return <div onClick={() => scrollNext()}>Right</div>
-}
-
-function Card({ onClick, title, itemId, ...rest }) {
+function Card({ onClick, title, itemId, className, ...rest }) {
   const visibility = React.useContext(VisibilityContext)
 
   return (
-    <div onClick={() => onClick(visibility)} tabIndex={0}>
+    <div onClick={() => onClick(visibility)} tabIndex={0} className={className}>
       {/* @ts-ignore */}
       <Strategy {...rest} />
     </div>
