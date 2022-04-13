@@ -34,7 +34,7 @@ import Token from "../components/Token"
 import { Txt } from "../components/Txt"
 import tw from "twin.macro"
 import { withPrefix } from "gatsby"
-import { FooterSocialIcon } from '../components/FooterSocialIcon'
+import { FooterSocialIcon } from "../components/FooterSocialIcon"
 
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
@@ -57,7 +57,6 @@ import OusdIcon from "../assets/images/ousdIcon.svg"
 //@ts-ignore
 import TetherUsdIcon from "../assets/images/usdt.png"
 
-
 //@ts-ignore
 import TwitterIcon from "../assets/images/twitter.svg"
 //@ts-ignore
@@ -74,7 +73,6 @@ import MediumIconLight from "../assets/images/mediumLight.svg"
 import GithubIconLight from "../assets/images/githubLight.svg"
 //@ts-ignore
 import DiscordIconLight from "../assets/images/discordLight.svg"
-
 
 const IndexPage = () => {
   return (
@@ -93,14 +91,20 @@ const IndexPage = () => {
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
               <div tw="flex flex-row  gap-3 ml-0 self-start mt-10 w-full justify-start">
-                <Button
-                  tw="width[50%] tablet:w-auto self-start"
-                  text="Start investing"
-                  bold
-                />
-                <a href="https://docs.ithil.fi/" target="_blank">
+                <a tw="width[50%] tablet:w-auto" href="https://app.ithil.fi" target="_blank">
                   <Button
-                    tw="width[50%] tablet:w-auto tablet:self-start"
+                    tw="w-full tablet:w-auto self-start"
+                    text="Start investing"
+                    bold
+                  />
+                </a>
+                <a
+                  tw="width[50%] tablet:w-auto"
+                  href="https://docs.ithil.fi/"
+                  target="_blank"
+                >
+                  <Button
+                    tw="w-full tablet:w-auto self-start"
                     text="Docs"
                     bold
                     action
@@ -198,71 +202,69 @@ const IndexPage = () => {
         <Layout bgLight={true}>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start bg-primary-100">
             <div tw="w-full flex justify-start desktop:w-2/12">
-              <Txt.Section tw="text-secondary">
-                Supported tokens
-              </Txt.Section>
+              <Txt.Section tw="text-secondary">Supported tokens</Txt.Section>
             </div>
-            <div tw="w-full desktop:w-10/12 flex flex-col items-end gap[1vw] tablet:gap[2vw] desktop:gap[2vw]">
-              <div tw="w-full tablet:w-auto flex flex-col tablet:flex-row gap-[1vw] tablet:gap[2vw] desktop:gap[2vw] tablet:margin-right[5vw]">
-                  <Token
-                    tokenName="Ether"
-                    tokenSymbol="ETH"
-                    apy="10%"
-                    icon={EtherIcon}
-                  />
-                  <Token
-                    tokenName="Wrapped Ether"
-                    tokenSymbol="WETH"
-                    apy="12%"
-                    icon={WrappedEtherIcon}
-                  />
-                  <Token
-                    tokenName="DAI Stablecoin"
-                    tokenSymbol="DAI"
-                    apy="12%"
-                    icon={DaiStablecoinIcon}
-                  />
-                  <Token
+            <div tw="w-full desktop-wide:w-10/12 flex flex-col tablet:items-start desktop:items-end gap[1vw] tablet:gap[2vw] desktop:gap[2vw]">
+              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[4vw] tablet:gap[2vw] desktop:gap[2vw] desktop:margin-right[5vw] justify-center tablet: justify-start">
+                <Token
+                  tokenName="Ether"
+                  tokenSymbol="ETH"
+                  apy="10%"
+                  icon={EtherIcon}
+                />
+                <Token
+                  tokenName="Wrapped Ether"
+                  tokenSymbol="WETH"
+                  apy="12%"
+                  icon={WrappedEtherIcon}
+                />
+                <Token
+                  tokenName="DAI Stablecoin"
+                  tokenSymbol="DAI"
+                  apy="12%"
+                  icon={DaiStablecoinIcon}
+                />
+                <Token
                   tw="flex tablet:hidden"
-                    tokenName="Wrapped Bitcoin"
-                    tokenSymbol="WBTC"
-                    apy="8%"
-                    icon={WrappedBitconIcon}
-                  />
-                  <Token
+                  tokenName="Wrapped Bitcoin"
+                  tokenSymbol="WBTC"
+                  apy="8%"
+                  icon={WrappedBitconIcon}
+                />
+                <Token
                   tw="flex tablet:hidden"
-                    tokenName="Tether USD"
-                    tokenSymbol="USDT"
-                    apy="10%"
-                    icon={TetherUsdIcon}
-                  />
-                  <div tw="flex tablet:hidden rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-[170px] desktop:min-width[240px]">
-                    <Plus tw="text-primary-100" size={20} />
-                    <Txt.Body1Regular tw="text-primary-100">
-                      See all tokens
-                    </Txt.Body1Regular>
-                  </div>
+                  tokenName="Tether USD"
+                  tokenSymbol="USDT"
+                  apy="10%"
+                  icon={TetherUsdIcon}
+                />
+                <div tw="flex tablet:hidden rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px]">
+                  <Plus tw="text-primary-100" size={20} />
+                  <Txt.Body1Regular tw="text-primary-100">
+                    See all tokens
+                  </Txt.Body1Regular>
                 </div>
-                <div tw="flex flex-row gap[1vw] tablet:gap[2vw] desktop:gap[2vw] hidden tablet:flex">
-                  <Token
-                    tokenName="Wrapped Bitcoin"
-                    tokenSymbol="WBTC"
-                    apy="8%"
-                    icon={WrappedBitconIcon}
-                  />
-                  <Token
-                    tokenName="Tether USD"
-                    tokenSymbol="USDT"
-                    apy="10%"
-                    icon={TetherUsdIcon}
-                  />
-                  <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-[170px] desktop:min-width[240px]">
-                    <Plus tw="text-primary-100" size={20} />
-                    <Txt.Body1Regular tw="text-primary-100">
-                      See all tokens
-                    </Txt.Body1Regular>
-                  </div>
+              </div>
+              <div tw="flex flex-row gap[1vw] tablet:gap[2vw] desktop:gap[2vw] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
+                <Token
+                  tokenName="Wrapped Bitcoin"
+                  tokenSymbol="WBTC"
+                  apy="8%"
+                  icon={WrappedBitconIcon}
+                />
+                <Token
+                  tokenName="Tether USD"
+                  tokenSymbol="USDT"
+                  apy="10%"
+                  icon={TetherUsdIcon}
+                />
+                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px]">
+                  <Plus tw="text-primary-100" size={20} />
+                  <Txt.Body1Regular tw="text-primary-100">
+                    See all tokens
+                  </Txt.Body1Regular>
                 </div>
+              </div>
             </div>
           </div>
         </Layout>
@@ -276,7 +278,9 @@ const IndexPage = () => {
                 and earn a lot, LPs’ get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
+              <a href="https://app.ithil.fi/stake" target="_blank">
+                <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
+              </a>
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
               <div tw="flex flex-col w-full tablet:w-9/12 gap-5">
@@ -325,8 +329,8 @@ const IndexPage = () => {
             <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="text-secondary">Join our community</Txt.Section>
             </div>
-            <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
-              <div tw="flex flex-wrap justify-start gap-10 tablet:gap-20 desktop:gap-40">
+            <div tw="w-full flex flex-col tablet:flex-row mt-4">
+              <div tw="flex flex-wrap justify-start gap-10 tablet:gap-16 desktop:gap-32">
                 <SocialLink
                   label="Twitter"
                   icon={TwitterIcon}
