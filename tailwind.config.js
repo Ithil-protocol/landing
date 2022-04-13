@@ -96,7 +96,8 @@ module.exports = {
       },
       screens: {
         'tablet': '480px',
-        'desktop': '1024px'
+        'desktop': '1024px',
+        'desktop-wide': '1330px',
       },
     },
   },
