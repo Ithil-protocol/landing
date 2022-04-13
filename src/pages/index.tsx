@@ -17,6 +17,8 @@ import { Button } from "../components/Button"
 import Feature from "../components/Feature"
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
+// @ts-ignore
+import HowItWorkIllustration from "../assets/images/howItWorks.svg"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 //@ts-ignore
@@ -140,8 +142,10 @@ const IndexPage = () => {
           ]}
         />
         <Layout>
-          <div tw="h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
-            <div tw="w-full min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
+          <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
+            <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
+              <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
+            </div>
             <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
               <Txt.Section>How it works</Txt.Section>
               <Txt.Body1Regular tw="text-font-200 text-left">
@@ -162,7 +166,9 @@ const IndexPage = () => {
                 />
               </div>
             </div>
-            <div tw="w-full tablet:w-1/2 min-width[50%] bg-font-200 h-3/5 opacity-30 block desktop:hidden"></div>
+            <div tw="w-full flex justify-center items-center desktop:hidden">
+              <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
+            </div>
           </div>
           <div tw="flex flex-col gap-10 desktop:gap-20 my-20 justify-start desktop:items-start">
             <Txt.Section>Available strategies</Txt.Section>
