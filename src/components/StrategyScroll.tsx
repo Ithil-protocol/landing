@@ -1,8 +1,16 @@
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu"
+import "twin.macro"
 
-import ArrowRight from "../assets/images/arrow_right.svg"
+import React, { useState } from "react"
+import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu"
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { css, jsx } from "@emotion/react"
+
+// @ts-ignore
+import ArrowLeft from "../assets/images/arrowLeft.svg"
+// @ts-ignore
+import ArrowRight from "../assets/images/arrowRight.svg"
 import Layout from "./Layout"
-import React from "react"
 import Strategy from "./Strategy"
 import { Txt } from "./Txt"
 
@@ -80,14 +88,31 @@ export const StrategyScroll = () => {
       )
     }
 
+  const [isAtStart, setIsAtStart] = useState(false)
   return (
     <>
       <Layout>
-        <div tw="flex flex-row justify-between">
-          <Txt.Section tw="my-20">Available strategies</Txt.Section>
+        <div tw="flex flex-row justify-between my-20">
+          <Txt.Section>Available strategies</Txt.Section>
           <div tw="flex flex-row gap-2">
-            <ArrowRight />
-            <ArrowRight />
+            <img
+              tw="h-8 w-8"
+              src={ArrowLeft}
+              alt="arrow left"
+              onClick={() => {
+                goToFirst()
+                setIsAtStart(true)
+              }}
+            />
+            <img
+              tw="h-8 w-8"
+              src={ArrowRight}
+              alt="arrow right"
+              onClick={() => {
+                goToLast()
+                setIsAtStart(false)
+              }}
+            />
           </div>
         </div>
         <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef}>

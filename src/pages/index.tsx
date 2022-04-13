@@ -5,6 +5,8 @@ import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
 
+//@ts-ignore
+import ArrowRight from "../assets/images/arrowRight.svg"
 import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
@@ -103,6 +105,7 @@ const IndexPage = () => {
             },
           ]}
         />
+        {/* <DiscordIcon /> */}
         <Layout>
           <div tw="h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-20 my-20 desktop:my-0">
             <div tw="w-full min-width[50%] bg-font-200 h-3/5 opacity-30 hidden desktop:block"></div>
