@@ -85,7 +85,7 @@ const IndexPage = () => {
           {/* <SEO title="Home" /> */}
           <div tw="w-full my-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
-              <Txt.Section tw="">DeFi made easy</Txt.Section>
+              <Txt.Section tw="">Leverage to Earn</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
                 To experienced traders and DeFi newcomers entering the market or
                 looking for customizable investment strategies, our DeFi
@@ -150,8 +150,8 @@ const IndexPage = () => {
             <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
               <Txt.Section>How it works</Txt.Section>
               <Txt.Body1Regular tw="text-font-200 text-left">
-                Traders can use LPs’ liquidity to perform leveraged investments
-                and earn a lot, LPs’ get fees from this, liquidators assure
+                Traders can use LPs' liquidity to perform leveraged investments
+                and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
               <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
@@ -248,8 +248,8 @@ const IndexPage = () => {
             <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10 tablet:mb-12">
               <Txt.Section tw="tablet:mb-5 desktop:mb-10">Earn by lending</Txt.Section>
               <Txt.Body1Regular tw="text-font-200">
-                Traders can use LPs’ liquidity to perform leveraged investments
-                and earn a lot, LPs’ get fees from this, liquidators assure
+                Traders can use LPs' liquidity to perform leveraged investments
+                and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
               <a href="https://app.ithil.fi/stake" target="_blank">
