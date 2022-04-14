@@ -98,7 +98,7 @@ export const StrategyScroll = () => {
             <div tw="flex flex-row gap-4">
               <img
                 tw="h-8 w-8"
-                src={true ? ArrowLeftSelected : ArrowLeft}
+                src={ArrowLeftSelected}
                 alt="arrow left"
                 onClick={() => {
                   goToFirst()
@@ -106,7 +106,7 @@ export const StrategyScroll = () => {
               />
               <img
                 tw="h-8 w-8"
-                src={false ? ArrowRight : ArrowRightSelected}
+                src={ArrowRightSelected}
                 alt="arrow right"
                 onClick={() => {
                   goToLast()
