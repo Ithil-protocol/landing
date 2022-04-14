@@ -6,7 +6,7 @@ export const TrackedLink = (props: { hotjar: any, title: string, target: string,
     const { title, target, url, hotjar } = props
 
     const sendRequest = useCallback(async () => {
-        hotjar.event(`${url} was clicked`);
+        hotjar.event(`${title} button was clicked to visit url ${url}`);
     }, [url])
 
     return (
