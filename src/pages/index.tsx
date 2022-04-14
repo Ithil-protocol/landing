@@ -81,7 +81,7 @@ const IndexPage = () => {
   return (
     <ParallaxProvider>
       <>
-        <Layout header>
+        <Layout header margins>
           {/* <SEO title="Home" /> */}
           <div tw="w-full my-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
@@ -143,6 +143,7 @@ const IndexPage = () => {
           ]}
         />
         <Layout bgMain>
+          <Layout margins>
           <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
             <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
               <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
@@ -171,15 +172,16 @@ const IndexPage = () => {
               <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
             </div>
           </div>
-        </Layout>
+          </Layout>
         <StrategyScroll />
-        <Layout bgLight={true}>
+        </Layout>
+        <Layout margins bgLight>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-2/12">
               <Txt.Section tw="text-secondary">Supported tokens</Txt.Section>
             </div>
             <div tw="w-full desktop-wide:w-10/12 flex flex-col tablet:items-start desktop:items-end gap[1vw] tablet:gap[2vw] desktop:gap[2vw]">
-              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[4vw] tablet:gap[2vw] desktop:gap[2vw] desktop:margin-right[5vw] justify-center tablet: justify-start">
+              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[4vw] tablet:gap[2vw] desktop:gap[2vw] desktop:margin-right[5vw] justify-center tablet:justify-start">
                 <Token
                   tokenName="Ether"
                   tokenSymbol="ETH"
@@ -212,12 +214,14 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <div tw="flex tablet:hidden rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px]">
+                <a href="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
+                <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
                   </Txt.Body1Regular>
                 </div>
+                </a>
               </div>
               <div tw="flex flex-row gap[1vw] tablet:gap[2vw] desktop:gap[2vw] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
                 <Token
@@ -232,18 +236,20 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px]">
+                <a tw="tablet:min-width[170px] desktop:min-width[240px]" href="https://app.ithil.fi/stake" target="_blank">
+                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
                   </Txt.Body1Regular>
                 </div>
+                </a>
               </div>
           </div>
           </div>
         </Layout>
 
-        <Layout bgDark>
+        <Layout margins bgDark>
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
             <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10 tablet:mb-12">
               <Txt.Section tw="tablet:mb-5 desktop:mb-10">Earn by lending</Txt.Section>
@@ -299,7 +305,7 @@ const IndexPage = () => {
             </div>
           </div> */}
         </Layout>
-        <Layout bgLight>
+        <Layout bgLight margins>
           <div tw="w-full flex flex-col gap-10 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
             <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="text-secondary">Join our community</Txt.Section>
@@ -330,7 +336,7 @@ const IndexPage = () => {
             </div>
           </div>
         </Layout>
-        <Layout>
+        <Layout margins>
           <div tw="w-full flex flex-row gap-10 desktop:gap-20 my-5 justify-start items-start">
             <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
               <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />

@@ -56,7 +56,7 @@ const Header = (props: { siteTitle?: any }) => {
             </Txt.Body1Bold>
           </a>
 
-          <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular mt-16 desktop:hidden">
+          {/* <Txt.Body1Bold tw="text-font-200 tablet:text-body2-regular mt-16 desktop:hidden">
             Legal disclaimer
           </Txt.Body1Bold>
           <a href="https://ipfs.io" target="_blank" tw="max-w-min desktop:hidden">
@@ -69,7 +69,7 @@ const Header = (props: { siteTitle?: any }) => {
           </Txt.Body1Bold>
           <a tw="mt-6" href="https://app.ithil.fi" target="_blank" className={`${isExpanded ? 'flex' : 'hidden'}`}>
           <Button tw="block lg:hidden h-10" bold text="Launch app" />
-        </a>
+        </a> */}
         </div>
         <a tw="" href="https://app.ithil.fi" target="_blank">
           <Button tw="hidden lg:block" bold text="Launch app" />
