@@ -16,18 +16,29 @@ const Layout = (props: {
   minScreenHeight?: boolean
   bgDark?: boolean
   bgMain?: boolean
+  margins?: boolean
 }) => {
   return (
     <>
       <div
-        className={props.bgDark && 'layoutDark' || props.bgLight && 'layoutLight' || props.bgMain && 'layoutMain'}
+        className={
+          (props.bgDark && "layoutDark") ||
+          (props.bgLight && "layoutLight") ||
+          (props.bgMain && "layoutMain")
+        }
         // @ts-ignore
         css={[
-          tw`flex flex-row w-full bg-background-primary`,
+          tw`flex flex-row w-full max-w-1920`,
           props.minScreenHeight && tw`min-h-screen`,
         ]}
       >
-        <div tw="max-w-1920 w-full tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24">
+        <div
+          // tw="max-w-1920 w-full tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"
+          className={`max-w-1920 w-full ${
+            props.margins &&
+            "tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"
+          }`}
+        >
           {props.header && <Header />}
           {props.children}
         </div>

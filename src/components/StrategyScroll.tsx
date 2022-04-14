@@ -91,14 +91,14 @@ export const StrategyScroll = () => {
 
   return (
     <>
-      <Layout>
+      <Layout margins>
         <div tw="flex flex-row justify-between items-center my-10">
           <Txt.Section tw="flex-grow">Available strategies</Txt.Section>
           {window.screen.width < 1600 && (
             <div tw="flex flex-row gap-4">
               <img
                 tw="h-8 w-8"
-                src={!true ? ArrowLeftSelected : ArrowLeft}
+                src={true ? ArrowLeftSelected : ArrowLeft}
                 alt="arrow left"
                 onClick={() => {
                   goToFirst()
@@ -106,7 +106,7 @@ export const StrategyScroll = () => {
               />
               <img
                 tw="h-8 w-8"
-                src={!true ? ArrowRight : ArrowRightSelected}
+                src={false ? ArrowRight : ArrowRightSelected}
                 alt="arrow right"
                 onClick={() => {
                   goToLast()
@@ -116,10 +116,12 @@ export const StrategyScroll = () => {
           )}
         </div>
       </Layout>
-      <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef} wrapperClassName='mb-10 desktop-wide:ml-20'>
+        <Layout>
+        <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef} wrapperClassName='mb-10 desktop-wide:ml-20'>
         {items.map(({ id, ...rest }, index) => (
           // @ts-ignore
           <Card
+            onClick={handleClick(id)}
             itemId={id}
             title={id}
             key={id}
@@ -130,7 +132,8 @@ export const StrategyScroll = () => {
           />
         ))}
       </ScrollMenu>
-    </>
+        </Layout>
+      </>
   )
 }
 
