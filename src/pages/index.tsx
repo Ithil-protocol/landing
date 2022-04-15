@@ -97,7 +97,7 @@ const IndexPage = () => {
                 trading strategies for any token, because we believe in
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
-              <div tw="flex flex-row  gap-3 ml-0 self-start mt-10 w-full justify-start">
+              <div tw="flex flex-row gap-3 ml-0 self-start mt-10 w-full justify-start">
                 <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
@@ -360,7 +360,7 @@ const IndexPage = () => {
             <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
               <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
-                Ithil © 2022
+              Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-center">
