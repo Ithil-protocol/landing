@@ -23,7 +23,13 @@ body > div {
 }
 
 * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .layoutLight {

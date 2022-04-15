@@ -1,12 +1,12 @@
 import Layout from "../components/Layout"
-import React from "react"
 import SEO from "../components/seo"
+import React, { useEffect } from 'react';
+import { navigate } from "@reach/router"
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+export const NotFoundPage = () => {
+  useEffect(() => {
+    navigate('/');
+  }, [])
 
-export default NotFoundPage
+  return null
+}
