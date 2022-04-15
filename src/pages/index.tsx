@@ -86,7 +86,7 @@ const IndexPage = () => {
     <ParallaxProvider>
       <>
         <Layout header margins>
-          <SEO title="Home" />
+          <SEO title="Leverage To Earn" />
           <div tw="w-full mt-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
