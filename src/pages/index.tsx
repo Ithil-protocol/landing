@@ -4,7 +4,6 @@ import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import { hotjar } from 'react-hotjar';
 
 //@ts-ignore
 import ArrowRight from "../assets/images/arrowRight.svg"
@@ -83,8 +82,6 @@ import UniswapIcon from "../assets/images/uniswapIcon.svg"
 import OusdIcon from "../assets/images/ousdIcon.svg"
 
 const IndexPage = () => {
-  hotjar.initialize(2925302, 6);
-
   return (
     <ParallaxProvider>
       <>
@@ -101,7 +98,7 @@ const IndexPage = () => {
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
               <div tw="flex flex-row  gap-3 ml-0 self-start mt-10 w-full justify-start">
-                <TrackedLink title="App" hotjar={hotjar} tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
+                <TrackedLink title="App"  tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
                     text="Start investing"
@@ -110,7 +107,7 @@ const IndexPage = () => {
                 </TrackedLink>
                 <TrackedLink
                   title="Docs"
-                  hotjar={hotjar}
+                  
                   tw="width[50%] tablet:w-auto"
                   url="https://docs.ithil.fi/"
                   target="_blank"
@@ -231,7 +228,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink hotjar={hotjar} title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
+                <TrackedLink  title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
                 <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
@@ -253,7 +250,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink hotjar={hotjar} title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink  title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
@@ -277,7 +274,7 @@ const IndexPage = () => {
                 and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <TrackedLink hotjar={hotjar} title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
+              <TrackedLink  title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
                 <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
               </TrackedLink>
             </div>
@@ -373,7 +370,7 @@ const IndexPage = () => {
                   <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
                     Legal disclaimer
                   </Txt.Body1Regular>
-                  <TrackedLink hotjar={hotjar} title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
+                  <TrackedLink  title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
                   <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
                     ToS
                   </Txt.Body1Regular>
