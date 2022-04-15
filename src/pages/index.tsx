@@ -15,7 +15,11 @@ import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
 import HowItWorkIllustration from "../assets/images/howItWorks.svg"
 //@ts-ignore
-import PartnerPlaceholer from "../assets/images/ithil.svg"
+import PartnerComposable from "../assets/images/composable.svg"
+//@ts-ignore
+import PartnerAdvancedBlockchain from "../assets/images/advancedBlockchain.svg"
+//@ts-ignore
+import PartnerDlab from "../assets/images/dlab.svg"
 import PropTypes from "prop-types"
 import SEO from "../components/seo"
 
@@ -317,23 +321,18 @@ const IndexPage = () => {
             </div>
           </div>
 
-          {/* <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
+          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-1/3">
               <Txt.Section tw="desktop:w-24">Partners</Txt.Section>
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
-              <div tw="flex flex-wrap justify-start gap-3 tablet:gap-6">
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
-                <Partner image={PartnerPlaceholer} />
+              <div tw="flex flex-row flex-wrap justify-start gap-3 tablet:gap-6">
+                <Partner image={PartnerComposable} />
+                <Partner image={PartnerAdvancedBlockchain} />
+                <Partner image={PartnerDlab} />
               </div>
             </div>
-          </div> */}
+          </div>
         </Layout>
         <Layout bgLight margins>
           <div tw="w-full flex flex-col gap-10 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
