@@ -76,14 +76,13 @@ import UniswapIcon from "../assets/images/uniswapIcon.svg"
 //@ts-ignore
 import OusdIcon from "../assets/images/ousdIcon.svg"
 
-
 const IndexPage = () => {
   return (
     <ParallaxProvider>
       <>
         <Layout header margins>
           {/* <SEO title="Home" /> */}
-          <div tw="w-full my-20 z-10">
+          <div tw="w-full mt-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
@@ -94,7 +93,11 @@ const IndexPage = () => {
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
               <div tw="flex flex-row  gap-3 ml-0 self-start mt-10 w-full justify-start">
-                <a tw="width[50%] tablet:w-auto" href="https://app.ithil.fi" target="_blank">
+                <a
+                  tw="width[50%] tablet:w-auto"
+                  href="https://app.ithil.fi"
+                  target="_blank"
+                >
                   <Button
                     tw="w-full tablet:w-auto self-start"
                     text="Start investing"
@@ -135,7 +138,7 @@ const IndexPage = () => {
                     height: "100%",
                     width: "100%",
                     background:
-                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(21, 26, 47, 1) 94%)",
+                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(22, 28, 49, 1) 94%)",
                   }}
                 />
               ),
@@ -144,36 +147,44 @@ const IndexPage = () => {
         />
         <Layout bgMain>
           <Layout margins>
-          <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
-            <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
-              <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
-            </div>
-            <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
-              <Txt.Section>How it works</Txt.Section>
-              <Txt.Body1Regular tw="text-font-200 text-left">
-                Traders can use LPs' liquidity to perform leveraged investments
-                and earn a lot, LPs' get fees from this, liquidators assure
-                liquidity is not attacked.
-              </Txt.Body1Regular>
-              <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
-                <Feature icon={CoinIcon} text="High APY Staking" />
-                <Feature
-                  icon={CoinIcon}
-                  text="Efficient framework of liquidation systems"
+            <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
+              <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
+                <img
+                  tw="w-full"
+                  src={HowItWorkIllustration}
+                  alt="how it works"
                 />
-                <Feature icon={CoinIcon} text="Leveraged investments" />
-                <Feature
-                  icon={CoinIcon}
-                  text="Insurance reserve to secure liquidity"
+              </div>
+              <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
+                <Txt.Section>How it works</Txt.Section>
+                <Txt.Body1Regular tw="text-font-200 text-left">
+                  Traders can use LPs' liquidity to perform leveraged
+                  investments and earn a lot, LPs' get fees from this,
+                  liquidators assure liquidity is not attacked.
+                </Txt.Body1Regular>
+                <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
+                  <Feature icon={CoinIcon} text="High APY Staking" />
+                  <Feature
+                    icon={CoinIcon}
+                    text="Efficient framework of liquidation systems"
+                  />
+                  <Feature icon={CoinIcon} text="Leveraged investments" />
+                  <Feature
+                    icon={CoinIcon}
+                    text="Insurance reserve to secure liquidity"
+                  />
+                </div>
+              </div>
+              <div tw="w-full flex justify-center items-center desktop:hidden">
+                <img
+                  tw="w-full"
+                  src={HowItWorkIllustration}
+                  alt="how it works"
                 />
               </div>
             </div>
-            <div tw="w-full flex justify-center items-center desktop:hidden">
-              <img tw="w-full" src={HowItWorkIllustration} alt="how it works" />
-            </div>
-          </div>
           </Layout>
-        <StrategyScroll />
+          <StrategyScroll />
         </Layout>
         <Layout margins bgLight>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
@@ -214,13 +225,17 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <a href="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
-                <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
-                  <Plus tw="text-primary-100" size={20} />
-                  <Txt.Body1Regular tw="text-primary-100">
-                    See all tokens
-                  </Txt.Body1Regular>
-                </div>
+                <a
+                  href="https://app.ithil.fi/stake"
+                  target="_blank"
+                  tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden"
+                >
+                  <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
+                    <Plus tw="text-primary-100" size={20} />
+                    <Txt.Body1Regular tw="text-primary-100">
+                      See all tokens
+                    </Txt.Body1Regular>
+                  </div>
                 </a>
               </div>
               <div tw="flex flex-row gap[1vw] tablet:gap[2vw] desktop:gap[2vw] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
@@ -236,23 +251,29 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <a tw="tablet:min-width[170px] desktop:min-width[240px]" href="https://app.ithil.fi/stake" target="_blank">
-                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
-                  <Plus tw="text-primary-100" size={20} />
-                  <Txt.Body1Regular tw="text-primary-100">
-                    See all tokens
-                  </Txt.Body1Regular>
-                </div>
+                <a
+                  tw="tablet:min-width[170px] desktop:min-width[240px]"
+                  href="https://app.ithil.fi/stake"
+                  target="_blank"
+                >
+                  <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
+                    <Plus tw="text-primary-100" size={20} />
+                    <Txt.Body1Regular tw="text-primary-100">
+                      See all tokens
+                    </Txt.Body1Regular>
+                  </div>
                 </a>
               </div>
-          </div>
+            </div>
           </div>
         </Layout>
 
         <Layout margins bgDark>
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
             <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10 tablet:mb-12">
-              <Txt.Section tw="tablet:mb-5 desktop:mb-10">Earn by lending</Txt.Section>
+              <Txt.Section tw="tablet:mb-5 desktop:mb-10">
+                Earn by lending
+              </Txt.Section>
               <Txt.Body1Regular tw="text-font-200">
                 Traders can use LPs' liquidity to perform leveraged investments
                 and earn a lot, LPs' get fees from this, liquidators assure
@@ -262,7 +283,7 @@ const IndexPage = () => {
                 <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
               </a>
             </div>
-            <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
+            <div tw="w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
               <div tw="flex flex-col w-full tablet:w-9/12 gap-5">
                 <div tw="flex flex-row justify-between w-full">
                   <Txt.Body1Regular tw="text-font-200">Asset</Txt.Body1Regular>
@@ -278,12 +299,21 @@ const IndexPage = () => {
                 <Asset icon={WrappedBitconIcon} tokenSymbol="ETH" apy="8" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={ShibInuIcon} tokenSymbol="ETH" apy="11" />
-                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
+                {/* <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={UniswapIcon} tokenSymbol="ETH" apy="18" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" />
+                <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" /> */}
+                {/* TODO */}
+                <a tw="self-center mt-5" href="https://app.ithil.fi/stake" target="_blank">
+                <div tw="flex flex-row justify-center items-center gap-2 ">
+                    <Plus tw="text-primary-100" size={20} />
+                    <Txt.Body1Regular tw="text-primary-100">
+                      See all tokens
+                    </Txt.Body1Regular>
+                  </div>
+              </a>
               </div>
-
+              
             </div>
           </div>
 
@@ -337,46 +367,50 @@ const IndexPage = () => {
           </div>
         </Layout>
         <Layout margins>
-          <div tw="w-full flex flex-row gap-10 desktop:gap-20 my-5 justify-start items-start">
+          <div tw="w-full flex flex-col tablet:flex-row gap-10 desktop:gap-20 my-5 justify-start items-start">
             <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
               <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
                 Ithil © 2022
               </Txt.Body1Regular>
             </div>
-            <div tw=" w-full w-8/12 tablet:w-6/12 flex flex-col tablet:flex-row items-end justify-center">
-              <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
-                <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
-                  Legal disclaimer
-                </Txt.Body1Regular>
-                <a href="https://ipfs.io" target="_blank" tw="max-w-min">
-                  <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
-                    IPFS
+            <div tw="w-full tablet:w-6/12 flex items-end justify-center">
+              <div tw="flex flex-row tablet:flex-col w-full desktop:w-7/12 gap-3">
+                <div tw="w-5/12 flex flex-col gap-2">
+                  <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
+                    Legal disclaimer
                   </Txt.Body1Regular>
-                </a>
-                <div tw="flex flex-row flex-wrap gap-3">
-                  <FooterSocialIcon
-                    icon={TwitterIconLight}
-                    url="https://twitter.com/ithil_protocol"
-                    altText="twitter"
-                  />
-                  <FooterSocialIcon
-                    icon={DiscordIconLight}
-                    url="https://discord.gg/tEaGBcGdQC"
-                    altText="discord"
-                  />
-                  <FooterSocialIcon
-                    icon={MediumIconLight}
-                    url="https://medium.com/@ithil_protocol"
-                    altText="medium"
-                  />
-                  <FooterSocialIcon
-                    icon={GithubIconLight}
-                    url="https://github.com/Ithil-protocol"
-                    altText="github"
-                  />
+                  <a href="https://ipfs.io" target="_blank" tw="max-w-min">
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
+                      IPFS
+                    </Txt.Body1Regular>
+                  </a>
                 </div>
-                <Button tw="tablet:self-start mt-10" text="Launch app" bold />
+                <div tw="w-7/12 tablet:w-full">
+                  <div tw="flex flex-row flex-wrap gap-3">
+                    <FooterSocialIcon
+                      icon={TwitterIconLight}
+                      url="https://twitter.com/ithil_protocol"
+                      altText="twitter"
+                    />
+                    <FooterSocialIcon
+                      icon={DiscordIconLight}
+                      url="https://discord.gg/tEaGBcGdQC"
+                      altText="discord"
+                    />
+                    <FooterSocialIcon
+                      icon={MediumIconLight}
+                      url="https://medium.com/@ithil_protocol"
+                      altText="medium"
+                    />
+                    <FooterSocialIcon
+                      icon={GithubIconLight}
+                      url="https://github.com/Ithil-protocol"
+                      altText="github"
+                    />
+                  </div>
+                  <Button tw="tablet:self-start mt-10" text="Launch app" bold />
+                </div>
               </div>
             </div>
           </div>
