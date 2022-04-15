@@ -4,12 +4,14 @@ import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
+import { hotjar } from 'react-hotjar';
 
 //@ts-ignore
 import ArrowRight from "../assets/images/arrowRight.svg"
 import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
+import { TrackedLink } from "../components/TrackedLink"
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
@@ -78,6 +80,8 @@ import OusdIcon from "../assets/images/ousdIcon.svg"
 
 
 const IndexPage = () => {
+  hotjar.initialize(2925302, 6);
+
   return (
     <ParallaxProvider>
       <>
@@ -94,16 +98,18 @@ const IndexPage = () => {
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
               <div tw="flex flex-row  gap-3 ml-0 self-start mt-10 w-full justify-start">
-                <a tw="width[50%] tablet:w-auto" href="https://app.ithil.fi" target="_blank">
+                <TrackedLink title="App" hotjar={hotjar} tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
                     text="Start investing"
                     bold
                   />
-                </a>
-                <a
+                </TrackedLink>
+                <TrackedLink
+                  title="Docs"
+                  hotjar={hotjar}
                   tw="width[50%] tablet:w-auto"
-                  href="https://docs.ithil.fi/"
+                  url="https://docs.ithil.fi/"
                   target="_blank"
                 >
                   <Button
@@ -113,7 +119,7 @@ const IndexPage = () => {
                     action
                     leftIcon={BookOpen}
                   />
-                </a>
+                </TrackedLink>
               </div>
             </div>
           </div>
@@ -214,14 +220,14 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <a href="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
+                <TrackedLink hotjar={hotjar} title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
                 <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
                   </Txt.Body1Regular>
                 </div>
-                </a>
+                </TrackedLink>
               </div>
               <div tw="flex flex-row gap[1vw] tablet:gap[2vw] desktop:gap[2vw] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
                 <Token
@@ -236,14 +242,14 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <a tw="tablet:min-width[170px] desktop:min-width[240px]" href="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink hotjar={hotjar} title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" href="https://app.ithil.fi/stake" target="_blank">
                 <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
                   </Txt.Body1Regular>
                 </div>
-                </a>
+                </TrackedLink>
               </div>
           </div>
           </div>
@@ -258,9 +264,9 @@ const IndexPage = () => {
                 and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <a href="https://app.ithil.fi/stake" target="_blank">
+              <TrackedLink hotjar={hotjar} title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
                 <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
-              </a>
+              </TrackedLink>
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row items-end justify-center">
               <div tw="flex flex-col w-full tablet:w-9/12 gap-5">
@@ -349,11 +355,11 @@ const IndexPage = () => {
                 <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
                   Legal disclaimer
                 </Txt.Body1Regular>
-                <a href="https://ipfs.io" target="_blank" tw="max-w-min">
+                <TrackedLink hotjar={hotjar} title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
                   <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
-                    IPFS
+                    ToS
                   </Txt.Body1Regular>
-                </a>
+                </TrackedLink>
                 <div tw="flex flex-row flex-wrap gap-3">
                   <FooterSocialIcon
                     icon={TwitterIconLight}
