@@ -298,14 +298,14 @@ const IndexPage = () => {
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" /> */}
                 {/* TODO */}
-                <a tw="self-center mt-5" href="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
                     <Txt.Body1Regular tw="text-primary-100">
                       See all tokens
                     </Txt.Body1Regular>
                   </div>
-              </a>
+              </TrackedLink>
               </div>
               
             </div>
@@ -366,14 +366,16 @@ const IndexPage = () => {
             <div tw="w-full tablet:w-6/12 flex items-end justify-center">
               <div tw="flex flex-row tablet:flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-5/12 flex flex-col gap-2">
-                  <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
-                    Legal disclaimer
-                  </Txt.Body1Regular>
+                  <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank" tw="max-w-min">
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
+                      Legal disclaimer
+                    </Txt.Body1Regular>
+                  </TrackedLink>
                   <TrackedLink title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
-                  <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
-                    ToS
-                  </Txt.Body1Regular>
-                </TrackedLink>
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
+                      ToS
+                    </Txt.Body1Regular>
+                  </TrackedLink>
                 </div>
                 <div tw="w-7/12 tablet:w-full">
                   <div tw="flex flex-row flex-wrap gap-3">
