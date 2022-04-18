@@ -28,7 +28,7 @@ const Layout = (props: {
         }
         // @ts-ignore
         css={[
-          tw`flex flex-row w-full max-w-1920`,
+          tw`flex flex-row w-full justify-center items-center`,
           props.minScreenHeight && tw`min-h-screen`,
         ]}
       >
@@ -36,7 +36,7 @@ const Layout = (props: {
           // tw="max-w-1920 w-full tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"
           className={`max-w-1920 w-full ${
             props.margins &&
-            "tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"
+            "tablet:m-[calc(100% - 3rem)] py-6 px-4 tablet:px-24"
           }`}
         >
           {props.header && <Header />}
