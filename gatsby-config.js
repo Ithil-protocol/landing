@@ -20,6 +20,7 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -77,6 +78,14 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwind: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: 2925302,
+        sv: 6,
       },
     },
   ],

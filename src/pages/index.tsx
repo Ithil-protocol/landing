@@ -4,7 +4,6 @@ import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react"
-import { hotjar } from 'react-hotjar';
 
 //@ts-ignore
 import ArrowRight from "../assets/images/arrowRight.svg"
@@ -83,13 +82,11 @@ import UniswapIcon from "../assets/images/uniswapIcon.svg"
 import OusdIcon from "../assets/images/ousdIcon.svg"
 
 const IndexPage = () => {
-  hotjar.initialize(2925302, 6);
-
   return (
     <ParallaxProvider>
       <>
         <Layout header margins>
-          {/* <SEO title="Home" /> */}
+          <SEO title="Leverage To Earn" />
           <div tw="w-full mt-20 z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
@@ -100,8 +97,8 @@ const IndexPage = () => {
                 trading strategies for any token, because we believe in
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
-              <div tw="flex flex-row  gap-3 ml-0 self-start mt-10 w-full justify-start">
-                <TrackedLink title="App" hotjar={hotjar} tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
+              <div tw="flex flex-row gap-3 ml-0 self-start mt-10 w-full justify-start">
+                <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
                     text="Start investing"
@@ -110,7 +107,6 @@ const IndexPage = () => {
                 </TrackedLink>
                 <TrackedLink
                   title="Docs"
-                  hotjar={hotjar}
                   tw="width[50%] tablet:w-auto"
                   url="https://docs.ithil.fi/"
                   target="_blank"
@@ -153,7 +149,7 @@ const IndexPage = () => {
         />
         <Layout bgMain>
           <Layout margins>
-            <div tw="desktop:h-screen w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-0">
+            <div tw="w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-40">
               <div tw="w-full min-width[50%] h-3/5 hidden desktop:flex justify-center items-center">
                 <img
                   tw="w-full"
@@ -197,8 +193,8 @@ const IndexPage = () => {
             <div tw="w-full flex justify-start desktop:w-2/12">
               <Txt.Section tw="text-secondary">Supported tokens</Txt.Section>
             </div>
-            <div tw="w-full desktop-wide:w-10/12 flex flex-col tablet:items-start desktop:items-end gap[1vw] tablet:gap[2vw] desktop:gap[2vw]">
-              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[4vw] tablet:gap[2vw] desktop:gap[2vw] desktop:margin-right[5vw] justify-center tablet:justify-start">
+            <div tw="w-full desktop-wide:w-10/12 flex flex-col tablet:items-start desktop:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
+              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[7px] tablet:gap[10px] desktop:gap[16px] desktop:margin-right[5vw] justify-center tablet:justify-start">
                 <Token
                   tokenName="Ether"
                   tokenSymbol="ETH"
@@ -231,7 +227,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink hotjar={hotjar} title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
+                <TrackedLink title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
                 <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
@@ -240,7 +236,7 @@ const IndexPage = () => {
                 </div>
                 </TrackedLink>
               </div>
-              <div tw="flex flex-row gap[1vw] tablet:gap[2vw] desktop:gap[2vw] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
+              <div tw="flex flex-row gap[7px] tablet:gap[10px] desktop:gap[16px] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
                 <Token
                   tokenName="Wrapped Bitcoin"
                   tokenSymbol="WBTC"
@@ -253,7 +249,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink hotjar={hotjar} title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
@@ -277,7 +273,7 @@ const IndexPage = () => {
                 and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <TrackedLink hotjar={hotjar} title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
+              <TrackedLink title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
                 <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
               </TrackedLink>
             </div>
@@ -302,14 +298,14 @@ const IndexPage = () => {
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" /> */}
                 {/* TODO */}
-                <a tw="self-center mt-5" href="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
                     <Txt.Body1Regular tw="text-primary-100">
                       See all tokens
                     </Txt.Body1Regular>
                   </div>
-              </a>
+              </TrackedLink>
               </div>
               
             </div>
@@ -361,23 +357,25 @@ const IndexPage = () => {
         </Layout>
         <Layout margins>
           <div tw="w-full flex flex-col tablet:flex-row gap-10 desktop:gap-20 my-5 justify-start items-start">
-            <div tw="w-full flex flex-col justify-center desktop:justify-start w-4/12 tablet:w-6/12 gap-10 desktop:gap-20">
+            <div tw="w-full flex flex-col justify-center desktop:justify-start tablet:w-6/12 gap-10 desktop:gap-20">
               <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
-                Ithil © 2022
+              Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-center">
               <div tw="flex flex-row tablet:flex-col w-full desktop:w-7/12 gap-3">
-                <div tw="w-5/12 flex flex-col gap-2">
-                  <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
-                    Legal disclaimer
-                  </Txt.Body1Regular>
-                  <TrackedLink hotjar={hotjar} title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
-                  <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
-                    ToS
-                  </Txt.Body1Regular>
-                </TrackedLink>
+                <div tw="w-full flex flex-col gap-2">
+                  <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank">
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
+                      Legal disclaimer
+                    </Txt.Body1Regular>
+                  </TrackedLink>
+                  <TrackedLink title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
+                      ToS
+                    </Txt.Body1Regular>
+                  </TrackedLink>
                 </div>
                 <div tw="w-7/12 tablet:w-full">
                   <div tw="flex flex-row flex-wrap gap-3">

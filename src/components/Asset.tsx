@@ -12,7 +12,7 @@ export const Asset = (props: { icon: any; tokenSymbol: string; apy: string }) =>
   return (
     <div tw="flex flex-row justify-between items-center w-full">
       <div tw="flex flex-row gap-3 justify-start items-center">
-        <img src={Icon} tw="w-12 h-12" alt="" />
+        <img src={Icon} tw="w-12 h-12" alt="token icon" />
         <Txt.Body1Regular tw="text-font-200">{tokenSymbol}</Txt.Body1Regular>
       </div>
       <Txt.Body1Regular tw="text-font-200">{apy}%</Txt.Body1Regular>

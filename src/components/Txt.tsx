@@ -7,7 +7,6 @@ export interface IBaseProps {
   className?: string | undefined
 }
 
-
 export interface ITxtProps extends IBaseProps {
   children: any
 }

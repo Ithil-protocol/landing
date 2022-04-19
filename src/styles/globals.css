@@ -23,7 +23,13 @@ body > div {
 }
 
 * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .layoutLight {
@@ -33,7 +39,7 @@ body > div {
 
 .layoutDark {
   background: rgb(21,26,41);
-background: radial-gradient(circle, rgba(21,26,41,1) 0%, rgba(21,26,41,0.72) 0%, rgba(7,124,224,0.21) 0%, rgba(21,26,41,1) 91%);
+  background: radial-gradient(circle, rgba(21,26,41,1) 0%, rgba(21,26,41,0.72) 0%, rgba(7,124,224,0.21) 0%, rgba(21,26,41,1) 91%);
 }
 
 .layoutMain {
