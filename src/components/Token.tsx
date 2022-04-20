@@ -12,9 +12,9 @@ const Token = (props: { icon: any, tokenSymbol: string, tokenName: string, apy: 
   return (
     <div className={props.className} tw="rounded-xl bg-secondary-300 flex flex-col justify-between p-6 gap-3 width[45%] tablet:min-width[170px] desktop:min-width[240px]">
       <img tw='w-12 h-12' src={Icon} alt="token icon" />
-      <div tw="flex flex-row justify-between">
-        <Txt.Body2Bold tw="text-primary">{tokenSymbol}</Txt.Body2Bold>
-        <div tw="flex flex-row gap-3 items-center">
+      <div tw="flex flex-col tablet:flex-row justify-between">
+        <Txt.Heading2 tw="text-primary tablet:text-body2-regular mb-2 tablet:mb-0">{tokenSymbol}</Txt.Heading2>
+        <div tw="w-full tablet:w-auto flex flex-row gap-3 items-center">
           <Txt.CaptionMedium tw="text-primary" >APY:</Txt.CaptionMedium>
           <Txt.CaptionMedium tw="text-primary" >{apy}</Txt.CaptionMedium>
         </div>
