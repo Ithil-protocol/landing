@@ -227,8 +227,8 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[160px] tablet:hidden">
-                <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[160px]">
+                <TrackedLink title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden">
+                <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[190px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
@@ -334,22 +334,22 @@ const IndexPage = () => {
                 <SocialLink
                   label="Twitter"
                   icon={TwitterIcon}
-                  url="https://www.google.com"
+                  url="https://twitter.com/ithil_protocol"
                 />
                 <SocialLink
                   label="Discord"
                   icon={DiscordIcon}
-                  url="https://www.google.com"
+                  url="https://discord.gg/tEaGBcGdQC"
                 />
                 <SocialLink
                   label="Medium"
                   icon={MediumIcon}
-                  url="https://www.google.com"
+                  url="https://medium.com/@ithil_protocol"
                 />
                 <SocialLink
                   label="GitHub"
                   icon={GithubIcon}
-                  url="https://www.google.com"
+                  url="https://github.com/Ithil-protocol"
                 />
               </div>
             </div>
@@ -357,28 +357,28 @@ const IndexPage = () => {
         </Layout>
         <Layout margins>
           <div tw="w-full flex flex-col tablet:flex-row gap-10 desktop:gap-20 my-5 justify-start items-start">
-            <div tw="w-full flex flex-col justify-center desktop:justify-start tablet:w-6/12 gap-10 desktop:gap-20">
-              <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
-              <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
+            <div tw="w-full flex flex-col justify-center desktop:justify-start tablet:w-6/12 gap-5 desktop:gap-10">
+              <img tw="w-24 tablet:w-28 mr-6 self-start" src={LogoDark} alt="logo" />
+              <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
               Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.
               </Txt.Body1Regular>
             </div>
-            <div tw="w-full tablet:w-6/12 flex items-end justify-center">
-              <div tw="flex flex-row tablet:flex-col w-full desktop:w-7/12 gap-3">
-                <div tw="w-full flex flex-col gap-2">
+            <div tw="w-full tablet:w-6/12 flex items-end justify-start">
+              <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
+                <div tw="w-full flex flex-col justify-start gap-2">
                   <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank">
                     <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
                       Legal disclaimer
                     </Txt.Body1Regular>
                   </TrackedLink>
-                  <TrackedLink title="tos" url="https://ipfs.io" target="_blank" tw="max-w-min">
+                  <TrackedLink title="tos" url="https://ipfs.io" target="_blank">
                     <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
                       ToS
                     </Txt.Body1Regular>
                   </TrackedLink>
                 </div>
-                <div tw="w-7/12 tablet:w-full">
-                  <div tw="flex flex-row flex-wrap gap-3">
+                <div tw="w-full flex flex-col justify-start">
+                  <div tw="flex flex-row gap-3 tablet:self-start">
                     <FooterSocialIcon
                       icon={TwitterIconLight}
                       url="https://twitter.com/ithil_protocol"
