@@ -31,6 +31,7 @@ const Layout = (props: {
           tw`flex flex-row w-full justify-center items-center`,
           props.minScreenHeight && tw`min-h-screen`,
         ]}
+        {...props}
       >
         <div
           // tw="max-w-1920 w-full tablet:w-[calc(100% - 3rem)] my-6 mx-4 tablet:mx-24"

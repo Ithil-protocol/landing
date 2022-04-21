@@ -85,9 +85,11 @@ const IndexPage = () => {
   return (
     <ParallaxProvider>
       <>
-        <Layout header margins>
+        <Layout header margins></Layout>
+        <Layout>
           <SEO title="Leverage To Earn" />
-          <div tw="w-full mt-20 z-10">
+          <Layout margins>
+          <div tw="w-full mt-20 desktop:margin-bottom[-20px] tablet:margin-bottom[-40px] desktop:margin-bottom[-60px] relative z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
@@ -97,7 +99,7 @@ const IndexPage = () => {
                 trading strategies for any token, because we believe in
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
-              <div tw="flex flex-row gap-3 ml-0 self-start mt-10 w-full justify-start">
+              <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
                 <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
@@ -122,9 +124,10 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-        </Layout>
+          </Layout>
+        
         <ParallaxBanner
-          className="aspect-[2/1]"
+          className="aspect-[2/1] absolute"
           layers={[
             { image: "./banner/base.svg", speed: 0 },
             { image: "./banner/layer-1.svg", speed: -10 },
@@ -147,6 +150,7 @@ const IndexPage = () => {
             },
           ]}
         />
+        </Layout>
         <Layout bgMain>
           <Layout margins>
             <div tw="w-full flex flex-col desktop:flex-row justify-between items-center gap-12 desktop:gap-20 desktop:my-40">
