@@ -16,7 +16,7 @@ const Header = (props: { siteTitle?: any }) => {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 mb-6 max-w-1920 w-full">
+    <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 max-w-1920 w-full">
       <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} />
       <div className="lg:hidden flex flex-row gap-3">
         <a href="https://app.ithil.fi" target="_blank" className={`${isExpanded ? 'hidden' : 'flex'}`}>
