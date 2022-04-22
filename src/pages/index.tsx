@@ -206,8 +206,8 @@ const IndexPage = () => {
                 <Button text="Stake" bold action dark />
               </TrackedLink>
             </div>
-            <div tw="w-full desktop-wide:w-8/12 flex flex-col tablet:items-start desktop:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
-              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[7px] tablet:gap[10px] desktop:gap[16px] desktop:margin-right[5vw] justify-center tablet:justify-start">
+            <div tw="w-full desktop-wide:w-8/12 flex flex-col tablet:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
+              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[7px] tablet:gap[10px] desktop:gap[16px]margin-right[5vw] justify-center tablet:justify-start">
                 <Token
                   tokenName="Ether"
                   tokenSymbol="ETH"
