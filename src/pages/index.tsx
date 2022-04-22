@@ -297,19 +297,19 @@ const IndexPage = () => {
                   <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
                 </div>
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={UsdcIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={UsdcIcon} tokenSymbol="USDC" apy="12" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={DaiStablecoinIcon} tokenSymbol="ETH" apy="5" />
+                <Asset icon={DaiStablecoinIcon} tokenSymbol="DAI" apy="5" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={WrappedEtherIcon} tokenSymbol="ETH" apy="11" />
+                <Asset icon={WrappedEtherIcon} tokenSymbol="WETH" apy="11" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={WrappedBitconIcon} tokenSymbol="ETH" apy="8" />
+                <Asset icon={WrappedBitconIcon} tokenSymbol="WBTC" apy="8" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={ShibInuIcon} tokenSymbol="ETH" apy="11" />
+                <Asset icon={ShibInuIcon} tokenSymbol="SHIB" apy="11" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={UniswapIcon} tokenSymbol="ETH" apy="18" />
+                <Asset icon={UniswapIcon} tokenSymbol="UNI" apy="18" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" />
+                <Asset icon={OusdIcon} tokenSymbol="OUSD" apy="14" />
                 <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
