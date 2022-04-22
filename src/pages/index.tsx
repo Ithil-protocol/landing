@@ -306,10 +306,10 @@ const IndexPage = () => {
                 <Asset icon={WrappedBitconIcon} tokenSymbol="WBTC" apy="8" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 <Asset icon={ShibInuIcon} tokenSymbol="SHIB" apy="11" />
-                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={UniswapIcon} tokenSymbol="UNI" apy="18" />
-                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={OusdIcon} tokenSymbol="OUSD" apy="14" />
+                // <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
+                // <Asset icon={UniswapIcon} tokenSymbol="UNI" apy="18" />
+                // <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
+                // <Asset icon={OusdIcon} tokenSymbol="OUSD" apy="14" />
                 <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
