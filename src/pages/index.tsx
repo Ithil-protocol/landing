@@ -89,7 +89,7 @@ const IndexPage = () => {
         <Layout>
           <SEO title="Leverage To Earn" />
           <Layout margins>
-          <div tw="w-full mt-20 desktop:margin-bottom[-20px] tablet:margin-bottom[-40px] desktop:margin-bottom[-60px] relative z-10">
+          <div tw="w-full tablet:mt-20 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
@@ -127,7 +127,7 @@ const IndexPage = () => {
           </Layout>
         
         <ParallaxBanner
-          className="aspect-[2/1] absolute"
+          className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
           layers={[
             { image: "./banner/base.svg", speed: 0 },
             { image: "./banner/layer-1.svg", speed: -10 },
@@ -139,11 +139,12 @@ const IndexPage = () => {
 
               children: (
                 <div
+                className="parallaxGradient"
                   style={{
                     height: "100%",
                     width: "100%",
-                    background:
-                      "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(22, 28, 49, 1) 94%)",
+                    // background:
+                    //   "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(22, 28, 49, 1) 94%)",
                   }}
                 />
               ),
@@ -194,11 +195,19 @@ const IndexPage = () => {
         </Layout>
         <Layout margins bgLight>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
-            <div tw="w-full flex justify-start desktop:w-2/12">
-              <Txt.Section tw="text-secondary">Supported tokens</Txt.Section>
+            <div tw="w-full flex flex-col justify-start desktop:w-8/12 desktop-wide:w-4/12 gap-5">
+              <Txt.Section tw="text-secondary mb-5">Earn by lending</Txt.Section>
+              <Txt.Body1Regular tw="text-secondary-100">
+                Traders can use LPs' liquidity to perform leveraged investments
+                and earn a lot, LPs' get fees from this, liquidators assure
+                liquidity is not attacked.
+              </Txt.Body1Regular>
+              <TrackedLink title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
+                <Button text="Stake" bold action dark />
+              </TrackedLink>
             </div>
-            <div tw="w-full desktop-wide:w-10/12 flex flex-col tablet:items-start desktop:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
-              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[7px] tablet:gap[10px] desktop:gap[16px] desktop:margin-right[5vw] justify-center tablet:justify-start">
+            <div tw="w-full desktop-wide:w-8/12 flex flex-col tablet:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
+              <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[7px] tablet:gap[10px] desktop:gap[16px]margin-right[5vw] justify-center tablet:justify-start">
                 <Token
                   tokenName="Ether"
                   tokenSymbol="ETH"
@@ -267,7 +276,7 @@ const IndexPage = () => {
         </Layout>
 
         <Layout margins bgDark>
-          <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
+          {/* <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start desktop:my-32">
             <div tw="w-full flex flex-col justify-center desktop:justify-start desktop:w-1/3 gap-4 desktop:gap-10 tablet:mb-12">
               <Txt.Section tw="tablet:mb-5 desktop:mb-10">
                 Earn by lending
@@ -288,20 +297,19 @@ const IndexPage = () => {
                   <Txt.Body1Regular tw="text-font-200">APY</Txt.Body1Regular>
                 </div>
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={UsdcIcon} tokenSymbol="ETH" apy="12" />
+                <Asset icon={UsdcIcon} tokenSymbol="USDC" apy="12" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={DaiStablecoinIcon} tokenSymbol="ETH" apy="5" />
+                <Asset icon={DaiStablecoinIcon} tokenSymbol="DAI" apy="5" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={WrappedEtherIcon} tokenSymbol="ETH" apy="11" />
+                <Asset icon={WrappedEtherIcon} tokenSymbol="WETH" apy="11" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={WrappedBitconIcon} tokenSymbol="ETH" apy="8" />
+                <Asset icon={WrappedBitconIcon} tokenSymbol="WBTC" apy="8" />
                 <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={ShibInuIcon} tokenSymbol="ETH" apy="11" />
-                {/* <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={UniswapIcon} tokenSymbol="ETH" apy="18" />
-                <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
-                <Asset icon={OusdIcon} tokenSymbol="ETH" apy="14" /> */}
-                {/* TODO */}
+                <Asset icon={ShibInuIcon} tokenSymbol="SHIB" apy="11" />
+                // <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
+                // <Asset icon={UniswapIcon} tokenSymbol="UNI" apy="18" />
+                // <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
+                // <Asset icon={OusdIcon} tokenSymbol="OUSD" apy="14" />
                 <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://app.ithil.fi/stake" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
@@ -313,7 +321,7 @@ const IndexPage = () => {
               </div>
               
             </div>
-          </div>
+          </div> */}
 
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-1/3">
