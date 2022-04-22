@@ -20,6 +20,7 @@ interface IButtonProps extends ICSSProps {
   onClick?: MouseEventHandler<HTMLButtonElement>
   className?: string | undefined
   bold?: boolean | undefined
+  dark?: boolean | undefined
 }
 
 export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
@@ -35,6 +36,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
         primary && tw`bg-action`,
         props.action && tw`border border-primary`,
         props.full && tw`w-full`,
+        props.dark && tw`border-secondary-100`
       ]}
       onClick={props.onClick}
     >
@@ -55,6 +57,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
           primary && tw`text-primary-100`,
           props.action && tw`text-primary-100`,
           props.bold && tw`font-bold`,
+          props.dark && tw`text-secondary-100`
         ]}
       >
         {props.text}
