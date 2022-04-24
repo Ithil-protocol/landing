@@ -100,7 +100,7 @@ const IndexPage = () => {
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
               <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
-                <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://app.ithil.fi" target="_blank">
+                <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://ithil.fi" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
                     text="Start investing"
@@ -202,7 +202,7 @@ const IndexPage = () => {
                 and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <TrackedLink title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
+              <TrackedLink title="Staking page" url="https://ithil.fi/stake" target="_blank">
                 <Button text="Stake" bold action dark />
               </TrackedLink>
             </div>
@@ -240,7 +240,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink title="Stake" url="https://app.ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden">
+                <TrackedLink title="Stake" url="https://ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden">
                 <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[190px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
@@ -262,7 +262,7 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://ithil.fi/stake" target="_blank">
                 <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
@@ -286,7 +286,7 @@ const IndexPage = () => {
                 and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <TrackedLink title="Staking page" url="https://app.ithil.fi/stake" target="_blank">
+              <TrackedLink title="Staking page" url="https://ithil.fi/stake" target="_blank">
                 <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
               </TrackedLink>
             </div>
@@ -310,7 +310,7 @@ const IndexPage = () => {
                 // <Asset icon={UniswapIcon} tokenSymbol="UNI" apy="18" />
                 // <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 // <Asset icon={OusdIcon} tokenSymbol="OUSD" apy="14" />
-                <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://app.ithil.fi/stake" target="_blank">
+                <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://ithil.fi/stake" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
                     <Txt.Body1Regular tw="text-primary-100">
