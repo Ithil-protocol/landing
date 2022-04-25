@@ -11,6 +11,7 @@ import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
 import { TrackedLink } from "../components/TrackedLink"
+import { Header } from "../components/Header" 
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
@@ -85,11 +86,11 @@ const IndexPage = () => {
   return (
     <ParallaxProvider>
       <>
-        <Layout header margins></Layout>
+        <Header />
         <Layout>
           <SEO title="Leverage To Earn" />
           <Layout margins>
-          <div tw="w-full tablet:mt-20 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
+          <div tw="w-full mt-28 tablet:mt-44 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
