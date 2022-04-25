@@ -241,7 +241,7 @@ const IndexPage = () => {
                   icon={TetherUsdIcon}
                 />
                 <TrackedLink title="Stake" url="https://ithil.fi/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden">
-                <div tw="flex rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 w-full height[190px]">
+                <div tw="flex rounded-xl bg-secondary-300 flex flex-col mobile:flex-row justify-center items-center gap-3 w-full height[190px]">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
@@ -263,7 +263,7 @@ const IndexPage = () => {
                   icon={TetherUsdIcon}
                 />
                 <TrackedLink title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://ithil.fi/stake" target="_blank">
-                <div tw="rounded-xl bg-secondary-300 flex flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
+                <div tw="rounded-xl bg-secondary-300 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
                   <Plus tw="text-primary-100" size={20} />
                   <Txt.Body1Regular tw="text-primary-100">
                     See all tokens
