@@ -390,7 +390,7 @@ const IndexPage = () => {
                   </TrackedLink>
                 </div>
                 <div tw="w-full flex flex-col justify-start">
-                  <div tw="flex flex-row gap-3 tablet:self-start">
+                  {/* <div tw="flex flex-row gap-3 tablet:self-start">
                     <FooterSocialIcon
                       icon={TwitterIconLight}
                       url="https://twitter.com/ithil_protocol"
@@ -411,7 +411,7 @@ const IndexPage = () => {
                       url="https://github.com/Ithil-protocol"
                       altText="github"
                     />
-                  </div>
+                  </div> */}
                   <Button tw="tablet:self-start mt-10" text="Launch app" bold />
                   </div>
               </div>
