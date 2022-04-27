@@ -36,22 +36,22 @@ const Header = (props: { siteTitle?: any }) => {
       >
         <div tw="flex flex-col desktop:flex-row justify-center gap-5 mr-14 mt-12 desktop:mt-0">
           <a href="https://github.com/Ithil-protocol" target="_blank">
-            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular">
+            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular hover:text-primary">
               GitHub
             </Txt.Body1Bold>
           </a>
           <a href="https://discord.gg/tEaGBcGdQC" target="_blank">
-            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular">
+            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular hover:text-primary">
               Discord
             </Txt.Body1Bold>
           </a>
           <a href="https://twitter.com/ithil_protocol" target="_blank">
-            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular">
+            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular hover:text-primary">
               Twitter
             </Txt.Body1Bold>
           </a>
           <a href="https://docs.ithil.fi/" target="_blank">
-            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular">
+            <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular hover:text-primary">
               Docs
             </Txt.Body1Bold>
           </a>
