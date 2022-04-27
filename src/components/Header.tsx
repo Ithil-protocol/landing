@@ -19,9 +19,9 @@ const Header = (props: { siteTitle?: any }) => {
     <nav className="flex flex-wrap items-center justify-between py-2 tablet:py-4 max-w-1920 w-full">
       <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} />
       <div className="lg:hidden flex flex-row gap-3">
-        <a href="https://ithil.fi" target="_blank" className={`${isExpanded ? 'hidden' : 'flex'}`}>
+        {/* <a href="https://ithil.fi" target="_blank" className={`${isExpanded ? 'hidden' : 'flex'}`}>
           <Button tw="block lg:hidden h-10" bold text="Launch app" />
-        </a>
+        </a> */}
         <button
           onClick={() => toggleExpansion(!isExpanded)}
           className="flex items-center px-3 py-2 text-primary"
