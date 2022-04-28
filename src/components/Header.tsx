@@ -9,9 +9,7 @@ import { List } from "phosphor-react"
 // @ts-ignore
 import LogoDark from "../assets/images/logoFullDark.svg"
 import { Txt } from "./Txt"
-import tw from "twin.macro"
 import { useState } from "react"
-import Layout from "../components/Layout"
 import useScrollingUp from "../hooks/useScrollingUp"
 
 export const Header = (props: { siteTitle?: any }) => {
@@ -19,9 +17,9 @@ export const Header = (props: { siteTitle?: any }) => {
   const scrolled = useScrollingUp()
 
   return (
-    <div className={`${!isExpanded && (scrolled ? "top-0" : "top-[-80px]")} flex flex-row justify-center items-center py-4 max-w-1920 w-full tablet:m-[calc(100% - 3rem)] px-4 tablet:px-24 z-50 fixed bg-background-primary transition-all`}>
+    <div className={`${!isExpanded && (scrolled ? "top-0" : "top-[-80px]")} flex flex-row justify-center items-center py-4 w-full tablet:m-[calc(100% - 3rem)] px-4 tablet:px-24 z-50 fixed bg-background-primary transition-all`}>
       <nav
-        className={`flex w-full flex-wrap items-center justify-between`}
+        className={`flex w-full flex-wrap items-center justify-between max-w-1920`}
       >
         <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} />
         <div className="lg:hidden flex flex-row gap-3">
