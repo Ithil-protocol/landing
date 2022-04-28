@@ -94,10 +94,10 @@ body > div {
   --lineheight-heading2: 25.6px;
   --fontsize-heading1: 24px;
   --lineheight-heading1: 38.4px;
-
   --fontsize-section: 24px;
   --lineheight-section: 38.4px;
 }
+
 .dark {
   --primary: 7, 11, 15;
   --primary-100: 21, 26, 41;
