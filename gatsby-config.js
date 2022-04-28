@@ -50,6 +50,7 @@ module.exports = {
         // selfHostedOrigin: "YOUR_SELF_HOSTED_ORIGIN",
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
@@ -65,6 +66,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/images/favicon.png`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://ithil.fi',
+        sitemap: 'https://ithil.fi/sitemap/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
