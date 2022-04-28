@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ title, description, image, meta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -34,12 +34,12 @@ function SEO({ description, lang, meta, title }) {
         'alternateName': 'Ithil',
         'url': 'https://ithil.fi/',
         'email': 'info@ithil.fi',
-        'slogan': 'Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.',
+        'slogan': description,
         'logo': {
             '@type': 'ImageObject',
             'width': 118,
             'height': 32,
-            'url': 'https://ithil.fi/logo.svg'
+            'url': image
         },
         'copyrightHolder': {
             '@type': 'Organization',
@@ -57,8 +57,9 @@ function SEO({ description, lang, meta, title }) {
         ]
   }
 
+  const lang = "en_US";
+  const defaultTitle = title || site.siteMetadata?.title
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
   const canonical = site.siteMetadata.siteUrl
 
   return (
@@ -66,8 +67,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={defaultTitle}
       link={
         canonical
           ? [
@@ -85,7 +85,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: defaultTitle,
+        },
+        {
+          name: `og:image`,
+          content: image,
         },
         {
           property: `og:description`,
@@ -94,6 +98,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:locale`,
+          content: lang,
         },
         {
           name: `twitter:card`,
@@ -105,7 +113,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
+        },
+        {
+          name: `twitter:image`,
+          content: image,
         },
         {
           name: `twitter:description`,
@@ -114,6 +126,8 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <script type="application/ld+json">{JSON.stringify(structuredContent)}</script>
+      <meta name="msapplication-TileColor" content="#151A29" />
+      <meta name="theme-color" content="#151A29" />
     </Helmet>
   )
 }

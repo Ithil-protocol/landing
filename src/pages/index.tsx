@@ -88,7 +88,7 @@ const IndexPage = () => {
       <>
         <Header />
         <Layout>
-          <SEO title="Leverage To Earn" />
+          <SEO title="Ithil | Leverage To Earn" description="An undercollateralised leverage investment protocol providing risk-diversified strategies" image="https://ithil.fi/logo.svg" />
           <Layout margins>
           <div tw="w-full mt-28 tablet:mt-44 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
@@ -380,13 +380,13 @@ const IndexPage = () => {
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-full flex flex-col justify-start gap-2">
                   <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank">
-                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular">
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
                       Legal disclaimer
                     </Txt.Body1Regular>
                   </TrackedLink>
-                  <TrackedLink title="tos" url="https://ipfs.io" target="_blank">
-                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular max-w-min">
-                      ToS
+                  <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank">
+                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
+                      Terms of Service
                     </Txt.Body1Regular>
                   </TrackedLink>
                 </div>

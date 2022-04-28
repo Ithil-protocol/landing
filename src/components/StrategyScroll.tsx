@@ -94,7 +94,7 @@ export const StrategyScroll = () => {
       <Layout margins>
         <div tw="flex flex-row justify-between items-center my-10">
           <Txt.Section tw="flex-grow">Available strategies</Txt.Section>
-            <div tw="flex flex-row gap-4">
+            <div tw="flex flex-row gap-4 cursor-pointer">
               <img
                 tw="h-8 w-8"
                 src={ArrowLeftSelected}
