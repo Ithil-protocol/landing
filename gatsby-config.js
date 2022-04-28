@@ -18,6 +18,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
