@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
         'name': 'Ithil',
         'alternateName': 'Ithil',
         'url': 'https://ithil.fi/',
-        'email': 'contact@coreline.agency',
+        'email': 'info@ithil.fi',
         'slogan': 'Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.',
         'logo': {
             '@type': 'ImageObject',
