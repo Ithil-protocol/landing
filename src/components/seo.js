@@ -26,6 +26,37 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
+  const structuredContent = {
+    '@context': 'http://schema.org',
+        '@type': 'Corporation',
+        '@id': 'https://ithil.fi/',
+        'name': 'Ithil',
+        'alternateName': 'Ithil',
+        'url': 'https://ithil.fi/',
+        'email': 'contact@coreline.agency',
+        'slogan': 'Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.',
+        'logo': {
+            '@type': 'ImageObject',
+            'width': 118,
+            'height': 32,
+            'url': 'https://ithil.fi/logo.svg'
+        },
+        'copyrightHolder': {
+            '@type': 'Organization',
+            'name': 'Ithil',
+            'url': 'https://ithil.fi/'
+        },
+        'copyrightYear': '2022',
+        'mainEntityOfPage': {
+            '@type': 'WebPage',
+            '@id': 'https://ithil.fi/'
+        },
+        'sameAs': [
+            'https://github.com/Ithil-protocol/',
+            'https://twitter.com/ithil_protocol/'
+        ]
+  }
+
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const canonical = site.siteMetadata.siteUrl
@@ -81,7 +112,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(structuredContent)}</script>
+    </Helmet>
   )
 }
 
