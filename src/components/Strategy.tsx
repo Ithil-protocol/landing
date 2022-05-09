@@ -12,10 +12,11 @@ const Strategy = (props: {
   apyMin: string
   apyMax: string
   risk: string
+  url: string
 }) => {
-  const { title, description, apyMin, apyMax, risk } = props
+  const { title, description, apyMin, apyMax, risk, url } = props
   return (
-    <TrackedLink url="https://ithil.fi/trade" target="_blank">
+    <TrackedLink url={url} title="Use the strategy now" target="_blank">
       <div tw="rounded-xl bg-[rgba(255, 255, 255, 0.1)] flex flex-col justify-between p-5 w-full tablet:w-[300px] desktop:w-[356px] hover:bg-[rgba(150, 150, 150, 0.1)]">
         <Txt.Heading2 tw="text-primary mb-2">{title}</Txt.Heading2>
         <Txt.Body2Regular tw="text-font-200 mb-2 tablet:mb-12 w-9/12 h-14">

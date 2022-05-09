@@ -373,18 +373,18 @@ const IndexPage = () => {
             <div tw="w-full flex flex-col justify-center desktop:justify-start tablet:w-6/12 gap-5 desktop:gap-10">
               <img tw="w-24 tablet:w-28 mr-6 self-start" src={LogoDark} alt="logo" />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
-              Ithil is a DeFi Swiss knife that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.
+              Ithil is a DeFi spellbook that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-start">
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-full flex flex-col justify-start gap-2">
-                  <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank">
+                  <TrackedLink title="disclamer" url="https://docs.ithil.fi/disclamer" target="_blank">
                     <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
                       Legal disclaimer
                     </Txt.Body1Regular>
                   </TrackedLink>
-                  <TrackedLink title="disclamer" url="https://ipfs.io" target="_blank">
+                  <TrackedLink title="tos" url="https://docs.ithil.fi/tos" target="_blank">
                     <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
                       Terms of Service
                     </Txt.Body1Regular>

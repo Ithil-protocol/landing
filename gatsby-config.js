@@ -1,12 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Ithil`,
-    author: `Ithil DAO`,
+    author: `Ithil Labs`,
     description: `Ithil is a generalised leveraged investment strategies aggregator`,
     siteUrl: `https://ithil.fi`,
-  },
-  flags: {
-    THE_FLAG: false,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -43,7 +40,7 @@ module.exports = {
         // on every Gatsby route change.
         //
         // Defaults to gatsby-route-change
-        routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
+        routeChangeEventName: "Redirect",
         // Defaults to false
         enableWebVitalsTracking: true,
         // Defaults to https://www.googletagmanager.com
