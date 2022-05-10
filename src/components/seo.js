@@ -67,6 +67,49 @@ function SEO({ title, description, image, meta }) {
   const metaDescription = description || site.siteMetadata.description
   const canonical = site.siteMetadata.siteUrl
 
+  const metaTags = [
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:title`,
+      content: defaultTitle,
+    },
+    {
+      name: `og:image`,
+      content: image,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      property: `og:locale`,
+      content: lang,
+    },
+    {
+      name: `twitter:card`,
+      content: `summary`,
+    },
+    {
+      name: `twitter:title`,
+      content: defaultTitle,
+    },
+    {
+      name: `twitter:image`,
+      content: image,
+    },
+    {
+      name: `twitter:description`,
+      content: metaDescription,
+    },
+  ].concat(meta || [])
+
   return (
     <Helmet
       htmlAttributes={{
@@ -83,48 +126,6 @@ function SEO({ title, description, image, meta }) {
             ]
           : []
       }
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: defaultTitle,
-        },
-        {
-          name: `og:image`,
-          content: image,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:locale`,
-          content: lang,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:title`,
-          content: defaultTitle,
-        },
-        {
-          name: `twitter:image`,
-          content: image,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
     >
       <script type="application/ld+json">{JSON.stringify(structuredContent)}</script>
       <meta name="msapplication-TileColor" content="#151A29" />
@@ -135,6 +136,10 @@ function SEO({ title, description, image, meta }) {
       <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96}/>
       <link rel={"icon"} type={"image/png"} sizes={"16x16"} href={favicon16}/>
       <link rel={"icon"} href={favicon}/>
+      {metaTags.map((meta) =>  {
+          return (<meta key={meta.name} name={meta.name} content={meta.content} />)
+        }
+      )}
     </Helmet>
   )
 }
