@@ -32,7 +32,7 @@ const strategies = [
   {
     id: 2,
     title: "Leveraged staking",
-    description: "Stake your favorite tokens on Yearn and Anchor and multiply your APY",
+    description: "Stake your favorite tokens on any Yearn vault and multiply your APY",
     apyMin: "5x",
     apyMax: "20x",
     risk: "Medium",
