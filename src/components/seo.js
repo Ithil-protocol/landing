@@ -136,10 +136,10 @@ function SEO({ title, description, image, meta }) {
       <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96}/>
       <link rel={"icon"} type={"image/png"} sizes={"16x16"} href={favicon16}/>
       <link rel={"icon"} href={favicon}/>
-      {metaTags.map((meta) =>  {
-          return (<meta key={meta.name} name={meta.name} content={meta.content} />)
-        }
-      )}
+      {metaTags.map((meta, index) => {
+        if (meta.name) return (<meta key={index} name={meta.name} content={meta.content} />)
+        if (meta.property) return (<meta key={index} property={meta.property} content={meta.content} />)
+      })}
     </Helmet>
   )
 }
