@@ -21,7 +21,7 @@ export const Header = (props: { siteTitle?: any }) => {
       <nav
         className={`flex w-full flex-wrap items-center justify-between max-w-1920`}
       >
-        <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} />
+        <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
         <div className="lg:hidden flex flex-row gap-3">
           <button
             onClick={() => toggleExpansion(!isExpanded)}
@@ -57,7 +57,7 @@ export const Header = (props: { siteTitle?: any }) => {
               </Txt.Body1Bold>
             </a>
           </div>
-          <a tw="" href="https://ithil.fi" target="_blank">
+          <a tw="" href="https://ithil-frontend.netlify.app/" target="_blank">
             <Button tw="hidden lg:block" bold text="Launch app" />
           </a>
         </div>

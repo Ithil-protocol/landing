@@ -101,7 +101,7 @@ const IndexPage = () => {
                 simplicity and guidance in the complex Defi universe.
               </Txt.Body1Regular>
               <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
-                <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://ithil.fi" target="_blank">
+                <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://ithil-frontend.netlify.app/" target="_blank">
                   <Button
                     tw="w-full tablet:w-auto self-start"
                     text="Start investing"
@@ -413,7 +413,9 @@ const IndexPage = () => {
                       altText="github"
                     />
                   </div> */}
-                  <Button tw="tablet:self-start mt-10" text="Launch app" bold />
+                  <a tw="" href="https://ithil-frontend.netlify.app/" target="_blank">
+                    <Button tw="tablet:self-start mt-10" text="Launch app" bold />
+                  </a>
                   </div>
               </div>
             </div>

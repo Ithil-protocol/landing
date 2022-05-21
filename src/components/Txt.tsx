@@ -8,10 +8,14 @@ export interface IBaseProps {
 }
 
 export interface ITxtProps extends IBaseProps {
+  h1: boolean,
+  h2: boolean,
   children: any
 }
 
 const InnerText: React.FC<IBaseProps> = (props) => {
+  if(props.h1) return <h1 className={props.className}>{props.children}</h1>
+  else if(props.h2) return <h2 className={props.className}>{props.children}</h2>
   return <div className={props.className}>{props.children}</div>
 }
 
