@@ -108,6 +108,10 @@ function SEO({ title, description, image, meta }) {
       name: `twitter:description`,
       content: metaDescription,
     },
+    {
+      name: `twitter:creator`,
+      content: `@ithil_protocol`,
+    },
   ].concat(meta || [])
 
   return (
