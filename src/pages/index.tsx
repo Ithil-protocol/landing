@@ -94,11 +94,8 @@ const IndexPage = () => {
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
               <Txt.Section tw="">Leverage to Earn</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
-                To experienced traders and DeFi newcomers entering the market or
-                looking for customizable investment strategies, our DeFi
-                protocol offers simplified and reliable leveraged staking and
-                trading strategies for any token, because we believe in
-                simplicity and guidance in the complex Defi universe.
+              Stake or invest with up to 10x leverage<br />
+              and earn big on the first crypto hedge fund in DeFi
               </Txt.Body1Regular>
               <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
                 <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://ithil-frontend.netlify.app/" target="_blank">
@@ -171,15 +168,15 @@ const IndexPage = () => {
                   liquidators assure liquidity is not attacked.
                 </Txt.Body1Regular>
                 <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
-                  <Feature icon={CoinIcon} text="High APY Staking" />
+                  <Feature icon={CoinIcon} text="Leverage up using almost any token as collateral" />
                   <Feature
                     icon={CoinIcon}
-                    text="Efficient framework of liquidation systems"
+                    text="Sustainable, secure yields"
                   />
-                  <Feature icon={CoinIcon} text="Leveraged investments" />
+                  <Feature icon={CoinIcon} text="Simplified investment strategies for different risk appetites" />
                   <Feature
                     icon={CoinIcon}
-                    text="Insurance reserve to secure liquidity"
+                    text="Insurance reserve to safeguard liquidity"
                   />
                 </div>
               </div>
@@ -199,9 +196,8 @@ const IndexPage = () => {
             <div tw="w-full flex flex-col justify-start desktop:w-8/12 desktop-wide:w-4/12 gap-5">
               <Txt.Section tw="text-secondary mb-5">Earn by lending</Txt.Section>
               <Txt.Body1Regular tw="text-secondary-100">
-                Traders can use LPs' liquidity to perform leveraged investments
-                and earn a lot, LPs' get fees from this, liquidators assure
-                liquidity is not attacked.
+              Provide liquidity in your favourite altcoin and earn trading fees.
+              Your capital is secured by efficient smart contracts and Ithil's insurance fund.
               </Txt.Body1Regular>
               <TrackedLink title="Staking page" url="https://ithil-frontend.netlify.app/stake" target="_blank">
                 <Button text="Stake" bold action dark />
@@ -373,7 +369,7 @@ const IndexPage = () => {
             <div tw="w-full flex flex-col justify-center desktop:justify-start tablet:w-6/12 gap-5 desktop:gap-10">
               <img tw="w-24 tablet:w-28 mr-6 self-start" src={LogoDark} alt="logo" />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
-              Ithil is a DeFi spellbook that allows anyone to use all available protocols and tools to earn thanks to their ability rather than their capital.
+              Ithil is a DeFi spellbook that uses innovative smart contracts and simplified strategies to provide better returns for all types of investors.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-start">

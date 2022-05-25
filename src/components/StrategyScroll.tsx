@@ -50,7 +50,7 @@ const strategies = [
   {
     id: 4,
     title: "ETH Maxi",
-    description: "Support the Merge and grow your ETH position with Lido",
+    description: "Grow your ETH position with Lido liquid staking",
     apyMin: "8x",
     apyMax: "16x",
     risk: "Low",
