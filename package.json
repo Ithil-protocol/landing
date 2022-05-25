@@ -33,6 +33,7 @@
     "twin.macro": "^2.8.2"
   },
   "devDependencies": {
+    "@netlify/plugin-gatsby": "^3.1.0",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "prettier": "^2.5.1",
