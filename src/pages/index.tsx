@@ -88,11 +88,11 @@ const IndexPage = () => {
       <>
         <Header />
         <Layout>
-          <SEO title="Ithil | Leverage To Earn" description="An undercollateralised leverage investment protocol providing risk-diversified strategies" image="https://ithil.fi/logo.png" />
+          <SEO title="Ithil | The DeFi Wizard" description="An undercollateralised leverage investment protocol providing risk-diversified strategies" image="https://ithil.fi/logo.png" />
           <Layout margins>
           <div tw="w-full mt-28 tablet:mt-44 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
             <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
-              <Txt.Section tw="">Leverage to Earn</Txt.Section>
+              <Txt.Section tw="">The DeFi Wizard</Txt.Section>
               <Txt.Body1Regular tw="text-primary-100">
               Stake or invest with up to 10x leverage<br />
               and earn big on the first crypto hedge fund in DeFi
