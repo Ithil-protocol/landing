@@ -50,7 +50,7 @@ const strategies = [
   {
     id: 4,
     title: "Grow with Euler",
-    description: "Grow your ETH position with Lido liquid staking",
+    description: "Grow your portfolio lending your tokens",
     apyMin: "1x",
     apyMax: "10x",
     risk: "Low",
