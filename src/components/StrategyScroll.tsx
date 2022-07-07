@@ -35,7 +35,7 @@ const strategies = [
     description: "Stake your favorite tokens on any Yearn vault and multiply your APY",
     apyMin: "5x",
     apyMax: "20x",
-    risk: "Medium",
+    risk: "Low",
     url: "",
   },
   {
