@@ -353,7 +353,7 @@ const IndexPage = () => {
                 <SocialLink
                   label="Medium"
                   icon={MediumIcon}
-                  url="https://medium.com/@ithil_protocol"
+                  url="https://medium.com/@ithil-protocol"
                 />
                 <SocialLink
                   label="GitHub"
@@ -400,7 +400,7 @@ const IndexPage = () => {
                     />
                     <FooterSocialIcon
                       icon={MediumIconLight}
-                      url="https://medium.com/@ithil_protocol"
+                      url="https://medium.com/@ithil-protocol"
                       altText="medium"
                     />
                     <FooterSocialIcon
