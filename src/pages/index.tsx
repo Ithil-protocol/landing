@@ -11,7 +11,7 @@ import { Asset } from "../components/Asset"
 import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
 import { TrackedLink } from "../components/TrackedLink"
-import { Header } from "../components/Header" 
+import { Header } from "../components/Header"
 // @ts-ignore
 import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
@@ -88,67 +88,77 @@ const IndexPage = () => {
       <>
         <Header />
         <Layout>
-          <SEO title="Ithil | The DeFi Wizard" description="An undercollateralised leverage investment protocol providing risk-diversified strategies" image="https://ithil.fi/logo.png" />
+          <SEO
+            title="Ithil | The DeFi Wizard"
+            description="An undercollateralised leverage investment protocol providing risk-diversified strategies"
+            image="https://ithil.fi/logo.png"
+          />
           <Layout margins>
-          <div tw="w-full mt-28 tablet:mt-44 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
-            <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
-              <Txt.Section tw="">The DeFi Wizard</Txt.Section>
-              <Txt.Body1Regular tw="text-primary-100">
-              Stake or invest with up to 10x leverage<br />
-              and earn big on the first crypto hedge fund in DeFi
-              </Txt.Body1Regular>
-              <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
-                <TrackedLink title="App" tw="width[50%] tablet:w-auto" url="https://ithil-frontend.netlify.app/" target="_blank">
-                  <Button
-                    tw="w-full tablet:w-auto self-start"
-                    text="Start investing"
-                    bold
-                  />
-                </TrackedLink>
-                <TrackedLink
-                  title="Docs"
-                  tw="width[50%] tablet:w-auto"
-                  url="https://docs.ithil.fi/"
-                  target="_blank"
-                >
-                  <Button
-                    tw="w-full tablet:w-auto self-start"
-                    text="Docs"
-                    bold
-                    action
-                    leftIcon={BookOpen}
-                  />
-                </TrackedLink>
+            <div tw="w-full mt-28 tablet:mt-44 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
+              <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
+                <Txt.Section tw="">The DeFi Wizard</Txt.Section>
+                <Txt.Body1Regular tw="text-primary-100">
+                  Stake or invest with up to 10x leverage
+                  <br />
+                  and earn big on the first crypto hedge fund in DeFi
+                </Txt.Body1Regular>
+                <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
+                  <TrackedLink
+                    title="App"
+                    tw="width[50%] tablet:w-auto"
+                    url="https://ithil-frontend.netlify.app/"
+                    target="_blank"
+                  >
+                    <Button
+                      tw="w-full tablet:w-auto self-start"
+                      text="Start investing"
+                      bold
+                    />
+                  </TrackedLink>
+                  <TrackedLink
+                    title="Docs"
+                    tw="width[50%] tablet:w-auto"
+                    url="https://docs.ithil.fi/"
+                    target="_blank"
+                  >
+                    <Button
+                      tw="w-full tablet:w-auto self-start"
+                      text="Docs"
+                      bold
+                      action
+                      leftIcon={BookOpen}
+                    />
+                  </TrackedLink>
+                </div>
               </div>
             </div>
-          </div>
           </Layout>
-        
-        <ParallaxBanner
-          className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
-          layers={[
-            { image: "./banner/base.svg", speed: 0 },
-            { image: "./banner/layer-1.svg", speed: -10 },
-            { image: "./banner/layer-2.svg", speed: -5 },
-            { image: "./banner/layer-3.svg", speed: 5 },
-            {
-              shouldAlwaysCompleteAnimation: true,
-              expanded: false,
 
-              children: (
-                <div
-                className="parallaxGradient"
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    // background:
-                    //   "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(22, 28, 49, 1) 94%)",
-                  }}
-                />
-              ),
-            },
-          ]}
-        />
+          <ParallaxBanner
+            className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
+            layers={[
+              { image: "./banner/base.svg", speed: 0 },
+              { image: "./banner/layer-1.svg", speed: -10 },
+              { image: "./banner/layer-2.svg", speed: -5 },
+              { image: "./banner/layer-3.svg", speed: 5 },
+              {
+                shouldAlwaysCompleteAnimation: true,
+                expanded: false,
+
+                children: (
+                  <div
+                    className="parallaxGradient"
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      // background:
+                      //   "linear-gradient(to bottom, rgba(21, 26, 41, 1) 0%, rgba(21, 26, 41, 0) 15%, rgba(21, 26, 41, 0) 75%, rgba(22, 28, 49, 1) 94%)",
+                    }}
+                  />
+                ),
+              },
+            ]}
+          />
         </Layout>
         <Layout bgMain>
           <Layout margins>
@@ -168,12 +178,15 @@ const IndexPage = () => {
                   liquidators assure liquidity is not attacked.
                 </Txt.Body1Regular>
                 <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
-                  <Feature icon={CoinIcon} text="Leverage up using almost any token as collateral" />
                   <Feature
                     icon={CoinIcon}
-                    text="Sustainable, secure yields"
+                    text="Leverage up using almost any token as collateral"
                   />
-                  <Feature icon={CoinIcon} text="Simplified investment strategies for different risk appetites" />
+                  <Feature icon={CoinIcon} text="Sustainable, secure yields" />
+                  <Feature
+                    icon={CoinIcon}
+                    text="Simplified investment strategies for different risk appetites"
+                  />
                   <Feature
                     icon={CoinIcon}
                     text="Insurance reserve to safeguard liquidity"
@@ -194,12 +207,19 @@ const IndexPage = () => {
         <Layout margins bgLight>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex flex-col justify-start desktop:w-8/12 desktop-wide:w-4/12 gap-5">
-              <Txt.Section tw="text-secondary mb-5">Earn by lending</Txt.Section>
+              <Txt.Section tw="text-secondary mb-5">
+                Earn by lending
+              </Txt.Section>
               <Txt.Body1Regular tw="text-secondary-100">
-              Provide liquidity in your favourite altcoin and earn trading fees.
-              Your capital is secured by efficient smart contracts and Ithil's insurance fund.
+                Provide liquidity in your favourite altcoin and earn trading
+                fees. Your capital is secured by efficient smart contracts and
+                Ithil's insurance fund.
               </Txt.Body1Regular>
-              <TrackedLink title="Staking page" url="https://ithil-frontend.netlify.app/stake" target="_blank">
+              <TrackedLink
+                title="Staking page"
+                url="https://ithil-frontend.netlify.app/stake"
+                target="_blank"
+              >
                 <Button text="Stake" bold action dark />
               </TrackedLink>
             </div>
@@ -237,13 +257,18 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink title="Stake" url="https://ithil-frontend.netlify.app/stake" target="_blank" tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden">
-                <div tw="flex rounded-xl bg-secondary-300 flex flex-col mobile:flex-row justify-center items-center gap-3 w-full height[190px]">
-                  <Plus tw="text-primary-100" size={20} />
-                  <Txt.Body1Regular tw="text-primary-100">
-                    See all tokens
-                  </Txt.Body1Regular>
-                </div>
+                <TrackedLink
+                  title="Stake"
+                  url="https://ithil-frontend.netlify.app/stake"
+                  target="_blank"
+                  tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden"
+                >
+                  <div tw="flex rounded-xl bg-secondary-300 flex flex-col mobile:flex-row justify-center items-center gap-3 w-full height[190px]">
+                    <Plus tw="text-primary-100" size={20} />
+                    <Txt.Body1Regular tw="text-primary-100">
+                      See all tokens
+                    </Txt.Body1Regular>
+                  </div>
                 </TrackedLink>
               </div>
               <div tw="flex flex-row gap[7px] tablet:gap[10px] desktop:gap[16px] hidden tablet:flex tablet:margin-left[5vw] desktop:ml-0">
@@ -259,13 +284,18 @@ const IndexPage = () => {
                   apy="10%"
                   icon={TetherUsdIcon}
                 />
-                <TrackedLink title="Supported tokens" tw="tablet:min-width[170px] desktop:min-width[240px]" url="https://ithil-frontend.netlify.app/dashboard" target="_blank">
-                <div tw="rounded-xl bg-secondary-300 hover:bg-secondary-100 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
-                  <Plus tw="text-primary-100" size={20} />
-                  <Txt.Body1Regular tw="text-primary-100">
-                    See all tokens
-                  </Txt.Body1Regular>
-                </div>
+                <TrackedLink
+                  title="Supported tokens"
+                  tw="tablet:min-width[170px] desktop:min-width[240px]"
+                  url="https://ithil-frontend.netlify.app/dashboard"
+                  target="_blank"
+                >
+                  <div tw="rounded-xl bg-secondary-300 hover:bg-secondary-100 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
+                    <Plus tw="text-primary-100" size={20} />
+                    <Txt.Body1Regular tw="text-primary-100">
+                      See all tokens
+                    </Txt.Body1Regular>
+                  </div>
                 </TrackedLink>
               </div>
             </div>
@@ -367,20 +397,34 @@ const IndexPage = () => {
         <Layout margins>
           <div tw="w-full flex flex-col tablet:flex-row gap-10 desktop:gap-20 my-5 justify-start items-start">
             <div tw="w-full flex flex-col justify-center desktop:justify-start tablet:w-6/12 gap-5 desktop:gap-10">
-              <img tw="w-24 tablet:w-28 mr-6 self-start" src={LogoDark} alt="logo" />
+              <img
+                tw="w-24 tablet:w-28 mr-6 self-start"
+                src={LogoDark}
+                alt="logo"
+              />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
-              Ithil is a DeFi spellbook that uses innovative smart contracts and simplified strategies to provide better returns for all types of investors.
+                Ithil is a DeFi spellbook that uses innovative smart contracts
+                and simplified strategies to provide better returns for all
+                types of investors.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-start">
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-full flex flex-col justify-start gap-2">
-                  <TrackedLink title="disclamer" url="https://docs.ithil.fi/docs/disclamer" target="_blank">
+                  <TrackedLink
+                    title="disclamer"
+                    url="https://docs.ithil.fi/docs/disclamer"
+                    target="_blank"
+                  >
                     <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
                       Legal disclaimer
                     </Txt.Body1Regular>
                   </TrackedLink>
-                  <TrackedLink title="tos" url="https://docs.ithil.fi/docs/tos" target="_blank">
+                  <TrackedLink
+                    title="tos"
+                    url="https://docs.ithil.fi/docs/tos"
+                    target="_blank"
+                  >
                     <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
                       Terms of Service
                     </Txt.Body1Regular>
@@ -409,10 +453,18 @@ const IndexPage = () => {
                       altText="github"
                     />
                   </div> */}
-                  <a tw="" href="https://ithil-frontend.netlify.app/" target="_blank">
-                    <Button tw="tablet:self-start mt-10" text="Launch app" bold />
+                  <a
+                    tw=""
+                    href="https://ithil-frontend.netlify.app/"
+                    target="_blank"
+                  >
+                    <Button
+                      tw="tablet:self-start mt-10"
+                      text="Launch app"
+                      bold
+                    />
                   </a>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
