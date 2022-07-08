@@ -34,12 +34,12 @@ const Layout = (props: {
           tw`flex flex-row w-full justify-center items-center`,
           props.minScreenHeight && tw`min-h-screen`,
           props.fixed && tw`fixed`,
-          props.header && tw`z-50`
+          props.header && tw`z-50`,
         ]}
         {...props}
       >
         <div
-          className={`max-w-1920 w-full ${
+          className={` w-full ${
             props.margins &&
             "tablet:m-[calc(100% - 3rem)] py-6 px-4 tablet:px-24"
           }`}
