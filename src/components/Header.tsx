@@ -37,7 +37,7 @@ export const Header = (props: { siteTitle?: any }) => {
             isExpanded ? `block` : `hidden`
           } w-full lg:flex lg:items-center lg:w-auto  h-screen desktop:h-auto`}
         >
-          <div tw="flex flex-col desktop:flex-row justify-center gap-10 mr-14 text-center mt-12 desktop:mt-0">
+          <div tw="flex flex-col desktop:flex-row justify-center gap-10 mr-7 ml-7 text-center mt-12 desktop:mt-0">
             <a href="https://github.com/Ithil-protocol" target="_blank">
               <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular hover:text-primary">
                 GitHub
