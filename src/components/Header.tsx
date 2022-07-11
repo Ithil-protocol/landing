@@ -23,7 +23,7 @@ export const Header = (props: { siteTitle?: any }) => {
       } flex flex-row justify-center items-center py-4 w-full tablet:m-[calc(100% - 3rem)] px-4 tablet:px-24 z-50 fixed bg-background-primary transition-all`}
     >
       <nav className={`flex w-full flex-wrap items-center justify-between`}>
-        <img tw="w-24 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
+        <img tw="desktop:w-1/6 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
         <div className="lg:hidden flex flex-row gap-3">
           <button
             onClick={() => toggleExpansion(!isExpanded)}

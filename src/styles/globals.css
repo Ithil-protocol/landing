@@ -23,13 +23,22 @@ body > div {
 }
 
 .parallaxGradient {
-  background: rgb(21,26,41);
-  background: linear-gradient(180deg, rgba(21,26,41,1) 0%, rgba(21,26,41,0.8772102591036415) 13%, rgba(21,26,41,0.7203475140056023) 19%, rgba(21,26,41,0) 51%, rgba(21,26,41,0.790375525210084) 84%, rgba(21,26,41,1) 92%, rgba(21,26,41,1) 100%);
+  background: rgb(21, 26, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 26, 41, 1) 0%,
+    rgba(21, 26, 41, 0.8772102591036415) 13%,
+    rgba(21, 26, 41, 0.7203475140056023) 19%,
+    rgba(21, 26, 41, 0) 51%,
+    rgba(21, 26, 41, 0.790375525210084) 84%,
+    rgba(21, 26, 41, 1) 92%,
+    rgba(21, 26, 41, 1) 100%
+  );
 }
 
 * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   box-sizing: border-box;
 }
 
@@ -38,18 +47,36 @@ body > div {
 }
 
 .layoutLight {
-  background: rgb(242,245,246);
-  background: linear-gradient(90deg, rgba(242,245,246,1) 0%, rgba(219,239,255,1) 0%, rgba(242,245,246,1) 57%, rgba(242,245,246,1) 67%, rgba(242,245,246,1) 100%);
+  background: rgb(242, 245, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(242, 245, 246, 1) 0%,
+    rgba(219, 239, 255, 1) 0%,
+    rgba(242, 245, 246, 1) 57%,
+    rgba(242, 245, 246, 1) 67%,
+    rgba(242, 245, 246, 1) 100%
+  );
 }
 
 .layoutDark {
-  background: rgb(21,26,41);
-  background: radial-gradient(circle, rgba(21,26,41,1) 0%, rgba(21,26,41,0.72) 0%, rgba(7,124,224,0.21) 0%, rgba(21,26,41,1) 91%);
+  background: rgb(21, 26, 41);
+  background: radial-gradient(
+    circle,
+    rgba(21, 26, 41, 1) 0%,
+    rgba(21, 26, 41, 0.72) 0%,
+    rgba(7, 124, 224, 0.21) 0%,
+    rgba(21, 26, 41, 1) 91%
+  );
 }
 
 .layoutMain {
-  background: rgb(7,124,224);
-  background: radial-gradient(circle, rgba(7,124,224,0.25) 0%, rgba(21,26,41,1) 83%, rgba(21,26,41,1) 100%);
+  background: rgb(7, 124, 224);
+  background: radial-gradient(
+    circle,
+    rgba(7, 124, 224, 0.25) 0%,
+    rgba(21, 26, 41, 1) 83%,
+    rgba(21, 26, 41, 1) 100%
+  );
 }
 
 :root {
@@ -96,6 +123,10 @@ body > div {
   --lineheight-heading1: 38.4px;
   --fontsize-section: 24px;
   --lineheight-section: 38.4px;
+
+  /*border radius*/
+  --rounded-md: 0.375rem;
+  --rounded-xl: 0.75rem;
 }
 
 .dark {
@@ -169,6 +200,38 @@ body > div {
     --lineheight-section: 48px;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  :root {
+    --fontsize-caption-medium: 0.875vw;
+    --lineheight-caption-medium: 1.4vw;
+    --fontsize-body2-regular: 1vw;
+    --lineheight-body2-regular: 1.6vw;
+    --fontsize-body2-bold: 1vw;
+    --lineheight-body2-bold: 1.6vw;
+    --fontsize-body1-regular: 1.125vw;
+    --lineheight-body1-regular: 1.8vw;
+    --fontsize-button-medium: 1.125vw;
+    --lineheight-button-medium: 1.575vw;
+    --fontsize-body1-bold: 1.125vw;
+    --lineheight-body1-bold: 1.8vw;
+    --fontsize-input-text: 1.25vw;
+    --lineheight-input-text: 1.4675vw;
+    --fontsize-heading2: 1.25vw;
+    --lineheight-heading2: 2vw;
+    --fontsize-heading1: 2vw;
+    --lineheight-heading1: 3.2vw;
+    --fontsize-section: 3vw;
+    --lineheight-section: 3vw;
+
+    --rounded-md: 0.5vw;
+    --rounded-xl: 1vw;
+  }
+  html {
+    font-size: 0.84vw;
+  }
+}
+
 .react-horizontal-scrolling-menu--scroll-container {
   overflow: hidden;
 }
