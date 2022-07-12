@@ -32,7 +32,7 @@ export const Button: React.FC<IButtonProps> = (props: IButtonProps) => {
       type={props.type ?? "button"}
       className={props.className}
       css={[
-        tw`border-0 rounded-md cursor-pointer flex flex-row items-center justify-center px-2 px-5 tablet:px-6 desktop:px-7 py-3`,
+        tw`border-0 rounded-md cursor-pointer flex flex-row items-center justify-center px-2 px-5 tablet:px-6 desktop:px-7 py-3 h-12 tablet:h-12 desktop:h-12`,
         primary && tw`bg-action hover:bg-[rgba(6, 107, 194)]`,
         props.action &&
           tw`border border-primary hover:bg-[rgba(255, 255, 255, 0.1)]`,
