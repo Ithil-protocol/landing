@@ -261,7 +261,7 @@ const IndexPage = () => {
                   title="Stake"
                   url="https://ithil-frontend.netlify.app/stake"
                   target="_blank"
-                  tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden"
+                  tw="tablet:w-[170px] desktop:min-width[15.4vw] height[190px] tablet:hidden"
                 >
                   <div tw="flex rounded-xl bg-secondary-300 flex flex-col mobile:flex-row justify-center items-center gap-3 w-full height[190px]">
                     <Plus tw="text-primary-100" size={20} />
@@ -286,12 +286,12 @@ const IndexPage = () => {
                 />
                 <TrackedLink
                   title="Supported tokens"
-                  tw="tablet:min-width[170px] desktop:min-width[240px]"
+                  tw="tablet:min-width[170px] desktop:min-width[15.4vw]"
                   url="https://ithil-frontend.netlify.app/dashboard"
                   target="_blank"
                 >
-                  <div tw="rounded-xl bg-secondary-300 hover:bg-secondary-100 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
-                    <Plus tw="text-primary-100" size={20} />
+                  <div tw="rounded-xl bg-secondary-300 hover:bg-secondary-100 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[15.4vw] h-full">
+                    <Plus tw="text-primary-100" />
                     <Txt.Body1Regular tw="text-primary-100">
                       See all tokens
                     </Txt.Body1Regular>
@@ -408,7 +408,7 @@ const IndexPage = () => {
                 types of investors.
               </Txt.Body1Regular>
             </div>
-            <div tw="w-full tablet:w-6/12 flex items-end justify-start">
+            {/* <div tw="w-full tablet:w-6/12 flex items-end justify-start">
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-full flex flex-col justify-start gap-2">
                   <TrackedLink
@@ -452,7 +452,7 @@ const IndexPage = () => {
                       url="https://github.com/Ithil-protocol"
                       altText="github"
                     />
-                  </div> */}
+                  </div> *
                   <a
                     tw=""
                     href="https://ithil-frontend.netlify.app/"
@@ -466,7 +466,7 @@ const IndexPage = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </Layout>
       </>
