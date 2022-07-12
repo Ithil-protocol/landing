@@ -25,7 +25,7 @@ export const Header = (props: { siteTitle?: any }) => {
     >
       <nav className={`flex w-full flex-wrap items-center justify-between`}>
         <img
-          tw="desktop-wide:w-1/12 tablet:w-28 mr-6"
+          tw="desktop-wide:w-[13%] tablet:w-28 desktop:w-32  mr-6"
           src={LogoDark}
           alt="logo"
         />
