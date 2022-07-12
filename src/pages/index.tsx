@@ -134,7 +134,7 @@ const IndexPage = () => {
             </div>
           </Layout>
 
-          <ParallaxBanner
+          {/* <ParallaxBanner
             className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
             layers={[
               { image: "./banner/base.svg", speed: 0 },
@@ -158,7 +158,7 @@ const IndexPage = () => {
                 ),
               },
             ]}
-          />
+          /> */}
         </Layout>
         <Layout bgMain>
           <Layout margins>
@@ -408,7 +408,7 @@ const IndexPage = () => {
                 types of investors.
               </Txt.Body1Regular>
             </div>
-            <div tw="w-full tablet:w-6/12 flex items-end justify-start">
+            {/* <div tw="w-full tablet:w-6/12 flex items-end justify-start">
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-full flex flex-col justify-start gap-2">
                   <TrackedLink
@@ -452,7 +452,7 @@ const IndexPage = () => {
                       url="https://github.com/Ithil-protocol"
                       altText="github"
                     />
-                  </div> */}
+                  </div> *
                   <a
                     tw=""
                     href="https://ithil-frontend.netlify.app/"
@@ -466,7 +466,7 @@ const IndexPage = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </Layout>
       </>

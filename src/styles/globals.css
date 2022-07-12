@@ -201,34 +201,34 @@ body > div {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1340px) {
   :root {
-    --fontsize-caption-medium: 0.875vw;
-    --lineheight-caption-medium: 1.4vw;
-    --fontsize-body2-regular: 1vw;
-    --lineheight-body2-regular: 1.6vw;
-    --fontsize-body2-bold: 1vw;
-    --lineheight-body2-bold: 1.6vw;
-    --fontsize-body1-regular: 1.125vw;
-    --lineheight-body1-regular: 1.8vw;
-    --fontsize-button-medium: 1.125vw;
-    --lineheight-button-medium: 1.575vw;
-    --fontsize-body1-bold: 1.125vw;
-    --lineheight-body1-bold: 1.8vw;
-    --fontsize-input-text: 1.25vw;
-    --lineheight-input-text: 1.4675vw;
-    --fontsize-heading2: 1.25vw;
-    --lineheight-heading2: 2vw;
-    --fontsize-heading1: 2vw;
-    --lineheight-heading1: 3.2vw;
-    --fontsize-section: 3vw;
-    --lineheight-section: 3vw;
+    --fontsize-caption-medium: 1.045vw;
+    --lineheight-caption-medium: 1.672vw;
+    --fontsize-body2-regular: 1.194vw;
+    --lineheight-body2-regular: 1.91vw;
+    --fontsize-body2-bold: 1.194vw;
+    --lineheight-body2-bold: 1.91vw;
+    --fontsize-body1-regular: 1.343vw;
+    --lineheight-body1-regular: 2.149vw;
+    --fontsize-button-medium: 1.343vw;
+    --lineheight-button-medium: 1.881vw;
+    --fontsize-body1-bold: 1.343vw;
+    --lineheight-body1-bold: 2.149vw;
+    --fontsize-input-text: 1.493vw;
+    --lineheight-input-text: 1.752vw;
+    --fontsize-heading2: 1.492vw;
+    --lineheight-heading2: 2.388vw;
+    --fontsize-heading1: 2.388vw;
+    --lineheight-heading1: 3.821vw;
+    --fontsize-section: 1.752vw;
+    --lineheight-section: 1.752vw;
 
     --rounded-md: 0.5vw;
     --rounded-xl: 1vw;
   }
   html {
-    font-size: 0.84vw;
+    font-size: 1.194vw;
   }
 }
 

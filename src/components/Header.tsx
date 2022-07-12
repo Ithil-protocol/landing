@@ -19,11 +19,16 @@ export const Header = (props: { siteTitle?: any }) => {
   return (
     <div
       className={`${
-        !isExpanded && (scrolled ? "top-0" : "top-[-80px]")
+        !isExpanded &&
+        (scrolled ? "top-0" : "tablet:top-[-80px] desktop-wide:top-[-5.97vw]")
       } flex flex-row justify-center items-center py-4 w-full tablet:m-[calc(100% - 3rem)] px-4 tablet:px-24 z-50 fixed bg-background-primary transition-all`}
     >
       <nav className={`flex w-full flex-wrap items-center justify-between`}>
-        <img tw="desktop:w-1/6 tablet:w-28 mr-6" src={LogoDark} alt="logo" />
+        <img
+          tw="desktop-wide:w-1/12 tablet:w-28 mr-6"
+          src={LogoDark}
+          alt="logo"
+        />
         <div className="lg:hidden flex flex-row gap-3">
           <button
             onClick={() => toggleExpansion(!isExpanded)}

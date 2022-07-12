@@ -111,7 +111,7 @@ module.exports = {
         mobile: "340px",
         tablet: "480px",
         desktop: "1024px",
-        "desktop-wide": "1330px",
+        "desktop-wide": "1340px",
       },
     },
   },
