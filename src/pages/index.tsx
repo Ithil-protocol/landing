@@ -134,7 +134,7 @@ const IndexPage = () => {
             </div>
           </Layout>
 
-          {/* <ParallaxBanner
+          <ParallaxBanner
             className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
             layers={[
               { image: "./banner/base.svg", speed: 0 },
@@ -158,7 +158,7 @@ const IndexPage = () => {
                 ),
               },
             ]}
-          /> */}
+          />
         </Layout>
         <Layout bgMain>
           <Layout margins>
