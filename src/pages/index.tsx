@@ -436,7 +436,7 @@ const IndexPage = () => {
                   </div> }
                   <a
                     tw=""
-                    href="hhttps://f8ywoysx6xq.typeform.com/to/kpeREaqW"
+                    href="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
                     target="_blank"
                   >
                     <Button
