@@ -90,7 +90,7 @@ const IndexPage = () => {
         <Layout>
           <SEO
             title="Ithil | The DeFi Wizard"
-            description="An undercollateralised leverage investment protocol providing risk-diversified strategies"
+            description="Get a boosted exposure to a variety of investment strategies on curated protocols in a single platform"
             image="https://ithil.fi/logo.png"
           />
           <Layout margins>
@@ -98,15 +98,14 @@ const IndexPage = () => {
               <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
                 <Txt.Section tw="">The DeFi Wizard</Txt.Section>
                 <Txt.Body1Regular tw="text-primary-100">
-                  Stake or invest with up to 10x leverage
-                  <br />
-                  and earn big on the first crypto hedge fund in DeFi
+                Get a boosted exposure to a variety of investment <br />
+                strategies on curated protocols in a single platform 
                 </Txt.Body1Regular>
                 <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
                   <TrackedLink
                     title="App"
                     tw="width[50%] tablet:w-auto"
-                    url="https://ithil-frontend.netlify.app/"
+                    url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
                     target="_blank"
                   >
                     <Button
@@ -173,23 +172,26 @@ const IndexPage = () => {
               <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
                 <Txt.Section>How it works</Txt.Section>
                 <Txt.Body1Regular tw="text-font-200 text-left">
-                  Traders can use LPs' liquidity to perform leveraged
-                  investments and earn a lot, LPs' get fees from this,
-                  liquidators assure liquidity is not attacked.
+                Traders can boost their investments by borrowing liquidity, 
+                LPs earn fees for making their tokens available and
+                Liquidators guarantee staker's capital does not decrease.
                 </Txt.Body1Regular>
                 <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
                   <Feature
                     icon={CoinIcon}
-                    text="Leverage up using almost any token as collateral"
+                    text="Earn single-sided APY on a wide range of tokens"
                   />
-                  <Feature icon={CoinIcon} text="Sustainable, secure yields" />
+                  <Feature 
+                    icon={CoinIcon} 
+                    text="Get sustainable and stable yields in any market condition"
+                    />
                   <Feature
                     icon={CoinIcon}
-                    text="Simplified investment strategies for different risk appetites"
+                    text="Perform curated investment strategies in one click"
                   />
                   <Feature
                     icon={CoinIcon}
-                    text="Insurance reserve to safeguard liquidity"
+                    text="Internal insurance reserve to safeguard liquidity"
                   />
                 </div>
               </div>
@@ -211,16 +213,16 @@ const IndexPage = () => {
                 Earn by lending
               </Txt.Section>
               <Txt.Body1Regular tw="text-secondary-100">
-                Provide liquidity in your favourite altcoin and earn trading
-                fees. Your capital is secured by efficient smart contracts and
-                Ithil's insurance fund.
+              Stake your favourite whitelisted token and get a solid APY.
+              Your capital is secured by an efficient on-chain liquidation
+              system and our insurance reserve.
               </Txt.Body1Regular>
               <TrackedLink
                 title="Staking page"
-                url="https://ithil-frontend.netlify.app/stake"
+                url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
                 target="_blank"
               >
-                <Button text="Stake" bold action dark />
+                <Button text="Stake now" bold action dark />
               </TrackedLink>
             </div>
             <div tw="w-full desktop-wide:w-8/12 flex flex-col tablet:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
@@ -259,7 +261,7 @@ const IndexPage = () => {
                 />
                 <TrackedLink
                   title="Stake"
-                  url="https://ithil-frontend.netlify.app/stake"
+                  url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
                   target="_blank"
                   tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden"
                 >
@@ -287,7 +289,7 @@ const IndexPage = () => {
                 <TrackedLink
                   title="Supported tokens"
                   tw="tablet:min-width[170px] desktop:min-width[240px]"
-                  url="https://ithil-frontend.netlify.app/dashboard"
+                  url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
                   target="_blank"
                 >
                   <div tw="rounded-xl bg-secondary-300 hover:bg-secondary-100 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
@@ -313,7 +315,7 @@ const IndexPage = () => {
                 and earn a lot, LPs' get fees from this, liquidators assure
                 liquidity is not attacked.
               </Txt.Body1Regular>
-              <TrackedLink title="Staking page" url="https://ithil-frontend.netlify.app/stake" target="_blank">
+              <TrackedLink title="Staking page" url="" target="_blank">
                 <Button tw="w-1/2 tablet:w-auto self-start" text="Stake" bold />
               </TrackedLink>
             </div>
@@ -337,7 +339,7 @@ const IndexPage = () => {
                 // <Asset icon={UniswapIcon} tokenSymbol="UNI" apy="18" />
                 // <div tw="flex w-full h-0.5 bg-primary opacity-10"></div>
                 // <Asset icon={OusdIcon} tokenSymbol="OUSD" apy="14" />
-                <TrackedLink title="See all tokens" tw="self-center mt-5" url="https://ithil-frontend.netlify.app/stake" target="_blank">
+                <TrackedLink title="See all tokens" tw="self-center mt-5" url="" target="_blank">
                 <div tw="flex flex-row justify-center items-center gap-2 ">
                     <Plus tw="text-primary-100" size={20} />
                     <Txt.Body1Regular tw="text-primary-100">
@@ -403,35 +405,14 @@ const IndexPage = () => {
                 alt="logo"
               />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
-                Ithil is a DeFi spellbook that uses innovative smart contracts
-                and simplified strategies to provide better returns for all
-                types of investors.
+              Ithil is a modular DeFi protocol that provides high capital-efficiency 
+              within a secure and simplified DeFi experience.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-start">
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
-                <div tw="w-full flex flex-col justify-start gap-2">
-                  <TrackedLink
-                    title="disclamer"
-                    url="https://docs.ithil.fi/docs/disclamer"
-                    target="_blank"
-                  >
-                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
-                      Legal disclaimer
-                    </Txt.Body1Regular>
-                  </TrackedLink>
-                  <TrackedLink
-                    title="tos"
-                    url="https://docs.ithil.fi/docs/tos"
-                    target="_blank"
-                  >
-                    <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular hover:text-primary">
-                      Terms of Service
-                    </Txt.Body1Regular>
-                  </TrackedLink>
-                </div>
                 <div tw="w-full flex flex-col justify-start">
-                  {/* <div tw="flex flex-row gap-3 tablet:self-start">
+                  { <div tw="flex flex-row gap-3 tablet:self-start">
                     <FooterSocialIcon
                       icon={TwitterIconLight}
                       url="https://twitter.com/ithil_protocol"
@@ -452,10 +433,10 @@ const IndexPage = () => {
                       url="https://github.com/Ithil-protocol"
                       altText="github"
                     />
-                  </div> */}
+                  </div> }
                   <a
                     tw=""
-                    href="https://ithil-frontend.netlify.app/"
+                    href="hhttps://f8ywoysx6xq.typeform.com/to/kpeREaqW"
                     target="_blank"
                   >
                     <Button

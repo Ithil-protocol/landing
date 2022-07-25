@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 export function on(obj, ...args) {
   obj.addEventListener(...args)
@@ -15,7 +15,7 @@ export function off(obj, ...args) {
 const useScrollingUp = () => {
   let prevScroll
   //if it is SSR then check you are now on the client and window object is available
-  if (typeof window !== 'undefined' && window && window.window === window) {
+  if (typeof window !== "undefined" && window && window.window === window) {
     prevScroll = window.pageYOffset
   }
   const [scrollingUp, setScrollingUp] = useState(true)
@@ -26,9 +26,9 @@ const useScrollingUp = () => {
     prevScroll = currScroll
   }
   useEffect(() => {
-    on(window, 'scroll', handleScroll, { passive: true })
+    on(window, "scroll", handleScroll, { passive: true })
     return () => {
-      off(window, 'scroll', handleScroll, { passive: true })
+      off(window, "scroll", handleScroll, { passive: true })
     }
   }, [])
   return scrollingUp

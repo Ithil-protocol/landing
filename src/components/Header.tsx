@@ -59,7 +59,7 @@ export const Header = (props: { siteTitle?: any }) => {
               </Txt.Body1Bold>
             </a>
           </div>
-          <a tw="" href="https://ithil-frontend.netlify.app/" target="_blank">
+          <a tw="" href="https://f8ywoysx6xq.typeform.com/to/kpeREaqW" target="_blank">
             <Button tw="hidden lg:block" bold text="Launch app" />
           </a>
         </div>

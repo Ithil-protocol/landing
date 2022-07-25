@@ -65,12 +65,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://ithil.fi',
-        sitemap: 'https://ithil.fi/sitemap/sitemap-index.xml',
-        policy: [{userAgent: '*', allow: '/'}]
-      }
+        host: "https://ithil.fi",
+        sitemap: "https://ithil.fi/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

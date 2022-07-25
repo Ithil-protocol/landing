@@ -32,37 +32,38 @@ function SEO({ title, description, image, meta }) {
   )
 
   const structuredContent = {
-    '@context': 'http://schema.org',
-        '@type': 'Corporation',
-        '@id': 'https://ithil.fi/',
-        'name': 'Ithil',
-        'alternateName': 'Ithil',
-        'url': 'https://ithil.fi/',
-        'email': 'info@ithil.fi',
-        'slogan': description,
-        'logo': {
-            '@type': 'ImageObject',
-            'width': 118,
-            'height': 32,
-            'url': image
-        },
-        'copyrightHolder': {
-            '@type': 'Organization',
-            'name': 'Ithil',
-            'url': 'https://ithil.fi/'
-        },
-        'copyrightYear': '2022',
-        'mainEntityOfPage': {
-            '@type': 'WebPage',
-            '@id': 'https://ithil.fi/'
-        },
-        'sameAs': [
-            'https://github.com/Ithil-protocol/',
-            'https://twitter.com/ithil_protocol/'
-        ]
+    "@context": "http://schema.org",
+    "@type": "Corporation",
+    "@id": "https://ithil.fi/",
+    name: "Ithil",
+    alternateName: "Ithil",
+    url: "https://ithil.fi/",
+    email: "info@ithil.fi",
+    slogan: description,
+    logo: {
+      "@type": "ImageObject",
+      width: 118,
+      height: 32,
+      url: image,
+    },
+    copyrightHolder: {
+      "@type": "Organization",
+      name: "Ithil",
+      url: "https://ithil.fi/",
+    },
+    copyrightYear: "2022",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://ithil.fi/",
+    },
+    sameAs: [
+      "https://github.com/Ithil-protocol/",
+      "https://twitter.com/ithil_protocol/",
+      "https://medium.com/@ithil-protocol/",
+    ],
   }
 
-  const lang = "en_US";
+  const lang = "en_US"
   const defaultTitle = title || site.siteMetadata?.title
   const metaDescription = description || site.siteMetadata.description
   const canonical = site.siteMetadata.siteUrl
@@ -131,18 +132,24 @@ function SEO({ title, description, image, meta }) {
           : []
       }
     >
-      <script type="application/ld+json">{JSON.stringify(structuredContent)}</script>
+      <script type="application/ld+json">
+        {JSON.stringify(structuredContent)}
+      </script>
       <meta name="msapplication-TileColor" content="#151A29" />
       <meta name="theme-color" content="#151A29" />
       <link rel={"apple-touch-icon"} sizes={"72x72"} href={favicon72} />
-      <link rel={"icon"} type={"image/png"} sizes={"32x32"} href={favicon32}/>
-      <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96}/>
-      <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96}/>
-      <link rel={"icon"} type={"image/png"} sizes={"16x16"} href={favicon16}/>
-      <link rel={"icon"} href={favicon}/>
+      <link rel={"icon"} type={"image/png"} sizes={"32x32"} href={favicon32} />
+      <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96} />
+      <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96} />
+      <link rel={"icon"} type={"image/png"} sizes={"16x16"} href={favicon16} />
+      <link rel={"icon"} href={favicon} />
       {metaTags.map((meta, index) => {
-        if (meta.name) return (<meta key={index} name={meta.name} content={meta.content} />)
-        if (meta.property) return (<meta key={index} property={meta.property} content={meta.content} />)
+        if (meta.name)
+          return <meta key={index} name={meta.name} content={meta.content} />
+        if (meta.property)
+          return (
+            <meta key={index} property={meta.property} content={meta.content} />
+          )
       })}
     </Helmet>
   )
