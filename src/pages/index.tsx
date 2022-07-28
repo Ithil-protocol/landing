@@ -105,7 +105,7 @@ const IndexPage = () => {
                   <TrackedLink
                     title="App"
                     tw="width[50%] tablet:w-auto"
-                    url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
+                    url="#"
                     target="_blank"
                   >
                     <Button
@@ -219,7 +219,7 @@ const IndexPage = () => {
               </Txt.Body1Regular>
               <TrackedLink
                 title="Staking page"
-                url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
+                url="#"
                 target="_blank"
               >
                 <Button text="Stake now" bold action dark />
@@ -261,7 +261,7 @@ const IndexPage = () => {
                 />
                 <TrackedLink
                   title="Stake"
-                  url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
+                  url="#"
                   target="_blank"
                   tw="width[45%] tablet:w-[170px] desktop:min-width[240px] height[190px] tablet:hidden"
                 >
@@ -289,7 +289,7 @@ const IndexPage = () => {
                 <TrackedLink
                   title="Supported tokens"
                   tw="tablet:min-width[170px] desktop:min-width[240px]"
-                  url="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
+                  url="#"
                   target="_blank"
                 >
                   <div tw="rounded-xl bg-secondary-300 hover:bg-secondary-100 flex flex-col mobile:flex-row justify-center items-center gap-3 tablet:min-width[170px] desktop:min-width[240px] h-full">
@@ -436,7 +436,7 @@ const IndexPage = () => {
                   </div> }
                   <a
                     tw=""
-                    href="https://f8ywoysx6xq.typeform.com/to/kpeREaqW"
+                    href="#"
                     target="_blank"
                   >
                     <Button
