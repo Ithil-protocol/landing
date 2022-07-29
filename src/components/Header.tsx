@@ -59,7 +59,7 @@ export const Header = (props: { siteTitle?: any }) => {
               </Txt.Body1Bold>
             </a>
           </div>
-          <a tw="" href="#" target="_blank">
+          <a tw="" href="https://app.ithil.fi" target="_blank">
             <Button tw="hidden lg:block" bold text="Launch app" />
           </a>
         </div>
