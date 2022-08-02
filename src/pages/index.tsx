@@ -82,6 +82,8 @@ import UniswapIcon from "../assets/images/uniswapIcon.svg"
 //@ts-ignore
 import OusdIcon from "../assets/images/ousdIcon.svg"
 
+import Modal from "../components/Modal"
+
 const IndexPage = () => {
   return (
     <ParallaxProvider>
@@ -105,12 +107,12 @@ const IndexPage = () => {
                   <TrackedLink
                     title="App"
                     tw="width[50%] tablet:w-auto"
-                    url="https://app.ithil.fi"
+                    url="https://discord.gg/tEaGBcGdQC"
                     target="_blank"
                   >
                     <Button
                       tw="w-full tablet:w-auto self-start"
-                      text="Start investing"
+                      text="Join our Discord"
                       bold
                     />
                   </TrackedLink>
@@ -132,6 +134,8 @@ const IndexPage = () => {
               </div>
             </div>
           </Layout>
+          
+          <Modal />
 
           <ParallaxBanner
             className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
@@ -228,10 +232,10 @@ const IndexPage = () => {
             <div tw="w-full desktop-wide:w-8/12 flex flex-col tablet:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
               <div tw="w-full flex-wrap tablet:flex-nowrap tablet:w-auto flex flex-row tablet:flex-col tablet:flex-row gap[7px] tablet:gap[10px] desktop:gap[16px]margin-right[5vw] justify-center tablet:justify-start">
                 <Token
-                  tokenName="Ether"
-                  tokenSymbol="ETH"
+                  tokenName="USD Coin"
+                  tokenSymbol="USDC"
                   apy="10%"
-                  icon={EtherIcon}
+                  icon={UsdcIcon}
                 />
                 <Token
                   tokenName="Wrapped Ether"
@@ -281,10 +285,10 @@ const IndexPage = () => {
                   icon={WrappedBitconIcon}
                 />
                 <Token
-                  tokenName="Tether USD"
-                  tokenSymbol="USDT"
+                  tokenName="Origin Dollar"
+                  tokenSymbol="OUSD"
                   apy="10%"
-                  icon={TetherUsdIcon}
+                  icon={OusdIcon}
                 />
                 <TrackedLink
                   title="Supported tokens"
