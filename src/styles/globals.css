@@ -23,13 +23,22 @@ body > div {
 }
 
 .parallaxGradient {
-  background: rgb(21,26,41);
-  background: linear-gradient(180deg, rgba(21,26,41,1) 0%, rgba(21,26,41,0.8772102591036415) 13%, rgba(21,26,41,0.7203475140056023) 19%, rgba(21,26,41,0) 51%, rgba(21,26,41,0.790375525210084) 84%, rgba(21,26,41,1) 92%, rgba(21,26,41,1) 100%);
+  background: rgb(21, 26, 41);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 26, 41, 1) 0%,
+    rgba(21, 26, 41, 0.8772102591036415) 13%,
+    rgba(21, 26, 41, 0.7203475140056023) 19%,
+    rgba(21, 26, 41, 0) 51%,
+    rgba(21, 26, 41, 0.790375525210084) 84%,
+    rgba(21, 26, 41, 1) 92%,
+    rgba(21, 26, 41, 1) 100%
+  );
 }
 
 * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   box-sizing: border-box;
 }
 
@@ -38,18 +47,36 @@ body > div {
 }
 
 .layoutLight {
-  background: rgb(242,245,246);
-  background: linear-gradient(90deg, rgba(242,245,246,1) 0%, rgba(219,239,255,1) 0%, rgba(242,245,246,1) 57%, rgba(242,245,246,1) 67%, rgba(242,245,246,1) 100%);
+  background: rgb(242, 245, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(242, 245, 246, 1) 0%,
+    rgba(219, 239, 255, 1) 0%,
+    rgba(242, 245, 246, 1) 57%,
+    rgba(242, 245, 246, 1) 67%,
+    rgba(242, 245, 246, 1) 100%
+  );
 }
 
 .layoutDark {
-  background: rgb(21,26,41);
-  background: radial-gradient(circle, rgba(21,26,41,1) 0%, rgba(21,26,41,0.72) 0%, rgba(7,124,224,0.21) 0%, rgba(21,26,41,1) 91%);
+  background: rgb(21, 26, 41);
+  background: radial-gradient(
+    circle,
+    rgba(21, 26, 41, 1) 0%,
+    rgba(21, 26, 41, 0.72) 0%,
+    rgba(7, 124, 224, 0.21) 0%,
+    rgba(21, 26, 41, 1) 91%
+  );
 }
 
 .layoutMain {
-  background: rgb(7,124,224);
-  background: radial-gradient(circle, rgba(7,124,224,0.25) 0%, rgba(21,26,41,1) 83%, rgba(21,26,41,1) 100%);
+  background: rgb(7, 124, 224);
+  background: radial-gradient(
+    circle,
+    rgba(7, 124, 224, 0.25) 0%,
+    rgba(21, 26, 41, 1) 83%,
+    rgba(21, 26, 41, 1) 100%
+  );
 }
 
 :root {

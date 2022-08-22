@@ -6,7 +6,11 @@ import tw from "twin.macro"
 
 import { Txt } from "./Txt"
 
-export const Asset = (props: { icon: any; tokenSymbol: string; apy: string }) => {
+export const Asset = (props: {
+  icon: any
+  tokenSymbol: string
+  apy: string
+}) => {
   const { icon, tokenSymbol, apy } = props
   const Icon = icon
   return (

@@ -100,8 +100,8 @@ const IndexPage = () => {
               <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
                 <Txt.Section tw="">The DeFi Wizard</Txt.Section>
                 <Txt.Body1Regular tw="text-primary-100">
-                Get a boosted exposure to a variety of investment <br />
-                strategies on curated protocols in a single platform 
+                  Get a boosted exposure to a variety of investment <br />
+                  strategies on curated protocols in a single platform
                 </Txt.Body1Regular>
                 <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
                   <TrackedLink
@@ -134,9 +134,6 @@ const IndexPage = () => {
               </div>
             </div>
           </Layout>
-          
-          <Modal />
-
           <ParallaxBanner
             className="aspect-[1/1.5] tablet:aspect-[1/1] desktop:aspect-[2/1] absolute"
             layers={[
@@ -176,19 +173,19 @@ const IndexPage = () => {
               <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
                 <Txt.Section>How it works</Txt.Section>
                 <Txt.Body1Regular tw="text-font-200 text-left">
-                Traders can boost their investments by borrowing liquidity, 
-                LPs earn fees for making their tokens available and
-                Liquidators guarantee staker's capital does not decrease.
+                  Traders can boost their investments by borrowing liquidity,
+                  LPs earn fees for making their tokens available and
+                  Liquidators guarantee staker's capital does not decrease.
                 </Txt.Body1Regular>
                 <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
                   <Feature
                     icon={CoinIcon}
                     text="Earn single-sided APY on a wide range of tokens"
                   />
-                  <Feature 
-                    icon={CoinIcon} 
+                  <Feature
+                    icon={CoinIcon}
                     text="Get sustainable and stable yields in any market condition"
-                    />
+                  />
                   <Feature
                     icon={CoinIcon}
                     text="Perform curated investment strategies in one click"
@@ -217,9 +214,9 @@ const IndexPage = () => {
                 Earn by lending
               </Txt.Section>
               <Txt.Body1Regular tw="text-secondary-100">
-              Stake your favourite whitelisted token and get a solid APY.
-              Your capital is secured by an efficient on-chain liquidation
-              system and our insurance reserve.
+                Stake your favourite whitelisted token and get a solid APY. Your
+                capital is secured by an efficient on-chain liquidation system
+                and our insurance reserve.
               </Txt.Body1Regular>
               <TrackedLink
                 title="Staking page"
@@ -409,40 +406,39 @@ const IndexPage = () => {
                 alt="logo"
               />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
-              Ithil is a modular DeFi protocol that provides high capital-efficiency 
-              within a secure and simplified DeFi experience.
+                Ithil is a modular DeFi protocol that provides high
+                capital-efficiency within a secure and simplified DeFi
+                experience.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-start">
               <div tw="flex flex-col w-full desktop:w-7/12 gap-3">
                 <div tw="w-full flex flex-col justify-start">
-                  { <div tw="flex flex-row gap-3 tablet:self-start">
-                    <FooterSocialIcon
-                      icon={TwitterIconLight}
-                      url="https://twitter.com/ithil_protocol"
-                      altText="twitter"
-                    />
-                    <FooterSocialIcon
-                      icon={DiscordIconLight}
-                      url="https://discord.gg/tEaGBcGdQC"
-                      altText="discord"
-                    />
-                    <FooterSocialIcon
-                      icon={MediumIconLight}
-                      url="https://medium.com/@ithil-protocol"
-                      altText="medium"
-                    />
-                    <FooterSocialIcon
-                      icon={GithubIconLight}
-                      url="https://github.com/Ithil-protocol"
-                      altText="github"
-                    />
-                  </div> }
-                  <a
-                    tw=""
-                    href="https://app.ithil.fi"
-                    target="_blank"
-                  >
+                  {
+                    <div tw="flex flex-row gap-3 tablet:self-start">
+                      <FooterSocialIcon
+                        icon={TwitterIconLight}
+                        url="https://twitter.com/ithil_protocol"
+                        altText="twitter"
+                      />
+                      <FooterSocialIcon
+                        icon={DiscordIconLight}
+                        url="https://discord.gg/tEaGBcGdQC"
+                        altText="discord"
+                      />
+                      <FooterSocialIcon
+                        icon={MediumIconLight}
+                        url="https://medium.com/@ithil-protocol"
+                        altText="medium"
+                      />
+                      <FooterSocialIcon
+                        icon={GithubIconLight}
+                        url="https://github.com/Ithil-protocol"
+                        altText="github"
+                      />
+                    </div>
+                  }
+                  <a tw="" href="https://app.ithil.fi" target="_blank">
                     <Button
                       tw="tablet:self-start mt-10"
                       text="Launch app"

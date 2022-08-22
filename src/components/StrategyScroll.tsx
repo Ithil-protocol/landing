@@ -32,7 +32,8 @@ const strategies = [
   {
     id: 2,
     title: "Yearn on steroids",
-    description: "Stake your favorite tokens on any Yearn vault and multiply your APY",
+    description:
+      "Stake your favorite tokens on any Yearn vault and multiply your APY",
     apyMin: "5x",
     apyMax: "20x",
     risk: "Low",
@@ -67,15 +68,11 @@ export const StrategyScroll = () => {
 
   const goToFirst = () => {
     const items = apiRef.current.items.toItems()
-    apiRef.current.scrollToItem(
-      apiRef.current.getPrevItem()
-    )
+    apiRef.current.scrollToItem(apiRef.current.getPrevItem())
   }
   const goToLast = () => {
     const items = apiRef.current.items.toItems()
-    apiRef.current.scrollToItem(
-      apiRef.current.getNextItem()
-    )
+    apiRef.current.scrollToItem(apiRef.current.getNextItem())
   }
 
   const isItemSelected = id => !!selected.find(el => el === id)
@@ -98,44 +95,47 @@ export const StrategyScroll = () => {
       <Layout margins>
         <div tw="flex flex-row justify-between items-center my-10">
           <Txt.Section tw="flex-grow">Available strategies</Txt.Section>
-            <div tw="flex flex-row gap-4 cursor-pointer">
-              <img
-                tw="h-8 w-8"
-                src={ArrowLeftSelected}
-                alt="arrow left"
-                onClick={() => {
-                  goToFirst()
-                }}
-              />
-              <img
-                tw="h-8 w-8"
-                src={ArrowRightSelected}
-                alt="arrow right"
-                onClick={() => {
-                  goToLast()
-                }}
-              />
-            </div>
+          <div tw="flex flex-row gap-4 cursor-pointer">
+            <img
+              tw="h-8 w-8"
+              src={ArrowLeftSelected}
+              alt="arrow left"
+              onClick={() => {
+                goToFirst()
+              }}
+            />
+            <img
+              tw="h-8 w-8"
+              src={ArrowRightSelected}
+              alt="arrow right"
+              onClick={() => {
+                goToLast()
+              }}
+            />
+          </div>
         </div>
       </Layout>
-        <Layout>
-        <ScrollMenu LeftArrow={null} RightArrow={null} apiRef={apiRef} wrapperClassName='mb-10 desktop-wide:ml-20'>
-        {items.map(({ id, ...rest }, index) => (
-          // @ts-ignore
-          <Card
-            onClick={handleClick(id)}
-            itemId={id}
-            title={id}
-            key={id}
-            css={[
-              tw` w-screen tablet:w-auto`,
-            ]}
-            {...rest}
-          />
-        ))}
-      </ScrollMenu>
-        </Layout>
-      </>
+      <Layout>
+        <ScrollMenu
+          LeftArrow={null}
+          RightArrow={null}
+          apiRef={apiRef}
+          wrapperClassName="mb-10 desktop-wide:ml-20"
+        >
+          {items.map(({ id, ...rest }, index) => (
+            // @ts-ignore
+            <Card
+              onClick={handleClick(id)}
+              itemId={id}
+              title={id}
+              key={id}
+              css={[tw` w-screen tablet:w-auto`]}
+              {...rest}
+            />
+          ))}
+        </ScrollMenu>
+      </Layout>
+    </>
   )
 }
 
@@ -143,8 +143,12 @@ function Card({ onClick, title, itemId, className, ...rest }) {
   const visibility = React.useContext(VisibilityContext)
 
   return (
-    <div onClick={() => onClick(visibility)} tabIndex={0} className={`${className} px-3`}>
-      { /* @ts-ignore */ }
+    <div
+      onClick={() => onClick(visibility)}
+      tabIndex={0}
+      className={`${className} px-3`}
+    >
+      {/* @ts-ignore */}
       <Strategy title={title} {...rest} />
     </div>
   )
