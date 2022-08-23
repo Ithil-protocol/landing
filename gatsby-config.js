@@ -55,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ithil - Leverage to earn`,
+        name: `Ithil - The DeFi Wizard`,
         short_name: `Ithil`,
         start_url: `/`,
         background_color: `#151A29`,
