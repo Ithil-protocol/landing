@@ -135,8 +135,8 @@ function SEO({ title, description, image, meta }) {
       <script type="application/ld+json">
         {JSON.stringify(structuredContent)}
       </script>
-      <meta name="msapplication-TileColor" content="#151A29" />
-      <meta name="theme-color" content="#151A29" />
+      <meta name="msapplication-TileColor" content="#2a333c" />
+      <meta name="theme-color" content="#2a333c" />
       <link rel={"apple-touch-icon"} sizes={"72x72"} href={favicon72} />
       <link rel={"icon"} type={"image/png"} sizes={"32x32"} href={favicon32} />
       <link rel={"icon"} type={"image/png"} sizes={"96x96"} href={favicon96} />
