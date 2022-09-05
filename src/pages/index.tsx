@@ -17,9 +17,9 @@ import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
 import HowItWorkIllustration from "../assets/images/howItWorks.svg"
 //@ts-ignore
-import PartnerBalancer from "../assets/images/balancer.svg"
+import BalancerLogo from "../assets/images/balancer.svg"
 //@ts-ignore
-import PartnerAura from "../assets/images/aura.svg"
+import AuraLogo from "../assets/images/aura.svg"
 import PropTypes from "prop-types"
 import SEO from "../components/seo"
 
@@ -353,12 +353,12 @@ const IndexPage = () => {
 
           <div tw="w-full flex flex-col desktop:flex-row gap-10 desktop:gap-20 my-32 justify-start tablet:items-center desktop:items-start">
             <div tw="w-full flex justify-start desktop:w-1/3">
-              <Txt.Section tw="desktop:w-24">Partners</Txt.Section>
+              <Txt.Section tw="desktop:w-24">Supported by</Txt.Section>
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
               <div tw="flex flex-row flex-wrap justify-start gap-3 tablet:gap-6">
-                <Partner image={PartnerBalancer} />
-                <Partner image={PartnerAura} />
+                <Partner image={BalancerLogo} />
+                <Partner image={AuraLogo} />
               </div>
             </div>
           </div>
