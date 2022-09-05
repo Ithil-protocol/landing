@@ -17,11 +17,9 @@ import IthilBackground from "../assets/images/bgSvg.svg"
 // @ts-ignore
 import HowItWorkIllustration from "../assets/images/howItWorks.svg"
 //@ts-ignore
-import PartnerComposable from "../assets/images/composable.svg"
+import PartnerBalancer from "../assets/images/balancer.svg"
 //@ts-ignore
-import PartnerAdvancedBlockchain from "../assets/images/advancedBlockchain.svg"
-//@ts-ignore
-import PartnerDlab from "../assets/images/dlab.svg"
+import PartnerAura from "../assets/images/aura.svg"
 import PropTypes from "prop-types"
 import SEO from "../components/seo"
 
@@ -359,9 +357,8 @@ const IndexPage = () => {
             </div>
             <div tw=" w-full desktop:w-2/3 flex flex-col tablet:flex-row mt-4">
               <div tw="flex flex-row flex-wrap justify-start gap-3 tablet:gap-6">
-                <Partner image={PartnerComposable} />
-                <Partner image={PartnerAdvancedBlockchain} />
-                <Partner image={PartnerDlab} />
+                <Partner image={PartnerBalancer} />
+                <Partner image={PartnerAura} />
               </div>
             </div>
           </div>
