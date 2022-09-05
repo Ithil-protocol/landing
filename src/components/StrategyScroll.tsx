@@ -41,7 +41,7 @@ const strategies = [
   },
   {
     id: 3,
-    title: "Join the veBAL revolution on Balancer",
+    title: "Grow with Balancer",
     description: "Coming soon...",
     apyMin: "10x",
     apyMax: "100x",
