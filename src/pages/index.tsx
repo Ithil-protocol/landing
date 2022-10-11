@@ -403,9 +403,7 @@ const IndexPage = () => {
                 alt="logo"
               />
               <Txt.Body1Regular tw="text-font-200 tablet:text-body2-regular desktop:w-7/12">
-                Ithil is a modular DeFi protocol that provides high
-                capital-efficiency within a secure and simplified DeFi
-                experience.
+              Ithil is a modular protocol that provides web3-native financial services within a secure and simplified user experience.
               </Txt.Body1Regular>
             </div>
             <div tw="w-full tablet:w-6/12 flex items-end justify-start">
