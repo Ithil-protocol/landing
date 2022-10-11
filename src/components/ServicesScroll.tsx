@@ -15,53 +15,52 @@ import ArrowRight from "../assets/images/arrowRight.svg"
 // @ts-ignore
 import ArrowRightSelected from "../assets/images/arrowRightSelected.svg"
 import Layout from "./Layout"
-import Strategy from "./Strategy"
+import Service from "./Service"
 import { Txt } from "./Txt"
 import tw from "twin.macro"
 
-const strategies = [
+const services = [
   {
     id: 1,
-    title: "Margin trading",
-    description: "Go long or short on any token pair via Kyber Network",
-    apyMin: "0",
-    apyMax: "∞x",
-    risk: "High",
+    title: "Dex Farming",
+    description:
+      "Single-sided LPing, automatically farming and autocompounding rewards",
+    status: "Active",
+    tag: "DeFi",
     url: "",
   },
   {
     id: 2,
-    title: "Yearn on steroids",
+    title: "Boosted Staking",
     description:
-      "Stake your favorite tokens on any Yearn vault and multiply your APY",
-    apyMin: "5x",
-    apyMax: "20x",
-    risk: "Low",
+      "Optimise your capital allocation on majour money markets like Aave or Euler",
+    status: "Active",
+    tag: "DeFi",
     url: "",
   },
   {
     id: 3,
-    title: "Grow with Balancer",
-    description: "Coming soon...",
-    apyMin: "10x",
-    apyMax: "100x",
-    risk: "Medium",
+    title: "Rents and Mortgages",
+    description:
+      "Rent or buy a metaverse LAND or a BAYC slowly repaying your debt",
+    status: "In Development",
+    tag: "NFT",
     url: "",
   },
   {
     id: 4,
-    title: "Rest assured with Aave",
-    description: "Coming soon...",
-    apyMin: "5x",
-    apyMax: "20x",
-    risk: "Low",
+    title: "Market Making",
+    description:
+      "Managed UniV3 leveraged liquidity position on prominent pools",
+    status: "In Development",
+    tag: "DeFi",
     url: "",
   },
 ]
 type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>
 
-export const StrategyScroll = () => {
-  const [items] = React.useState(strategies)
+export const ServicesScroll = () => {
+  const [items] = React.useState(services)
   const [selected, setSelected] = React.useState([])
 
   const apiRef = React.useRef({} as scrollVisibilityApiType)
@@ -94,7 +93,7 @@ export const StrategyScroll = () => {
     <>
       <Layout margins>
         <div tw="flex flex-row justify-between items-center my-10">
-          <Txt.Section tw="flex-grow">Available strategies</Txt.Section>
+          <Txt.Section tw="flex-grow">Available services</Txt.Section>
           <div tw="flex flex-row gap-4 cursor-pointer">
             <img
               tw="h-8 w-8"
@@ -149,7 +148,7 @@ function Card({ onClick, title, itemId, className, ...rest }) {
       className={`${className} px-3`}
     >
       {/* @ts-ignore */}
-      <Strategy title={title} {...rest} />
+      <Service title={title} {...rest} />
     </div>
   )
 }

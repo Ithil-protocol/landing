@@ -12,22 +12,18 @@ import { BookOpen } from "phosphor-react"
 import { Button } from "../components/Button"
 import { TrackedLink } from "../components/TrackedLink"
 import { Header } from "../components/Header"
-// @ts-ignore
-import IthilBackground from "../assets/images/bgSvg.svg"
+import SEO from "../components/seo"
+import Token from "../components/Token"
+import { FooterSocialIcon } from "../components/FooterSocialIcon"
+
 // @ts-ignore
 import HowItWorkIllustration from "../assets/images/howItWorks.svg"
 //@ts-ignore
 import BalancerLogo from "../assets/images/balancer.svg"
 //@ts-ignore
 import AuraLogo from "../assets/images/aura.svg"
-import PropTypes from "prop-types"
-import SEO from "../components/seo"
-
-import Token from "../components/Token"
-import tw from "twin.macro"
-import { withPrefix } from "gatsby"
-import { FooterSocialIcon } from "../components/FooterSocialIcon"
-
+//@ts-ignore
+import AaveLogo from "../assets/images/aave.svg"
 //@ts-ignore
 import CoinIcon from "../assets/images/coinIcon.svg"
 //@ts-ignore
@@ -51,8 +47,7 @@ import Partner from "../components/Partner"
 import { Plus } from "phosphor-react"
 import React from "react"
 import { SocialLink } from "../components/SocialLink"
-import Strategy from "../components/Strategy"
-import { StrategyScroll } from "../components/StrategyScroll"
+import { ServicesScroll } from "../components/ServicesScroll"
 //@ts-ignore
 import TetherUsdIcon from "../assets/images/usdt.png"
 //@ts-ignore
@@ -89,17 +84,20 @@ const IndexPage = () => {
         <Header />
         <Layout>
           <SEO
-            title="Ithil | The DeFi Wizard"
-            description="Get a boosted exposure to a variety of investment strategies on curated protocols in a single platform"
+            title="Ithil | The Web3 Wizard"
+            description="A financial primitive protocol empowering the future of web3 and providing easier access to on-chain assets"
             image="https://ithil.fi/logo.png"
           />
           <Layout margins>
             <div tw="w-full mt-28 tablet:mt-44 margin-bottom[-150px] tablet:margin-bottom[-200px] desktop:margin-bottom[-200px] relative z-10">
               <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
-                <Txt.Section tw="">The DeFi Wizard</Txt.Section>
+                <Txt.Section tw="">The Web3 Wizard</Txt.Section>
                 <Txt.Body1Regular tw="text-primary-100">
-                  Get a boosted exposure to a variety of investment <br />
-                  strategies on curated protocols in a single platform
+                  A financial primitive protocol empowering
+                  <br />
+                  the future of web3 and providing easier access
+                  <br />
+                  to on-chain assets
                 </Txt.Body1Regular>
                 <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
                   <TrackedLink
@@ -171,9 +169,10 @@ const IndexPage = () => {
               <div tw="flex flex-col w-full gap-4 desktop:gap-10 justify-start">
                 <Txt.Section>How it works</Txt.Section>
                 <Txt.Body1Regular tw="text-font-200 text-left">
-                  Traders can boost their investments by borrowing liquidity,
-                  LPs earn fees for making their tokens available and
-                  Liquidators guarantee staker's capital does not decrease.
+                  Borrowers can get financial services in different areas of
+                  web3, Lenders earn fees for making their tokens available for
+                  use and Liquidators safeguard positions and close the ones
+                  loosing too much.
                 </Txt.Body1Regular>
                 <div tw="flex flex-col m-4 gap-5 ml-0  desktop:self-start mt-8">
                   <Feature
@@ -182,15 +181,15 @@ const IndexPage = () => {
                   />
                   <Feature
                     icon={CoinIcon}
-                    text="Get sustainable and stable yields in any market condition"
+                    text="Grow your portfolio with one-click investment strategies"
                   />
                   <Feature
                     icon={CoinIcon}
-                    text="Perform curated investment strategies in one click"
+                    text="Purchase on-chain assets and repay your debt over time"
                   />
                   <Feature
                     icon={CoinIcon}
-                    text="Internal insurance reserve to safeguard liquidity"
+                    text="Rent NFTs to access guarded communities or Play2Earn games"
                   />
                 </div>
               </div>
@@ -203,7 +202,7 @@ const IndexPage = () => {
               </div>
             </div>
           </Layout>
-          <StrategyScroll />
+          <ServicesScroll />
         </Layout>
         <Layout margins bgLight>
           <div tw="w-full flex flex-col desktop-wide:flex-row gap-10 desktop:gap-20 my-20 justify-start tablet:items-center desktop:items-start">
@@ -212,16 +211,16 @@ const IndexPage = () => {
                 Earn by lending
               </Txt.Section>
               <Txt.Body1Regular tw="text-secondary-100">
-                Stake your favourite whitelisted token and get a solid APY. Your
-                capital is secured by an efficient on-chain liquidation system
-                and our insurance reserve.
+                Deposit your favourite whitelisted token and get a solid APY.
+                Your capital is secured by an efficient on-chain liquidation
+                system and our insurance reserve to protect your capital.
               </Txt.Body1Regular>
               <TrackedLink
                 title="Staking page"
                 url="https://app.ithil.fi"
                 target="_blank"
               >
-                <Button text="Stake now" bold action dark />
+                <Button text="Deposit now" bold action dark />
               </TrackedLink>
             </div>
             <div tw="w-full desktop-wide:w-8/12 flex flex-col tablet:items-end gap[7px] tablet:gap[10px] desktop:gap[16px]">
@@ -359,6 +358,7 @@ const IndexPage = () => {
               <div tw="flex flex-row flex-wrap justify-start gap-3 tablet:gap-6">
                 <Partner image={BalancerLogo} />
                 <Partner image={AuraLogo} />
+                <Partner image={AaveLogo} />
               </div>
             </div>
           </div>
