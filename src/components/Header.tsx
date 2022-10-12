@@ -53,9 +53,9 @@ export const Header = (props: { siteTitle?: any }) => {
                 Twitter
               </Txt.Body1Bold>
             </a>
-            <a href="https://docs.ithil.fi/" target="_blank">
+            <a href="https://github.com/Ithil-protocol" target="_blank">
               <Txt.Body1Bold tw="tablet:text-font-200 text-primary-100 tablet:font-normal tablet:text-body2-regular hover:text-primary">
-                Docs
+                GitHub
               </Txt.Body1Bold>
             </a>
           </div>
