@@ -85,7 +85,7 @@ const IndexPage = () => {
         <Layout>
           <SEO
             title="Ithil | The Web3 Wizard"
-            description="A financial primitive protocol empowering the future of web3 and providing easier access to on-chain assets"
+            description="Ithil is a financial interoperability layer that connects the whole web3 space facilitating new value creation via crowdlending."
             image="https://ithil.fi/logo.png"
           />
           <Layout margins>
@@ -93,11 +93,9 @@ const IndexPage = () => {
               <div tw="flex flex-col gap-10 w-full tablet:w-9/12 desktop:w-7/12">
                 <Txt.Section tw="">The Web3 Wizard</Txt.Section>
                 <Txt.Body1Regular tw="text-primary-100">
-                  A financial primitive protocol empowering
-                  <br />
-                  the future of web3 and providing easier access
-                  <br />
-                  to on-chain assets
+                  A financial interoperability layer<br />
+                  that connects the whole web3 space<br /> 
+                  facilitating new value creation via crowdlending.
                 </Txt.Body1Regular>
                 <div tw="flex flex-row gap-3 ml-0 self-start w-full justify-start">
                   <TrackedLink
