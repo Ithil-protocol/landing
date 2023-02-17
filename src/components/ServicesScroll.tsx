@@ -22,38 +22,61 @@ import tw from "twin.macro"
 const services = [
   {
     id: 1,
-    title: "Dex Farming",
-    description:
-      "Single-sided LPing, automatically farming and autocompounding rewards",
+    title: "GMX",
+    description: "Maximise your exposure to the GLP real yield rewards",
     status: "Active",
-    tag: "DeFi",
+    tag: "Lending",
     url: "",
   },
   {
     id: 2,
-    title: "Boosted Staking",
+    title: "Aave",
     description:
-      "Optimise your capital allocation on majour money markets like Aave or Euler",
+      "Optimise your capital allocation on the biggest DeFi money market",
     status: "Active",
-    tag: "DeFi",
+    tag: "Lending",
     url: "",
   },
   {
     id: 3,
-    title: "Rents and Mortgages",
+    title: "Curve + Convex",
     description:
-      "Rent or buy a metaverse LAND or a BAYC slowly repaying your debt",
-    status: "In Development",
-    tag: "NFT",
+      "Leveraged LPing on any Curve pool and farming rewards on Convex",
+    status: "Active",
+    tag: "Dex",
     url: "",
   },
   {
     id: 4,
-    title: "Market Making",
+    title: "Balancer",
     description:
-      "Managed UniV3 leveraged liquidity position on prominent pools",
+      "Provide liquidity to any pool with single or multi-token leverage",
+    status: "Active",
+    tag: "Dex",
+    url: "",
+  },
+  {
+    id: 5,
+    title: "Sushi",
+    description: "Become a chef and get the best yield on any pool",
+    status: "Active",
+    tag: "Dex",
+    url: "",
+  },
+  {
+    id: 6,
+    title: "Stargate",
+    description: "Help make cross-chain token transfers a reality and get paid",
+    status: "Active",
+    tag: "Bridge",
+    url: "",
+  },
+  {
+    id: 7,
+    title: "NFT Mortgages",
+    description: "Buy a metaverse LAND or a BAYC over monthly instalments",
     status: "In Development",
-    tag: "DeFi",
+    tag: "NFT",
     url: "",
   },
 ]
@@ -93,7 +116,7 @@ export const ServicesScroll = () => {
     <>
       <Layout margins>
         <div tw="flex flex-row justify-between items-center my-10">
-          <Txt.Section tw="flex-grow">Available services</Txt.Section>
+          <Txt.Section tw="flex-grow">Available Strategies</Txt.Section>
           <div tw="flex flex-row gap-4 cursor-pointer">
             <img
               tw="h-8 w-8"
