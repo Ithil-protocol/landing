@@ -25,7 +25,7 @@ const services = [
     title: "GMX",
     description: "Maximise your exposure to the GLP real yield rewards",
     status: "Active",
-    tag: "Lending",
+    risk: "Medium",
     url: "",
   },
   {
@@ -34,7 +34,7 @@ const services = [
     description:
       "Optimise your capital allocation on the biggest DeFi money market",
     status: "Active",
-    tag: "Lending",
+    risk: "Low",
     url: "",
   },
   {
@@ -43,7 +43,7 @@ const services = [
     description:
       "Leveraged LPing on any Curve pool and farming rewards on Convex",
     status: "Active",
-    tag: "Dex",
+    risk: "Low",
     url: "",
   },
   {
@@ -52,7 +52,7 @@ const services = [
     description:
       "Provide liquidity to any pool with single or multi-token leverage",
     status: "Active",
-    tag: "Dex",
+    risk: "Low",
     url: "",
   },
   {
@@ -60,7 +60,7 @@ const services = [
     title: "Sushi",
     description: "Become a chef and get the best yield on any pool",
     status: "Active",
-    tag: "Dex",
+    risk: "Medium",
     url: "",
   },
   {
@@ -68,15 +68,23 @@ const services = [
     title: "Stargate",
     description: "Help make cross-chain token transfers a reality and get paid",
     status: "Active",
-    tag: "Bridge",
+    risk: "Medium",
     url: "",
   },
   {
     id: 7,
     title: "NFT Mortgages",
     description: "Buy a metaverse LAND or a BAYC over monthly instalments",
-    status: "In Development",
-    tag: "NFT",
+    status: "Coming Soon",
+    risk: "High",
+    url: "",
+  },
+  {
+    id: 8,
+    title: "Uniswap",
+    description: "Leveraged market making on UniV3 range order positions",
+    status: "Coming Soon",
+    risk: "High",
     url: "",
   },
 ]
@@ -149,7 +157,6 @@ export const ServicesScroll = () => {
             <Card
               onClick={handleClick(id)}
               itemId={id}
-              title={id}
               key={id}
               css={[tw` w-screen tablet:w-auto`]}
               {...rest}
