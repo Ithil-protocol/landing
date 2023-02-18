@@ -65,15 +65,13 @@ import MediumIconLight from "../assets/images/mediumLight.svg"
 import GithubIconLight from "../assets/images/githubLight.svg"
 // @ts-ignore
 import WrappedEtherIcon from "../assets/images/weth.png"
-
-//@ts-ignore
-import ShibInuIcon from "../assets/images/shibIcon.svg"
 //@ts-ignore
 import UsdcIcon from "../assets/images/usdcIcon.svg"
 //@ts-ignore
-import UniswapIcon from "../assets/images/uniswapIcon.svg"
+import ShibInuIcon from "../assets/images/shibIcon.svg"
 //@ts-ignore
-import OusdIcon from "../assets/images/ousdIcon.svg"
+import UniswapIcon from "../assets/images/uniswapIcon.svg"
+
 
 import Modal from "../components/Modal"
 
@@ -226,33 +224,33 @@ const IndexPage = () => {
                 <Token
                   tokenName="USD Coin"
                   tokenSymbol="USDC"
-                  apy="10%"
+                  apy="6%"
                   icon={UsdcIcon}
                 />
                 <Token
                   tokenName="Wrapped Ether"
                   tokenSymbol="WETH"
-                  apy="12%"
+                  apy="6%"
                   icon={WrappedEtherIcon}
                 />
                 <Token
                   tokenName="DAI Stablecoin"
                   tokenSymbol="DAI"
-                  apy="12%"
+                  apy="5%"
                   icon={DaiStablecoinIcon}
                 />
                 <Token
                   tw="flex tablet:hidden"
                   tokenName="Wrapped Bitcoin"
                   tokenSymbol="WBTC"
-                  apy="8%"
+                  apy="2%"
                   icon={WrappedBitconIcon}
                 />
                 <Token
                   tw="flex tablet:hidden"
                   tokenName="Tether USD"
                   tokenSymbol="USDT"
-                  apy="10%"
+                  apy="7%"
                   icon={TetherUsdIcon}
                 />
                 <TrackedLink
@@ -273,14 +271,14 @@ const IndexPage = () => {
                 <Token
                   tokenName="Wrapped Bitcoin"
                   tokenSymbol="WBTC"
-                  apy="8%"
+                  apy="3%"
                   icon={WrappedBitconIcon}
                 />
                 <Token
-                  tokenName="Origin Dollar"
-                  tokenSymbol="OUSD"
-                  apy="10%"
-                  icon={OusdIcon}
+                  tokenName="Tether"
+                  tokenSymbol="USDT"
+                  apy="5%"
+                  icon={TetherUsdIcon}
                 />
                 <TrackedLink
                   title="Supported tokens"
