@@ -22,14 +22,6 @@ import tw from "twin.macro"
 const services = [
   {
     id: 1,
-    title: "GMX",
-    description: "Maximise your exposure to the GLP real yield rewards",
-    status: "Active",
-    risk: "Medium",
-    url: "",
-  },
-  {
-    id: 2,
     title: "Aave",
     description:
       "Optimise your capital allocation on the biggest DeFi money market",
@@ -38,51 +30,27 @@ const services = [
     url: "",
   },
   {
+    id: 2,
+    title: "Balancer",
+    description:
+      "Provide liquidity to any pool with single or multi-token leverage",
+    status: "Active",
+    risk: "Medium",
+    url: "",
+  },
+  {
     id: 3,
     title: "Curve + Convex",
     description:
       "Leveraged LPing on any Curve pool and farming rewards on Convex",
     status: "Active",
-    risk: "Low",
+    risk: "Medium",
     url: "",
   },
   {
     id: 4,
-    title: "Balancer",
-    description:
-      "Provide liquidity to any pool with single or multi-token leverage",
-    status: "Active",
-    risk: "Low",
-    url: "",
-  },
-  {
-    id: 5,
-    title: "Sushi",
-    description: "Become a chef and get the best yield on any pool",
-    status: "Active",
-    risk: "Medium",
-    url: "",
-  },
-  {
-    id: 6,
-    title: "Stargate",
-    description: "Help make cross-chain token transfers a reality and get paid",
-    status: "Active",
-    risk: "Medium",
-    url: "",
-  },
-  {
-    id: 7,
     title: "NFT Mortgages",
     description: "Buy a metaverse LAND or a BAYC over monthly instalments",
-    status: "Coming Soon",
-    risk: "High",
-    url: "",
-  },
-  {
-    id: 8,
-    title: "Uniswap",
-    description: "Leveraged market making on UniV3 range order positions",
     status: "Coming Soon",
     risk: "High",
     url: "",
