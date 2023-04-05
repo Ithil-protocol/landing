@@ -92,7 +92,7 @@ export const ServicesScroll = () => {
     <>
       <Layout margins>
         <div tw="flex flex-row justify-between items-center my-10">
-          <Txt.Section tw="flex-grow">Available Strategies</Txt.Section>
+          <Txt.Section tw="flex-grow">Available Services</Txt.Section>
           <div tw="flex flex-row gap-4 cursor-pointer">
             <img
               tw="h-8 w-8"
