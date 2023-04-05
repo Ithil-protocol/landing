@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Ithil`,
     author: `Ithil Labs`,
-    description: `Ithil is a generalised leveraged investment strategies aggregator`,
+    description: `Ithil is a financial interoperability layer that connects the whole web3 space facilitating new value creation via crowdlending.`,
     siteUrl: `https://ithil.fi`,
   },
   plugins: [
@@ -55,7 +55,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ithil - The DeFi Wizard`,
+        name: `Ithil - The Web3 Wizard`,
         short_name: `Ithil`,
         start_url: `/`,
         background_color: `#2a333c`,
