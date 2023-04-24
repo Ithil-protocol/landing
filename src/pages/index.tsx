@@ -429,7 +429,7 @@ const IndexPage = () => {
                       />
                     </div>
                   }
-                  <a tw="" href="https://app.ithil.fi" target="_blank">
+                  <a tw="" href="#" target="_blank">
                     <Button
                       tw="tablet:self-start mt-10"
                       text="Launch app"
