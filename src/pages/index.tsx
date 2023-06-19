@@ -37,6 +37,8 @@ import EthereumIcon from "../assets/images/eth.png"
 import Feature from "../components/Feature"
 //@ts-ignore
 import GithubIcon from "../assets/images/github.svg"
+//@ts-ignore
+import GmxLogo from "../assets/images/gmx.svg"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 //@ts-ignore
@@ -355,6 +357,7 @@ const IndexPage = () => {
                 <Partner image={BalancerLogo} />
                 <Partner image={AuraLogo} />
                 <Partner image={AaveLogo} />
+                <Partner image={GmxLogo} />
               </div>
             </div>
           </div>
